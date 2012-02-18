@@ -1,0 +1,11 @@
+$ cat .gitignore
+bd/*
+build/*
+diseños/*
+dist/*
+Documentacion/*
+ejemplos/*
+Librerias/*
+nbproject/*
+Servidor/*
+
