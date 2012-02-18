@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="NoEncabezado" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.4641000000000082"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="332"/>
+	<style name="Title" fontName="URW Gothic L" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="URW Gothic L" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="URW Gothic L" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="URW Gothic L" fontSize="12"/>
+	<parameter name="noEncabezado" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[58]]></defaultValueExpression>
+	</parameter>
+	<parameter name="URL_LOGO_DELPHOS" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT upper(r.descripcion) AS "Regmin" , upper(es.nombrehabilitacion) AS "EntidadSalud" , ea.fechainicial AS "fechainicial" , ea.fechafinal AS "fechafinal" , ea.codarchivo AS "CodArchivo" , upper(d.nombre) AS "dpto" , upper(m.nombre) AS "muni" , upper(ta.descripcion) AS "tipoArchivo" , ea.nombrearchivo AS "nombrearchivo" ,ea.nombreenvia , ea.telefonoenvia , ea.emailenvia, ea.registros , ea.fecharegistro
+FROM encabezadoarchivo ea , entidadsalud es , regimen r , municipio m  , departamento d , tipoarchivo ta
+WHERE
+ea.codregimenes = es.codregimenes AND es.codregimenes = r.codregimen
+AND ea.codentidadsalud = es.codentidadsalud
+AND ea.codtipoarchivo = ta.codtipoarchivo --AND ta.codregimen = r.codregimen
+AND ea.coddepartamento = m.coddepartamento AND  m.coddepartamento = d.coddepartamento
+AND ea.codmunicipio = m.codmunicipio
+AND idencabezado = $P{noEncabezado}]]>
+	</queryString>
+	<field name="Regmin" class="java.lang.String"/>
+	<field name="EntidadSalud" class="java.lang.String"/>
+	<field name="fechainicial" class="java.sql.Date"/>
+	<field name="fechafinal" class="java.sql.Date"/>
+	<field name="CodArchivo" class="java.lang.String"/>
+	<field name="dpto" class="java.lang.String"/>
+	<field name="muni" class="java.lang.String"/>
+	<field name="tipoArchivo" class="java.lang.String"/>
+	<field name="nombrearchivo" class="java.lang.String"/>
+	<field name="nombreenvia" class="java.lang.String"/>
+	<field name="telefonoenvia" class="java.lang.String"/>
+	<field name="emailenvia" class="java.lang.String"/>
+	<field name="registros" class="java.math.BigDecimal"/>
+	<field name="fecharegistro" class="java.sql.Timestamp"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="352" height="33"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<text><![CDATA[Sistema Carga Archivos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="72" y="46" width="258" height="22"/>
+				<textElement/>
+				<text><![CDATA[Numero de Encabezado]]></text>
+			</staticText>
+			<image>
+				<reportElement x="390" y="3" width="160" height="64"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{URL_LOGO_DELPHOS}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="410" splitType="Stretch">
+			<staticText>
+				<reportElement style="Column header" x="23" y="10" width="139" height="22"/>
+				<textElement>
+					<font size="14" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Señor Usuario:]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="-2" y="124" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="20" y="31" width="527" height="43"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Conserve este numero si posteriormente desea Consultar o Modificar datos de la Carga del Archivo Correspondiente.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="80" width="294" height="31"/>
+				<textElement textAlignment="Right">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Registro de Encabezado No.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="317" y="80" width="233" height="32" forecolor="#FF0000"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{noEncabezado}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="164" width="127" height="20" backcolor="#B7D769"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Regimen:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="141" width="127" height="20" backcolor="#B7D769"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Entidad de Salud:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="281" width="127" height="20" backcolor="#B7D769"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Periodo: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="233" width="127" height="20" backcolor="#B7D769"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Codigo Archivo :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="327" width="127" height="20" backcolor="#B7D769"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Remitente:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="210" width="127" height="20" backcolor="#B7D769"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad Registros:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="143" y="164" width="409" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Regmin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="141" width="409" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{EntidadSalud}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="304" width="127" height="20" backcolor="#B7D769"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Lugar:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="143" y="304" width="409" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{muni}+" "+$F{dpto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="233" width="409" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CodArchivo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="143" y="210" width="409" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{registros}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="327" width="409" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nombreenvia}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="373" width="127" height="20" backcolor="#B7D769"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Telefono:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="143" y="373" width="409" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{telefonoenvia}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="350" width="127" height="20" backcolor="#B7D769"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Correo Remitente:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="143" y="350" width="409" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{emailenvia}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="187" width="127" height="20" backcolor="#B7D769"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Tipo Archivo:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="143" y="187" width="409" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{tipoArchivo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="281" width="221" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["De "+$F{fechainicial}+" a "+$F{fechafinal}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="403" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="257" width="127" height="20" backcolor="#B7D769"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Doc Remisorio:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="144" y="257" width="221" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nombrearchivo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<columnFooter>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement x="379" y="4" width="173" height="20"/>
+				<textElement textAlignment="Right">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Delphos - Inteligencia en Salud]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="132" y="0" width="323" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["Pagina "+$V{PAGE_NUMBER}+" de"+"  " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="1" y="0" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

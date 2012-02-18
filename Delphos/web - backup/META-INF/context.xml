@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/Delphos">
+  <Resource auth="Container" driverClassName="org.postgresql.Driver" maxActive="20" maxIdle="10" maxWait="-1" name="jdbc/delphos" password="armen1a@d3lph052011" type="javax.sql.DataSource" url="jdbc:postgresql://localhost/delphos" username="postgres"/>
+  <Resource driverClassName="org.postgresql.Driver" name="jdbc/delphos" password="armen1a@d3lph052011" type="javax.sql.DataSource" url="jdbc:postgresql://localhost/delphos" username="postgres"/>
+  <ResourceLink global="jdbc/delphos" name="jdbc/delphos" type="javax.sql.DataSource"/>
+  <ResourceParams name="jdbc/delphos">
+    <parameter>
+      <name>factory</name>
+      <value>org.apache.commons.dbcp.BasicDataSourceFactory</value>
+    </parameter>
+    <parameter>
+      <name>removeAbandoned</name>
+      <value>true</value>
+    </parameter>
+    <parameter>
+      <name>removeAbandonedTimeout</name>
+      <value>60</value>
+    </parameter>
+    <parameter>
+      <name>logAbandoned</name>
+      <value>true</value>
+    </parameter>
+  </ResourceParams>
+</Context>

@@ -1,0 +1,32 @@
+/*Fondo para el background de las descripciones de los campos de las tablas*/
+.bgDescTablas
+{
+    /*background-color: #C9E289;*/
+    background-color: #EFEFEF;
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    font-size: 11px;
+}
+
+/*Titulo 1*/
+.titulo1
+{
+    font-weight: bold; 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    background-color: #EFEFEF;
+   font-size: 14px;
+}
+
+/*Titulo 2*/
+.titulo2
+{
+    font-weight: bold; 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    color: #347E2D;
+    font-size: 13px;
+}
+
+.textoPequeno {
+        color: #000000;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 9px;
+}

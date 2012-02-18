@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PlantillaReporte" language="groovy" pageWidth="1122" pageHeight="793" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+    <property name="ireport.zoom" value="0.826446280991736"/>
+    <property name="ireport.x" value="0"/>
+    <property name="ireport.y" value="0"/>
+    <style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+    <style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+    <style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+    <style name="Detail" fontName="Arial" fontSize="12"/>
+    <style name="Row" mode="Transparent">
+        <conditionalStyle>
+            <conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]>
+            </conditionExpression>
+            <style backcolor="#B2D65B"/>
+        </conditionalStyle>
+    </style>
+    <queryString> <![CDATA[SELECT * FROM poblacion;]]>
+    </queryString>
+    <field name="numeroidentafiliado" class="java.lang.String"/>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="70" splitType="Stretch">
+            <image>
+                <reportElement x="393" y="0" width="160" height="64"/>
+                <imageExpression class="java.lang.String"><![CDATA["LogoDelphos.png"]]>
+                </imageExpression>
+            </image>
+            <staticText>
+                <reportElement style="Title" x="0" y="13" width="263" height="33"/>
+                <textElement verticalAlignment="Middle"/>
+                <text><![CDATA[Logo o Texto Aqui]]>
+                </text>
+            </staticText>
+            <staticText>
+                <reportElement style="SubTitle" x="100" y="46" width="174" height="22"/>
+                <textElement/>
+                <text><![CDATA[Leaf Green SubTitle]]>
+                </text>
+            </staticText>
+        </band>
+    </title>
+    <pageHeader>
+        <band splitType="Stretch"/>
+    </pageHeader>
+    <columnHeader>
+        <band height="36" splitType="Stretch">
+            <staticText>
+                <reportElement style="Column header" x="0" y="19" width="100" height="15"/>
+                <textElement/>
+                <text><![CDATA[Label]]>
+                </text>
+            </staticText>
+            <line>
+                <reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1"/>
+                <graphicElement>
+                    <pen lineWidth="0.5" lineColor="#999999"/>
+                </graphicElement>
+            </line>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="16" splitType="Stretch">
+            <frame>
+                <reportElement style="Row" mode="Opaque" x="0" y="0" width="555" height="15"/>
+                <textField>
+                    <reportElement x="0" y="0" width="100" height="15"/>
+                    <textElement/>
+                    <textFieldExpression class="java.lang.String"><![CDATA[$F{numeroidentafiliado}]]>
+                    </textFieldExpression>
+                </textField>
+            </frame>
+        </band>
+    </detail>
+    <pageFooter>
+        <band height="20" splitType="Stretch">
+            <textField>
+                <reportElement style="Column header" x="431" y="0" width="80" height="20"/>
+                <textElement textAlignment="Right">
+                    <font size="10" isBold="false"/>
+                </textElement>
+                <textFieldExpression class="java.lang.String"><![CDATA["Pagina "+$V{PAGE_NUMBER}+" de"]]>
+                </textFieldExpression>
+            </textField>
+            <textField evaluationTime="Report">
+                <reportElement style="Column header" x="513" y="0" width="40" height="20"/>
+                <textElement>
+                    <font size="10" isBold="false"/>
+                </textElement>
+                <textFieldExpression class="java.lang.String"><![CDATA[" " + $V{PAGE_NUMBER}]]>
+                </textFieldExpression>
+            </textField>
+            <textField pattern="EEEEE dd MMMMM yyyy">
+                <reportElement style="Column header" x="99" y="0" width="108" height="20"/>
+                <textElement>
+                    <font size="10" isBold="false"/>
+                </textElement>
+                <textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]>
+                </textFieldExpression>
+            </textField>
+            <line>
+                <reportElement positionType="FixRelativeToBottom" x="0" y="0" width="555" height="1"/>
+                <graphicElement>
+                    <pen lineWidth="0.5" lineColor="#999999"/>
+                </graphicElement>
+            </line>
+            <staticText>
+                <reportElement x="1" y="0" width="100" height="20" forecolor="#666666" backcolor="#666666"/>
+                <textElement/>
+                <text><![CDATA[Fecha Generacíon :]]>
+                </text>
+            </staticText>
+            <textField pattern="h.mm a">
+                <reportElement x="202" y="0" width="100" height="20" forecolor="#666666"/>
+                <textElement/>
+                <textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]>
+                </textFieldExpression>
+            </textField>
+        </band>
+    </pageFooter>
+</jasperReport>

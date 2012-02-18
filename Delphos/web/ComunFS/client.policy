@@ -1,0 +1,9 @@
+/* AUTOMATICALLY GENERATED ON Mon Apr 19 17:00:37 COT 2010*/
+/* DO NOT EDIT */
+
+keystore "file:/huella/dtsstore", "jks";
+
+grant signedBy "dts" {
+  permission java.security.AllPermission, signedBy "dts";
+};
+

@@ -1,0 +1,136 @@
+
+<table width="603" border="0" class="tablaContenido">
+  <tr>
+    <td colspan="6" class="titulo1"><center>Datos Residencia</center></td>
+  </tr>
+  <tr>
+    <td colspan="6" class="bgDescTablas">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="30" class="bgDescTablas">&nbsp;</td>
+    <td class="bgDescTablas"><strong>Telefono</strong></td>
+    <td class="sinBgDescTablas">
+      <input name="telefonores" type="text" id="telefonores" value="${telefonores}" />    </td>
+    <td>&nbsp;</td>
+    <td class="bgDescTablas"><strong>Direccion</strong></td>
+    <td class="sinBgDescTablas"><label>
+      <input name="direccionres" type="text" id="direccionres" value="${direccionres}" />
+    </label></td>
+  </tr>
+  <tr>
+    <td colspan="6">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="bgDescTablas">&nbsp;</td>
+    <td class="bgDescTablas"><strong>Departamento</strong></td>
+    <td class="sinBgDescTablas"><label>
+    <select name="coddepartamentore" id="coddepartamentore" onchange="cargarMunicipios();" style="width: 150px">
+      <option value=""></option>
+      <sql:query var="r" sql="select coddepartamento, nombre from departamento order by nombre" dataSource="jdbc/delphos" scope="page"/>
+      <jsp2:forEach items="${r.rows}" var="fila" varStatus="contador">
+        <c:choose>
+          <c:when test='${fila.coddepartamento == coddepartamento}'>
+            <option value="${fila.coddepartamento}" selected="selected">${fila.nombre}</option>
+          </c:when>
+          <c:otherwise>
+            <option value="${fila.coddepartamento}">${fila.nombre}</option>
+          </c:otherwise>
+        </c:choose>
+      </jsp2:forEach>
+    </select>
+    </label></td>
+    <td>&nbsp;</td>
+    <td class="bgDescTablas"><strong>Municipio</strong></td>
+    <td class="sinBgDescTablas"><label>
+    <span id="spanMunicipio">
+                    <c:choose>
+                        <c:when test="${codmunicipio != null}">
+                        <select name="codmunicipiore" id="codmunicipiore" style="width: 150px">
+                        <option value=""></option>
+                        <sql:query var="r" sql="select codmunicipio, nombre from municipio where coddepartamento='${coddepartamento}' order by nombre" dataSource="jdbc/delphos" scope="page"/>
+                        <jsp2:forEach items="${r.rows}" var="fila" varStatus="contador">
+                        <c:choose>
+                            <c:when test='${fila.codmunicipio == codmunicipio}'>
+                            <option value="${fila.codmunicipio}" selected="selected">${fila.nombre}</option>
+                            </c:when>
+                            <c:otherwise>
+                            <option value="${fila.codmunicipio}">${fila.nombre}</option>
+                            </c:otherwise>
+                        </c:choose>
+                        </jsp2:forEach>
+                        </select>                        
+                        </c:when>
+                        <c:otherwise>
+                        <select disabled>
+                            <option value=""></option>
+                        </select>
+                        </c:otherwise>
+                    </c:choose>
+                </span>
+    </label></td>
+  </tr>
+  <tr>
+    <td colspan="6" class="bgDescTablas">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="bgDescTablas">&nbsp;</td>
+    <td class="bgDescTablas"><strong>Barrio</strong></td>
+    <td class="sinBgDescTablas"><label>
+      <select name="barriores" id="barriores" style="width: 150px">
+           <option id="barriores" value=""></option>
+      <sql:query var="r" sql="select codbarrio, nombre from barrio" dataSource="jdbc/delphos" scope="page"/>
+      <jsp2:forEach items="${r.rows}" var="fila" varStatus="contador">
+       <c:choose>
+            <c:when test='${fila.codbarrio == codbarrio}'>
+            <option value="${fila.codbarrio}" selected="selected">${fila.nombre}</option>
+            </c:when>
+        <c:otherwise>
+            <option value="${fila.codbarrio}">${fila.nombre}</option>
+        </c:otherwise>
+       </c:choose>
+     </jsp2:forEach>
+      </select>
+    </label></td>
+    <td>&nbsp;</td>
+    <td class="bgDescTablas"><strong>Sector Geografico</strong></td>
+    <td class="sinBgDescTablas"><label>
+      <select name="codsectorgeografico" id="codsectorgeografico" style="width: 150px">
+               <option id="codsectorgeografico" value=""></option>
+          <sql:query var="r" sql="select codsectorgeografico, descripcion from sectorgeografico" dataSource="jdbc/delphos" scope="page"/>
+          <jsp2:forEach items="${r.rows}" var="fila" varStatus="contador">
+           <c:choose>
+                <c:when test='${fila.codsectorgeografico == codsectorgeografico}'>
+                <option value="${fila.codsectorgeografico}" selected="selected">${fila.descripcion}</option>
+                </c:when>
+            <c:otherwise>
+                <option value="${fila.codsectorgeografico}">${fila.descripcion}</option>
+            </c:otherwise>
+           </c:choose>
+         </jsp2:forEach>
+      </select>
+    </label></td>
+  </tr>
+  <tr>
+    <td colspan="6">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="bgDescTablas">&nbsp;</td>
+    <td class="bgDescTablas"><strong>Zona Geografica</strong></td>
+    <td colspan="4" class="sinBgDescTablas">
+      <select name="codzonageo" id="codzonageo" style="width: 150px">
+           <option id="codzonageo" value=""></option>
+          <sql:query var="r" sql="select codzonageo, descripcion from zonageografica" dataSource="jdbc/delphos" scope="page"/>
+          <jsp2:forEach items="${r.rows}" var="fila" varStatus="contador">
+           <c:choose>
+                <c:when test='${fila.codzonageo == codzonageo}'>
+                <option value="${fila.codzonageo}" selected="selected">${fila.descripcion}</option>
+                </c:when>
+            <c:otherwise>
+                <option value="${fila.codzonageo}">${fila.descripcion}</option>
+            </c:otherwise>
+           </c:choose>
+         </jsp2:forEach>
+      </select>    </td>
+  </tr>
+</table>
+

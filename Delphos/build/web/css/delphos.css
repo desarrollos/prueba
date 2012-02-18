@@ -1,0 +1,144 @@
+a:link, a:active, a:visited
+{
+    font-size:          13px;
+    font-family:        Tahoma;
+    color:              #000000;
+    text-decoration:    none;
+}
+
+a:hover
+{
+    text-decoration:    underline;
+}
+
+div.contenidoweb
+{
+        font-family:    Arial, Helvetica, Sans-serif;
+        text-align:     justify;
+        margin:         10px;
+}
+
+div.tablaContenido div.sinBgDescTablas center input
+{
+        width:          100%;
+}
+
+div.tablaContenido div.titulo1
+{
+	vertical-align:         	middle;
+	height:				40px;
+	width:				100%;
+}
+
+
+/*div.tablaContenido div.sinBgDescTablas input
+{
+        width:                          68px;
+}*/
+
+div.tablaContenido div.bgDescTablas
+{
+	padding:			5px;
+	position:			relative;
+	float:				left;
+	height:				18px;
+	margin:				1px;
+        width:				14%;
+}
+
+div.tablaContenido div.sinBgDescTablas
+{
+	padding:			6px;
+	position:			relative;
+	height:				18px;
+	float: 				left;
+	width:				10%;
+}
+
+/*Para las pestañas de la web. Se utiliza en el fromulario de Vinculación, en inscripción de familias*/
+.pestana
+{
+    font-family:    Arial, Helvetica, sans-serif;
+    font-size:      11px;
+    font-weight:    bold;
+    text-decoration: none;
+    color:          #ffffff;
+    width:          120px;
+}
+
+.textoPequeno {
+        color: #000000;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-weight:    bold;
+        font-size: 12px;
+}
+
+body
+{
+    margin: 0px;
+}
+
+/*EStilo de la tabla de contenido de todas las secciones de la web*/
+.tablaContenido
+{
+    background-color: #EFEFEF;
+    border-collapse:    collapse;
+    border-color:       #ffffff;
+    border-width:       1px;
+    width:              670px;
+}
+
+/*Fondo para el background de las descripciones de los campos de las tablas*/
+.bgDescTablas
+{
+    /*background-color: #C9E289;*/
+    background-color: #EFEFEF;
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    font-size: 11px;
+}
+
+/*Titulo 1*/
+.titulo1
+{
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #EFEFEF;
+	font-size: 14px;
+	text-decoration: underline;
+}
+
+/*Titulo 2*/
+.titulo2
+{
+    font-weight: bold; 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    color: #347E2D;
+    font-size: 13px;
+}
+
+.formulario_error
+{
+    border-color:   red;
+    border-style:   solid;/*dashed;*/
+}
+
+.formulario_normal
+{
+    border-color:   lightgray;
+    border-style:   solid;
+}
+
+/* Estilos para el Menú.                                    */
+/* Styles for the tree.                                     */
+/*                                                          */
+SPAN.TreeviewSpanArea A
+{
+     font-size: 10pt; 
+     font-family: verdana,helvetica; 
+     text-decoration: none;
+     color: #000000;
+}
+SPAN.TreeviewSpanArea A:hover
+{
+     color: #820082;
+}

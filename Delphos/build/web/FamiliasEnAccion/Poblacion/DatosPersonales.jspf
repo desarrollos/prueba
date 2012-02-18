@@ -1,0 +1,198 @@
+<table width="619" border="0" class="tablaContenido">
+  <tr>
+    <td colspan="6" class="titulo1"><center>Datos Personales</center></td>
+  </tr>
+  <tr>
+    <td colspan="6" class="bgDescTablas">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="30" class="bgDescTablas">&nbsp;</td>
+    <td class="bgDescTablas"><p><strong>Id. Usuario</strong></p>    </td>
+    <td colspan="4" class="sinBgDescTablas"><label>
+      <input name="idusuario" type="text" id="idusuario" value="${idusuario}" />
+    </label></td>
+  </tr>
+  <tr>
+    <td colspan="6">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="bgDescTablas">&nbsp;</td>
+    <td class="bgDescTablas"><strong>Tipo Identificaci&oacute;n</strong></td>
+    <td><span class="sinBgDescTablas">
+      <select name="codtipoidentafiliado" id="codtipoidentafiliado" style="width: 150px">
+        <option id="codtipoidentidad" value=""></option>
+        <sql:query var="r" sql="select codtipoidentidad, descripcion from tipoidentificacion" dataSource="jdbc/delphos" scope="page"/>
+        <jsp2:forEach items="${r.rows}" var="fila" varStatus="contador">
+          <c:choose>
+            <c:when test='${fila.codtipoidentidad == codtipoidentidad}'>
+              <option value="${fila.codtipoidentidad}" selected="selected">${fila.descripcion}</option>
+            </c:when>
+            <c:otherwise>
+              <option value="${fila.codtipoidentidad}">${fila.descripcion}</option>
+            </c:otherwise>
+          </c:choose>
+        </jsp2:forEach>
+      </select>
+    </span></td>
+    <td>&nbsp;</td>
+    <td><span class="bgDescTablas"><strong>No. Identificaci&oacute;n Afiliado</strong></span></td>
+    <td><span class="sinBgDescTablas">
+      <input name="numeroidentafiliado" type="text" id="numeroidentafiliado" value="${numeroidentafiliado}" />
+    </span></td>
+  </tr>
+  <tr>
+    <td colspan="6">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="bgDescTablas">&nbsp;</td>
+    <td class="bgDescTablas"><strong>Primer Nombre</strong></td>
+    <td class="sinBgDescTablas"><label>
+      <input name="primernombre" type="text" id="primernombre" value="${primernombre}" />
+    </label></td>
+    <td>&nbsp;</td>
+    <td class="bgDescTablas"><strong>Segundo Nombre</strong></td>
+    <td class="sinBgDescTablas"><label>
+      <input name="segundonombre" type="text" id="segundonombre" value="${segundonombre}" />
+    </label></td>
+  </tr>
+  <tr>
+    <td colspan="6">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="bgDescTablas">&nbsp;</td>
+    <td class="bgDescTablas"><strong>Primer Apellido</strong></td>
+    <td class="sinBgDescTablas"><label>
+      <input name="primerapellido" type="text" id="primerapellido" value="${primerapellido}" />
+    </label></td>
+    <td>&nbsp;</td>
+    <td class="bgDescTablas"><strong>Segundo Apellido</strong></td>
+    <td class="sinBgDescTablas"><label>
+      <input name="segundoapellido" type="text" id="segundoapellido" value="${segundoapellido}" />
+    </label></td>
+  </tr>
+  <tr>
+    <td colspan="6">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="bgDescTablas">&nbsp;</td>
+    <td class="bgDescTablas"><strong>Sexo</strong></td>
+    <td class="sinBgDescTablas"><label>
+      <select name="codsexo" id="codsexo" style="width: 150px">
+           <option id="codsexo" value=""></option>
+          <sql:query var="r" sql="select codsexo, descripcion from sexo" dataSource="jdbc/delphos" scope="page"/>
+          <jsp2:forEach items="${r.rows}" var="fila" varStatus="contador">
+           <c:choose>
+                <c:when test='${fila.sexo == sexo}'>
+                <option value="${fila.sexo}" selected="selected">${fila.descripcion}</option>
+                </c:when>
+            <c:otherwise>
+                <option value="${fila.sexo}">${fila.descripcion}</option>
+            </c:otherwise>
+           </c:choose>
+         </jsp2:forEach>
+      </select>
+    </label></td>
+    <td>&nbsp;</td>
+    <td class="bgDescTablas"><strong>Estado Civil</strong></td>
+    <td class="sinBgDescTablas"><label>
+      <select name="codestadocivil" id="codestadocivil" style="width: 150px">
+           <option id="codestadocivil" value=""></option>
+          <sql:query var="r" sql="select codestadocivil, descripcion from estadocivil" dataSource="jdbc/delphos" scope="page"/>
+          <jsp2:forEach items="${r.rows}" var="fila" varStatus="contador">
+           <c:choose>
+                <c:when test='${fila.codestadocivil == codestadocivil}'>
+                <option value="${fila.codestadocivil}" selected="selected">${fila.descripcion}</option>
+                </c:when>
+            <c:otherwise>
+                <option value="${fila.codestadocivil}">${fila.descripcion}</option>
+            </c:otherwise>
+           </c:choose>
+         </jsp2:forEach>
+      </select>
+    </label></td>
+  </tr>
+  <tr>
+    <td colspan="6">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="bgDescTablas">&nbsp;</td>
+    <td class="bgDescTablas"><strong>Fecha Nacimiento</strong></td>
+    <td class="sinBgDescTablas"><span class="bgDescTablas">
+      <input name="fechanacimiento" type="text" id="fechanacimiento" value="${fechanacimiento}" size="14" readonly="readonly" />
+    </span><span class="bgDescTablas">
+    <input name="botonFechanacimiento" type="button" id="botonFechanacimiento" value="..." />
+    </span></td>
+    <td>&nbsp;</td>
+    <td class="bgDescTablas"><strong>Edad</strong></td>
+    <td class="sinBgDescTablas"><label>
+      <input name="edad" type="text" id="edad" value="${edad}" readonly="readonly" />
+    </label></td>
+  </tr>
+  <tr>
+    <td colspan="6" class="bgDescTablas">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="bgDescTablas">&nbsp;</td>
+    <td class="bgDescTablas"><strong>Departamento</strong></td>
+    <td class="sinBgDescTablas"><label>
+    <select name="coddepartamentonac" id="coddepartamentonac" onchange="cargarMunicipios();" style="width: 150px">
+      <option value=""></option>
+      <sql:query var="r" sql="select coddepartamento, nombre from departamento order by nombre" dataSource="jdbc/delphos" scope="page"/>
+      <jsp2:forEach items="${r.rows}" var="fila" varStatus="contador">
+        <c:choose>
+          <c:when test='${fila.coddepartamento == coddepartamento}'>
+            <option value="${fila.coddepartamento}" selected="selected">${fila.nombre}</option>
+          </c:when>
+          <c:otherwise>
+            <option value="${fila.coddepartamento}">${fila.nombre}</option>
+          </c:otherwise>
+        </c:choose>
+      </jsp2:forEach>
+    </select>
+    </label></td>
+    <td>&nbsp;</td>
+    <td class="bgDescTablas"><strong>Municipio</strong></td>
+    <td class="sinBgDescTablas"><label>
+    <span id="spanMunicipio">
+                    <c:choose>
+                        <c:when test="${codmunicipio != null}">
+                        <select name="codmunicipionac" id="codmunicipionac" style="width: 150px">
+                        <option value=""></option>
+                        <sql:query var="r" sql="select codmunicipio, nombre from municipio where coddepartamento='${coddepartamento}' order by nombre" dataSource="jdbc/delphos" scope="page"/>
+                        <jsp2:forEach items="${r.rows}" var="fila" varStatus="contador">
+                        <c:choose>
+                            <c:when test='${fila.codmunicipio == codmunicipio}'>
+                            <option value="${fila.codmunicipio}" selected="selected">${fila.nombre}</option>
+                            </c:when>
+                            <c:otherwise>
+                            <option value="${fila.codmunicipio}">${fila.nombre}</option>
+                            </c:otherwise>
+                        </c:choose>
+                        </jsp2:forEach>
+                        </select>                        
+                        </c:when>
+                        <c:otherwise>
+                        <select disabled>
+                            <option value=""></option>
+                        </select>
+                        </c:otherwise>
+                    </c:choose>
+                </span>
+    </label></td>
+  </tr>
+  <tr>
+    <td colspan="6">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="bgDescTablas">&nbsp;</td>
+    <td class="bgDescTablas"><strong>Nombre Padre</strong></td>
+    <td class="sinBgDescTablas"><label>
+      <input name="nombrepadre" type="text" id="nombrepadre" value="${nombrepadre}" />
+    </label></td>
+    <td>&nbsp;</td>
+    <td class="bgDescTablas"><strong>Nombre Madre</strong></td>
+    <td class="sinBgDescTablas"><label>
+      <input name="nombremadre" type="text" id="nombremadre" value="${nombremadre}" />
+    </label></td>
+  </tr>
+</table>

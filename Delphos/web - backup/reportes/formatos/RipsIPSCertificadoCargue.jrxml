@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RipsCertificadoCarga" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.771561000000014"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="7"/>
+	<style name="Title" fontName="URW Gothic L" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="URW Gothic L" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="URW Gothic L" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="URW Gothic L" fontSize="12"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#73B0E6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#CFDBE6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#F3F6F8"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="Delphos_Tabla">
+		<parameter name="noEncabezado" class="java.lang.Integer">
+			<defaultValueExpression><![CDATA[58]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[Select ripsperiodicousuario.idencabezado As "Numero Encabezado",
+       'US' As "Tipo Rips",
+       Count(*) As "Total Registros Adicionados",
+       (Select Count(distinct inconsarchivorips.idregistro)
+        From  inconsarchivorips
+        Where ripsperiodicousuario.idencabezado = inconsarchivorips.idencabezado And
+              inconsarchivorips.codtiporips = 'US') As "Registros Inconsistencias",
+       (Select fechainicial
+        From encabezadoarchivo
+        Where ripsperiodicousuario.idencabezado = encabezadoarchivo.idencabezado) As "Fecha Inicial",
+       (Select fechafinal
+        From encabezadoarchivo
+        Where ripsperiodicousuario.idencabezado = encabezadoarchivo.idencabezado) As "Fecha Final"
+From ripsperiodicousuario
+Where ripsperiodicousuario.idencabezado = $P{noEncabezado}
+Group By ripsperiodicousuario.idencabezado
+Union All
+-- Número Total de Registros e Inconsistencias en Rips de Facturas (AF)
+Select ripsperiodicofactura.idencabezado As "Numero Encabezado",
+       'AF' As "Tipo Rips",
+       Count(*) As "Total Registros Adicionados",
+       (Select Count(distinct inconsarchivorips.idregistro)
+        From  inconsarchivorips
+        Where ripsperiodicofactura.idencabezado = inconsarchivorips.idencabezado And
+              inconsarchivorips.codtiporips = 'AF') As "Registros Inconsistencias",
+       (Select fechainicial
+        From encabezadoarchivo
+        Where ripsperiodicofactura.idencabezado = encabezadoarchivo.idencabezado) As "Fecha Inicial",
+       (Select fechafinal
+        From encabezadoarchivo
+        Where ripsperiodicofactura.idencabezado = encabezadoarchivo.idencabezado) As "Fecha Final"
+From ripsperiodicofactura
+Where ripsperiodicofactura.idencabezado = $P{noEncabezado}
+Group By ripsperiodicofactura.idencabezado
+Union All
+-- Número Total de Registros e Inconsistencias en Rips IPS de Actividades (AC, AH, AM, AN, AP, AT y AU)
+Select ripsperiodicoips.idencabezado As "Numero Encabezado",
+       ripsperiodicoips.codtiporips As "Tipo Rips",
+       Count(*) As "Total Registros Adicionados",
+       (Select Count(distinct inconsarchivorips.idregistro)
+        From  inconsarchivorips
+        Where ripsperiodicoips.idencabezado = inconsarchivorips.idencabezado And
+              inconsarchivorips.codtiporips = ripsperiodicoips.codtiporips) As "Registros Inconsistencias",
+       (Select fechainicial
+        From encabezadoarchivo
+        Where ripsperiodicoips.idencabezado = encabezadoarchivo.idencabezado) As "Fecha Inicial",
+       (Select fechafinal
+        From encabezadoarchivo
+        Where ripsperiodicoips.idencabezado = encabezadoarchivo.idencabezado) As "Fecha Final"
+From ripsperiodicoips
+Where ripsperiodicoips.idencabezado = $P{noEncabezado}
+Group By ripsperiodicoips.idencabezado,ripsperiodicoips.codtiporips
+Union All
+-- Número Total de Registros e Inconsistencias en Rips EAPB de Actividades (AC, AH, AM, AN, AP, AT y AU)
+Select ripsperiodicoeapb.idencabezado As "Numero Encabezado",
+       ripsperiodicoeapb.codtiporips As "Tipo Rips",
+       Count(*) As "Total Registros Adicionados",
+       (Select Count(distinct inconsarchivorips.idregistro)
+        From  inconsarchivorips
+        Where ripsperiodicoeapb.idencabezado = inconsarchivorips.idencabezado And
+              ripsperiodicoeapb.codtiporips = inconsarchivorips.codtiporips) As "Registros Inconsistencias",
+       (Select fechainicial
+        From encabezadoarchivo
+        Where ripsperiodicoeapb.idencabezado = encabezadoarchivo.idencabezado) As "Fecha Inicial",
+       (Select fechafinal
+        From encabezadoarchivo
+        Where ripsperiodicoeapb.idencabezado = encabezadoarchivo.idencabezado) As "Fecha Final"
+From ripsperiodicoeapb
+Where ripsperiodicoeapb.idencabezado = $P{noEncabezado}
+Group By ripsperiodicoeapb.idencabezado,ripsperiodicoeapb.codtiporips]]>
+		</queryString>
+		<field name="Numero Encabezado" class="java.math.BigDecimal"/>
+		<field name="Tipo Rips" class="java.lang.String"/>
+		<field name="Total Registros Adicionados" class="java.lang.Long"/>
+		<field name="Registros Inconsistencias" class="java.lang.Long"/>
+		<field name="Fecha Inicial" class="java.sql.Timestamp"/>
+		<field name="Fecha Final" class="java.sql.Date"/>
+		<variable name="SumRegistroAdicionados" class="java.lang.Long" calculation="Sum">
+			<variableExpression><![CDATA[$F{Total Registros Adicionados}]]></variableExpression>
+		</variable>
+		<variable name="SumRegistroInconsistencias" class="java.lang.Long" calculation="Sum">
+			<variableExpression><![CDATA[$F{Registros Inconsistencias}]]></variableExpression>
+		</variable>
+	</subDataset>
+	<parameter name="noEncabezado" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[58]]></defaultValueExpression>
+	</parameter>
+	<parameter name="URL_LOGO_DELPHOS" class="java.lang.String"/>
+	<parameter name="MsjRip" class="java.lang.String"/>
+	<parameter name="codigoQR" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT upper(r.descripcion) AS "Regmin" , upper(es.nombrehabilitacion) AS "EntidadSalud" , ea.fechainicial AS "fechainicial" , ea.fechafinal AS "fechafinal" , ea.codarchivo AS "CodArchivo" , upper(d.nombre) AS "dpto" , upper(m.nombre) AS "muni" , upper(ta.descripcion) AS "tipoArchivo" , ea.nombrearchivo AS "nombrearchivo" ,ea.nombreenvia , ea.telefonoenvia , ea.emailenvia, ea.registros , ea.fecharegistro
+FROM encabezadoarchivo ea , entidadsalud es , regimen r , municipio m  , departamento d , tipoarchivo ta
+WHERE
+ea.codregimenes = es.codregimenes AND es.codregimenes = r.codregimen
+AND ea.codentidadsalud = es.codentidadsalud
+AND ea.codtipoarchivo = ta.codtipoarchivo --AND ta.codregimen = r.codregimen
+AND ea.coddepartamento = m.coddepartamento AND  m.coddepartamento = d.coddepartamento
+AND ea.codmunicipio = m.codmunicipio
+AND idencabezado = $P{noEncabezado}]]>
+	</queryString>
+	<field name="Regmin" class="java.lang.String"/>
+	<field name="EntidadSalud" class="java.lang.String"/>
+	<field name="fechainicial" class="java.sql.Date"/>
+	<field name="fechafinal" class="java.sql.Date"/>
+	<field name="CodArchivo" class="java.lang.String"/>
+	<field name="dpto" class="java.lang.String"/>
+	<field name="muni" class="java.lang.String"/>
+	<field name="tipoArchivo" class="java.lang.String"/>
+	<field name="nombrearchivo" class="java.lang.String"/>
+	<field name="nombreenvia" class="java.lang.String"/>
+	<field name="telefonoenvia" class="java.lang.String"/>
+	<field name="emailenvia" class="java.lang.String"/>
+	<field name="registros" class="java.math.BigDecimal"/>
+	<field name="fecharegistro" class="java.sql.Timestamp"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="59" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="2" y="3" width="317" height="52"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="20"/>
+				</textElement>
+				<text><![CDATA[CERTIFICADO CARGUE DE ARCHIVOS]]></text>
+			</staticText>
+			<image onErrorType="Icon">
+				<reportElement x="390" y="2" width="160" height="55"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{URL_LOGO_DELPHOS}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="635" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="-2" y="114" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="184" y="19" width="187" height="21"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CERTIFICADO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="292" y="92" width="139" height="18" forecolor="#FF0000"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{noEncabezado}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="144" width="127" height="20" backcolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Regimen:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="121" width="127" height="20" backcolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Entidad de Salud:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="261" width="127" height="20" backcolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Periodo: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="213" width="127" height="20" backcolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Codigo Archivo :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="307" width="127" height="20" backcolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Remitente:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="190" width="127" height="20" backcolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad Registros:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="143" y="144" width="409" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Regmin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="121" width="409" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{EntidadSalud}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="284" width="127" height="20" backcolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Lugar:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="143" y="284" width="409" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{muni}+" "+$F{dpto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="213" width="409" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CodArchivo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="143" y="190" width="409" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{registros}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="307" width="409" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nombreenvia}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="353" width="127" height="20" backcolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Telefono:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="143" y="353" width="409" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{telefonoenvia}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="330" width="127" height="20" backcolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Correo Remitente:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="143" y="330" width="409" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{emailenvia}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="167" width="127" height="20" backcolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Tipo Archivo:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="143" y="167" width="409" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{tipoArchivo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="261" width="221" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["De "+$F{fechainicial}+" a "+$F{fechafinal}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="378" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="237" width="127" height="20" backcolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Doc Remisorio:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="144" y="237" width="221" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nombrearchivo}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy h.mm a">
+				<reportElement x="9" y="6" width="354" height="20"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="93" y="92" width="194" height="18"/>
+				<textElement textAlignment="Justified">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Registro de Encabezado No. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="381" width="537" height="18"/>
+				<textElement textAlignment="Justified">
+					<font size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[El Detalle de los Registros se presenta en la siguiente Tabla:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="588" width="542" height="45"/>
+				<textElement textAlignment="Justified">
+					<font size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Si se presentaron Inconsistencias, por favor verifique su detalle en los archivos que el Sistema Delphos ha generado y realice la corrección pertinente a sus archivos Planos, para que sean adicionados nuevamente.]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement key="table 5" style="table 5" x="8" y="403" width="539" height="182"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Delphos_Tabla">
+						<datasetParameter name="noEncabezado">
+							<datasetParameterExpression><![CDATA[$P{noEncabezado}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="90">
+						<jr:columnHeader style="table 5_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="8" width="90" height="13"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Tipo Rips]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 5_CH" height="15" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="15"/>
+								<textElement textAlignment="Center">
+									<font size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Total]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell style="table 5_TD" height="15" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="15"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression class="java.lang.String"><![CDATA[$F{Tipo Rips}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90">
+						<jr:columnHeader style="table 5_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Total Registros Adicionados]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 5_CH" height="15" rowSpan="1">
+							<textField>
+								<reportElement x="2" y="0" width="86" height="14"/>
+								<textElement textAlignment="Right">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression class="java.lang.Long"><![CDATA[$V{SumRegistroAdicionados}]]></textFieldExpression>
+							</textField>
+						</jr:columnFooter>
+						<jr:detailCell style="table 5_TD" height="15" rowSpan="1">
+							<textField>
+								<reportElement x="2" y="0" width="86" height="15"/>
+								<textElement textAlignment="Right"/>
+								<textFieldExpression class="java.lang.Long"><![CDATA[$F{Total Registros Adicionados}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90">
+						<jr:columnHeader style="table 5_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Registros Inconsistencias]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 5_CH" height="15" rowSpan="1">
+							<textField>
+								<reportElement x="2" y="0" width="86" height="14"/>
+								<textElement textAlignment="Right">
+									<font isBold="true"/>
+								</textElement>
+								<textFieldExpression class="java.lang.Long"><![CDATA[$V{SumRegistroInconsistencias}]]></textFieldExpression>
+							</textField>
+						</jr:columnFooter>
+						<jr:detailCell style="table 5_TD" height="15" rowSpan="1">
+							<textField>
+								<reportElement x="2" y="0" width="86" height="15"/>
+								<textElement textAlignment="Right"/>
+								<textFieldExpression class="java.lang.Long"><![CDATA[$F{Registros Inconsistencias}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90">
+						<jr:columnHeader style="table 5_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="8" width="90" height="13"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Fecha Inicial]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 5_CH" height="15" rowSpan="1"/>
+						<jr:detailCell style="table 5_TD" height="15" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="15"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression class="java.util.Date"><![CDATA[$F{Fecha Inicial}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90">
+						<jr:columnHeader style="table 5_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="8" width="90" height="13"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Fecha Final]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 5_CH" height="15" rowSpan="1"/>
+						<jr:detailCell style="table 5_TD" height="15" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="15"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression class="java.util.Date"><![CDATA[$F{Fecha Final}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<textField>
+				<reportElement x="6" y="50" width="546" height="37"/>
+				<textElement textAlignment="Justified">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{MsjRip}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<columnFooter>
+		<band height="95" splitType="Stretch">
+			<staticText>
+				<reportElement x="377" y="77" width="173" height="13"/>
+				<textElement textAlignment="Right">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Delphos - Inteligencia en Salud]]></text>
+			</staticText>
+			<image onErrorType="Blank">
+				<reportElement x="8" y="0" width="95" height="95"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{codigoQR}]]></imageExpression>
+			</image>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="13" splitType="Stretch">
+			<textField>
+				<reportElement x="132" y="0" width="323" height="13"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Pagina "+$V{PAGE_NUMBER}+" de"+"  " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="1" y="0" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

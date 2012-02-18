@@ -1,0 +1,140 @@
+<style type="text/css">
+<!--
+.style1 {font-weight: bold}
+-->
+</style>
+<table width="782" border="0" class="tablaContenido">
+  <tr>
+                        <td colspan="5"><div align="center"><span class="titulo1">Beneficiarios</span></div></td>
+                      </tr>
+                      <tr>
+                        <td colspan="5">&nbsp;</td>
+  </tr>
+                      <tr class="bgDescTablas">
+                        <td width="182" class="bgDescTablas"><strong>Tipo Id.</strong></td>
+                        <td width="209" class="bgDescTablas"><select name="codtipoidentidad_beneficiario" id="codtipoidentidad_beneficiario">
+                         <option value=" " selected="selected"> </option>
+                          <sql:query var="r" sql="select codtipoidentidad, descripcion from tipoidentificacion" dataSource="jdbc/delphos" scope="page"/>
+                          <jsp2:forEach items="${r.rows}" var="fila" varStatus="contador">
+                            <option value="${fila.codtipoidentidad}">${fila.codtipoidentidad}</option>
+                          </jsp2:forEach>
+                        </select></td>
+                        <td width="33">&nbsp;</td>
+                        <td width="170" class="bgDescTablas"><strong>C&oacute;digo Beneficiario</strong></td>
+                        <td width="166" class="bgDescTablas"><input name="codigbenef" type="text" id="codigbenef" size="15" /></td>
+                      </tr>
+                      <tr class="bgDescTablas">
+                        <td colspan="5" class="bgDescTablas">&nbsp;</td>
+                      </tr>
+                      <tr class="bgDescTablas">
+                        <td class="bgDescTablas"><strong>Fecha Nacimiento</strong></td>
+                        <td class="bgDescTablas"><input name="fechanacim" type="text" id="fechanacim" size="12" readonly="readonly" />
+                        <input name="button" type="button" id="botonFechanacim" value="..." /></td>
+                        <td>&nbsp;</td>
+                        <td class="bgDescTablas"><strong>Parentesco</strong></td>
+                        <td class="bgDescTablas"><select name="tipoparentesco_codtipoparentesco" id="tipoparentesco_codtipoparentesco">
+                          <option value=" " selected="selected"> </option>
+                          <sql:query var="r" sql="select codtipoparentesco, descripcion from tipoparentesco" dataSource="jdbc/delphos" scope="page"/>
+                          <jsp2:forEach items="${r.rows}" var="fila" varStatus="contador">
+                            <option value="${fila.codtipoparentesco}">${fila.descripcion}</option>
+                          </jsp2:forEach>
+                        </select></td>
+                      </tr>
+                      <tr class="bgDescTablas">
+                        <td colspan="5" class="bgDescTablas">&nbsp;</td>
+                      </tr>
+                      <tr class="bgDescTablas">
+                        <td class="bgDescTablas"><strong>Estado Beneficiario</strong></td>
+                        <td class="bgDescTablas"><select name="estadobeneficiario_codiestben" id="estadobeneficiario_codiestben">
+                          <option value=" " selected="selected"> </option>
+                          <sql:query var="r" sql="select codiestben, descestben from estadobeneficiario" dataSource="jdbc/delphos" scope="page"/>
+                          <jsp2:forEach items="${r.rows}" var="fila" varStatus="contador">
+                            <option value="${fila.codiestben}">${fila.descestben}</option>
+                          </jsp2:forEach>
+                        </select></td>
+                        <td>&nbsp;</td>
+                        <td class="bgDescTablas"><strong>Vive con Titular</strong></td>
+                        <td class="bgDescTablas"><p>
+                            <label>
+                              <span class="style1">
+                              <input type="radio" name="vivecontit" value="Si" checked="checked"/>
+                              Si</span></label>
+                            <strong>
+                            <label>
+                              <input type="radio" name="vivecontit" value="No" />
+                              No</label>
+                            </strong><br />
+                        </p></td>
+                      </tr>
+                      <tr class="bgDescTablas">
+                        <td colspan="5" class="bgDescTablas">&nbsp;</td>
+                      </tr>
+                      <tr class="bgDescTablas">
+                        <td class="bgDescTablas"><strong>Id. Poblaci&oacute;n</strong></td>
+                        <td class="bgDescTablas"><input name="identbenef" type="text" id="identbenef" size="15" /></td>
+                        <td class="bgDescTablas">&nbsp;</td>
+                        <td class="bgDescTablas"><strong>IPS Asignada</strong></td>
+                        <td class="bgDescTablas"><select name="entidadsalud_codentidadsalud_beneficiario" id="entidadsalud_codentidadsalud_beneficiario">
+                          <option value=" " selected="selected"> </option>
+                          <sql:query var="r" sql="select codentidadsalud, nombre from entidadsalud a join empresa b on a.codempresa = b.codempresa" dataSource="jdbc/delphos" scope="page"/>
+                          <jsp2:forEach items="${r.rows}" var="fila" varStatus="contador">
+                            <option value="${fila.codentidadsalud}">${fila.nombre}</option>
+                          </jsp2:forEach>
+                        </select></td>
+                      </tr>
+                      <tr class="bgDescTablas">
+                        <td colspan="5" class="bgDescTablas">&nbsp;</td>
+                      </tr>
+                      <tr class="bgDescTablas">
+                        <td class="bgDescTablas"><strong>Intituci&oacute;n Educativa</strong></td>
+                        <td class="bgDescTablas"><select name="empresa_codempresa" id="empresa_codempresa">
+                          <option value=" " selected="selected"> </option>
+                          <sql:query var="r" sql="select codempresa, nombre from empresa" dataSource="jdbc/delphos" scope="page"/>
+                          <jsp2:forEach items="${r.rows}" var="fila" varStatus="contador">
+                            <option value="${fila.codempresa}">${fila.nombre}</option>
+                          </jsp2:forEach>
+                        </select></td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr class="bgDescTablas">
+                        <td colspan="5" class="bgDescTablas">&nbsp;</td>
+                      </tr>
+                      <tr class="bgDescTablas">
+                        <td class="bgDescTablas"><strong>Nro. Certificado Escolar</strong></td>
+                        <td class="bgDescTablas"><input name="numceresco" type="text" id="numceresco" size="15" /></td>
+                        <td class="bgDescTablas">&nbsp;</td>
+                        <td class="bgDescTablas"><strong>Grado Actual</strong></td>
+                        <td class="bgDescTablas"><input name="gradoactua" type="text" id="gradoactua" size="15" /></td>
+                      </tr>
+                      <tr class="bgDescTablas">
+                        <td colspan="5" class="bgDescTablas">&nbsp;</td>
+                      </tr>
+                      <tr class="bgDescTablas">
+                        <td class="bgDescTablas"><strong>Banco</strong></td>
+                        <td class="bgDescTablas"><select name="banco_codbanco_beneficiario" id="banco_codbanco_beneficiario">
+                          <option value=" " selected="selected"> </option>
+                          <sql:query var="r" sql="select descripcion, codbanco from banco" dataSource="jdbc/delphos" scope="page"/>
+                          <jsp2:forEach items="${r.rows}" var="fila" varStatus="contador">
+                            <option value="${fila.codbanco}">${fila.descripcion}</option>
+                          </jsp2:forEach>
+                        </select></td>
+                        <td>&nbsp;</td>
+                        <td class="bgDescTablas"><strong>Nro Cuenta Bancaria</strong></td>
+                        <td class="bgDescTablas"><input name="numcuebanc_beneficiario" type="text" id="numcuebanc_beneficiario" size="15" /></td>
+                      </tr>
+                      <tr class="bgDescTablas">
+                        <td class="bgDescTablas" colspan="5">&nbsp;</td>
+                      </tr>
+                      <tr class="bgDescTablas">
+                        <td class="bgDescTablas" colspan="5"><p align="center"><strong>Observaciones</strong></p>
+                        <p align="center">
+                          <textarea name="observacion_beneficiario" id="observacion_beneficiario" cols="65" rows="5"></textarea>
+                        </p></td>
+                      </tr>
+                    </table>
+                    <p>
+                      <input type="hidden" name="numeroPeriodosPago" id="numeroPeriodosPago" value="0" />
+                      <input type="hidden" name="contadorPeriodosPago" id="contadorPeriodosPago" value="0" />
+</p>

@@ -1,0 +1,5 @@
+<sql:setDataSource driver="org.postgresql.Driver"
+ url="jdbc:postgresql://localhost:5432/delphos"
+ user="postgres"
+  password="123456"
+ var="bdatos" />

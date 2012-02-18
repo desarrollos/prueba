@@ -1,0 +1,71 @@
+#departamentos-municipios{
+    text-align:left !important;
+}
+#dialog{
+    font-size:12px;
+}
+#accordion{
+    margin-top:10px;
+    font-size:14px;
+    text-align:left;
+    width: 700px;
+}
+.titulo_prin{
+    text-align: center; font-size:17px;
+}
+.titulo_secun{
+    text-align: center; font-size:12px;
+}
+fieldset{
+    border:1px solid #77B839;
+}
+#ajax-cargando{
+    display:none;
+    text-align:center
+
+}
+#drawer{
+    background:#fff url(../images/h80.png) repeat-x scroll 0 0;
+    _background-color:#fff;
+    overflow:visible;
+    position:fixed;
+    left:0;
+    bottom: 0;
+    text-align:center;
+    padding-bottom: 0;
+    border-bottom:2px solid #789;
+    width:100%;
+    z-index:2;
+    height: 52px;
+
+}
+
+#drawer input{
+    font-size:13px;
+}
+
+#mensajes-usuario{
+    text-align:center
+}
+.dato, .check{
+    height:30px;
+
+}
+.dato{
+    width:515px;
+    float:left;
+    text-align: right;
+}
+.check{
+    width:29px;
+    float:left;
+}
+.tablas{
+    width:250px; 
+    float: left;
+    margin-left:10px;
+}
+
+.ui-dialog .ui-dialog-buttonpane button{
+    font-size:13px
+}

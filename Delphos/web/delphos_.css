@@ -1,0 +1,123 @@
+/* Barra breadcrumb */
+.breadcrumb {
+	font-family: "Futura BcCn Bt", "Abadi Mt Condensed", "Arial Condensed", Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-decoration: none;
+        font-weight: bold;
+	color: #000000;
+}
+/* Enlace sin *** */
+a:link {
+	color: #000000;
+	text-decoration: none;
+}       
+/* Enlace visitado */
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+/* Enlace mouse over */
+a:hover {
+	text-decoration: none;
+	color: #000000
+}
+/* Enlace sin visitar */
+a:active {
+	text-decoration: none;
+	color: #000000;
+
+}
+/* Titulos de las tablas (busquedas, reportes) */
+.tituloTabla {
+        font-weight: bold; 
+        font-family: Arial, Helvetica, sans-serif; 
+        font-size: 12px;
+}
+/* Contenidos de las tablas (busquedas, reportes) */
+.contenidoTabla {
+        font-family: Arial, Helvetica, sans-serif; 
+        font-size: 12px;
+}
+/* Texto en general */
+.texto {
+
+}
+/* Texto en general tamaño 18 */
+.texto18 {
+        color: #000000;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+}
+/* Texto en general tamaño 18 */
+.texto16 {
+        color: #000000;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+}
+/* Texto en general tamaño 12 */
+.texto12 {
+        color: #000000;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+}
+
+/* Texto en general tamaño 18 color rojo*/
+.texto18Rojo {
+        color: #FF0000;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+}
+/* Texto en general */
+.textoPequeno {
+        color: #000000;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 9px;
+}
+/* Items de los menues */
+.menu {
+        color: #000000;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+}
+/* Titulos de las páginas */
+.titulo {
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	font-weight: bold;
+	font-style: italic;
+	text-decoration: underline;
+}
+/* Subtitulos de las páginas */
+.subTitulo {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        color: #000000;
+        /*color: #000099;*/
+}
+/* Descripción de los campos de los formularios */
+.descCampoForm {
+        font-family: Arial, Helvetica, sans-serif; 
+        font-size: 12px;
+	font-weight: bold;
+}
+/* Descripción de los campos de los formularios. Tamaño 11 */
+.descCampoForm11 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+	font-weight: bold;
+}
+/* Mensaje de un submit correcto */
+.okSubmit {
+        color: #000000;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+}
+/* Mensaje de un submit incorrecto */
+.errorSubmit {
+}

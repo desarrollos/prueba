@@ -1,0 +1,90 @@
+body{
+    font-size:12px !important;
+}
+
+.ui-helper-reset {
+
+    font-size: 15px;
+
+}
+.error{
+    color: #FF0000;
+}
+.obligatorio{
+    color: #FF0000;
+}
+#accordion{
+    overflow:hidden !important;
+}
+.ui-widget-overlay{
+    background: #CCC;
+    filter:alpha(opacity=60);
+    -moz-opacity:.60;
+    opacity:.60;
+}
+select, text{
+    width:220px;
+}
+.anadir{
+    background: url(../../images/add.png) no-repeat center left;
+
+}
+.modificar{
+    background: url(../../images/mod.png) no-repeat center left;
+}
+.eliminar{
+    background: url(../../images/eli.png) no-repeat center left;
+}
+.txt{
+  background: url(../../images/txt_i.png) no-repeat center left;  
+}
+.pdf{
+  background: url(../../images/pdf_i.png) no-repeat center left;  
+}
+.xls{
+  background: url(../../images/xls_i.png) no-repeat center left;  
+}
+
+.titulo{
+    width:500px;
+    font-size:30px;
+    margin:0 auto;
+    color:#459E00;
+    text-align: center;
+
+}
+.encabezado{
+    background: url(../../images/cabezote.png) no-repeat center;
+    width:100%;
+    height: 150px;
+    margin:0 auto;
+    background-color: #FFFFFF; 
+    /*    position: absolute;
+        left: 85%;*/
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+    /*border:#333;*/
+}
+
+
+.perfiles .ui-selecting,.usuarios .ui-selecting, .paginas .ui-selecting { background: #AFD455; width:360px; }
+.perfiles .ui-selected,.usuarios .ui-selected,.paginas .ui-selected { background: #52A412; color: white;width:360px;-moz-box-shadow: 1px 1px 0px #090;-webkit-box-shadow: 4px 2px 1px #AFD455; }
+.perfiles, .usuarios, .paginas { list-style-type: none; margin: 0; padding: 0; width:360px; }
+.perfiles li,.usuarios li, .paginas li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px;width:360px; }
+
+#usuarios_permisos, #paginas_permisos, #perfiles_permisos{
+    width: 385px;
+    float:left;
+        
+}
+.paginas .ui-selecting, .paginas .ui-selected, .paginas,.paginas li{
+    width:309px;
+}
+
+.clearBottom{
+    clear: both;
+}
+
+table{
+    font-size:16px;
+}

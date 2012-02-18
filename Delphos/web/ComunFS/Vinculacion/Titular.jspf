@@ -1,0 +1,144 @@
+<table class="tablaContenido">
+  <tr align="center">
+    <td colspan="5" class="titulo1" valign="middle" height="40">Titular Familia</td>
+  </tr>
+  <tr align="center">
+    <td width="254" align="left" class="bgDescTablas"><b>Tipo id.</b></td>
+    <td width="207" align="left" class="bgDescTablas"><select name="codtipoidentidad" id="codtipoidentidad">
+      <option value=" " selected="selected"> </option>
+      <sql:query var="r" sql="select codtipoidentidad, descripcion from tipoidentificacion" dataSource="jdbc/delphos" scope="page"/>
+      <jsp2:forEach items="${r.rows}" var="fila" varStatus="contador">
+        <option value="${fila.codtipoidentidad}">${fila.codtipoidentidad}</option>
+      </jsp2:forEach>
+    </select></td>
+    <td class="bgDescTablas" width="24">&nbsp;</td>
+    <td width="202" align="left" class="bgDescTablas"><p><b>Nro. Identificacion</b></p>    </td>
+    <td width="154" align="left" class="bgDescTablas"><p>
+      <input type="text" size="12" name="identitfam" id="identitfam" />
+</p></td>
+  </tr>
+  <tr rowspan = "1">
+    <td colspan="5" align="left" class="bgDescTablas">&nbsp;</td>
+  </tr>
+  <tr align="center">
+    <td align="left" class="bgDescTablas"><b>Nombres</b></td>
+    <td class="bgDescTablas" align="left"><label>
+      <input type="text" name="nomtfam" id="nomtfam" readonly="true" />
+    </label></td>
+    <td class="bgDescTablas" width="24">&nbsp;</td>
+    <td align="left" class="bgDescTablas"><b>Apellidos</b></td>
+    <td align="left" class="bgDescTablas"><label>
+      <input type="text" name="apetfam" id="apetfam" readonly="true"/>
+    </label></td>
+  </tr>
+  <tr rowspan = "1">
+    <td colspan="5" align="left" class="bgDescTablas">&nbsp;</td>
+  </tr>
+  <tr align="center">
+    <td align="left" class="bgDescTablas"><b>Direccion</b></td>
+    <td align="left" class="bgDescTablas"><label>
+      <input type="text" name="dirtfam" id="dirtfam" readonly="true"/>
+    </label></td>
+    <td class="bgDescTablas" width="24">&nbsp;</td>
+    <td align="left" class="bgDescTablas"><b>Telefono</b></td>
+    <td align="left" class="bgDescTablas"><label>
+      <input type="text" name="teltfam" id="teltfam" readonly="true"/>
+    </label></td>
+  </tr>
+  <tr rowspan = "1">
+    <td colspan="5" align="left" class="bgDescTablas">&nbsp;</td>
+  </tr>
+  <tr align="center">
+    <td align="left" class="bgDescTablas"><b>Tipo T&iacute;tular</b></td>
+    <td class="bgDescTablas" align="left"><select name="tipotitular_coditiptit" id="tipotitular_coditiptit">
+      <option value=" " selected="selected"> </option>
+      <sql:query var="r" sql="select coditiptit, desctiptit from tipotitular" dataSource="jdbc/delphos" scope="page"/>
+      <jsp2:forEach items="${r.rows}" var="fila" varStatus="contador">
+        <option value="${fila.coditiptit}">${fila.desctiptit}</option>
+      </jsp2:forEach>
+    </select></td>
+    <td class="bgDescTablas" width="24">&nbsp;</td>
+    <td align="left" class="bgDescTablas"><p><b>Tipo Beneficiario</b></p>    </td>
+    <td class="bgDescTablas" align="left"><p>
+      <select name="tipobeneficiario_coditipben" id="tipobeneficiario_coditipben">
+        <option value=" " selected="selected"> </option>
+        <sql:query var="r" sql="select coditipben, desctipben from tipobeneficiario" dataSource="jdbc/delphos" scope="page"/>
+        <jsp2:forEach items="${r.rows}" var="fila" varStatus="contador">
+          <option value="${fila.coditipben}">${fila.desctipben}</option>
+        </jsp2:forEach>
+      </select>
+</p></td>
+  </tr>
+  <tr rowspan = "1">
+    <td colspan="5" align="left" class="bgDescTablas">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="bgDescTablas" align="left"><b>Vive Con Hijos</b></td>
+    <td align="left" class="bgDescTablas"><strong>Si
+      <input type="radio" name="vivehisjos" id="vivehisjos_0" value="Si" />
+No
+<input type="radio" name="vivehisjos" id="vivehisjos_1" value="No" checked="checked" />
+    </strong></td>
+    <td class="bgDescTablas" align="left" width="24">&nbsp;</td>
+    <td align="left" class="bgDescTablas"><strong>Fecha de Inicio</strong></td>
+    <td class="bgDescTablas" align="left"><input type="text" name="fechinitit" size="12" id="fechinitit" readonly="readonly" />
+    <input name="button" type="button" id="botonFechinitit" value="..." /></td>
+  </tr>
+  <tr rowspan = "1">
+    <td colspan="5" align="left" class="bgDescTablas">&nbsp;</td>
+  </tr>
+  <tr align="center">
+    <td align="left" class="bgDescTablas"><b>Banco</b></td>
+    <td class="bgDescTablas" align="left"><select name="banco_codbanco_titular" id="banco_codbanco_titular">
+      <option value=" " selected="selected"> </option>
+      <sql:query var="r" sql="select descripcion, codbanco from banco" dataSource="jdbc/delphos" scope="page"/>
+      <jsp2:forEach items="${r.rows}" var="fila" varStatus="contador">
+        <option value="${fila.codbanco}">${fila.descripcion}</option>
+      </jsp2:forEach>
+    </select></td>
+    <td class="bgDescTablas" width="24">&nbsp;</td>
+    <td align="left" class="bgDescTablas"><b>Nro. Cuenta Bancaria </b></td>
+    <td class="bgDescTablas" align="left"><input type="text" name="numcuebanc_titular" id="numcuebanc_titular" /></td>
+  </tr>
+  <tr rowspan = "1">
+    <td colspan="5" align="left" class="bgDescTablas">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="bgDescTablas" align="left"><b>Estado</b></td>
+    <td class="bgDescTablas" align="left"><select name="estadotitular_codiesttit" id="estadotitular_codiesttit">
+      <option value=" " selected="selected"> </option>
+      <sql:query var="r" sql="select codiesttit, descripcion from estadotitular" dataSource="jdbc/delphos" scope="page"/>
+      <jsp2:forEach items="${r.rows}" var="fila" varStatus="contador">
+        <option value="${fila.codiesttit}">${fila.descripcion}</option>
+      </jsp2:forEach>
+    </select></td>
+    <td class="bgDescTablas" align="left">&nbsp;</td>
+    <td class="bgDescTablas" align="left"><b>Firma</b></td>
+    <td class="bgDescTablas" align="left"><input name="firmatitul" type="file" id="firmatitul" size="10" /></td>
+  </tr>
+  <tr rowspan = "1">
+    <td colspan="5" align="left" class="bgDescTablas">&nbsp;</td>
+  </tr>
+  <tr rowspan = "1">
+    <td colspan="5" align="left" class="bgDescTablas"><p align="center"><strong>Observaciones</strong></p>
+    <p align="center">
+      <textarea name="observacion" id="observacion" cols="65" rows="5"></textarea>
+    </p></td>
+  </tr>
+  <tr rowspan = "1">
+    <td colspan="5" align="left" class="bgDescTablas">&nbsp;</td>
+  </tr>
+  <!--<tr rowspan = "5">
+                        <td class="bgDescTablas" align="left" colspan="5">
+                            <applet code="huella.HuellaPrincipal"
+		   archive="Huella.jar"
+		   width=515
+		   height=560>
+	<PARAM name=DllZipName value="GrFingerDLLs.zip">
+	<PARAM name=licenseFile value="GrFingerLicenseAgreementLightTrial.txt">
+	</applet>
+                            <APPLET CODE="huella.HuellaPrincipal">
+                        </APPLET></td>
+                    </tr>-->
+</table>
+<p>&nbsp;</p>
