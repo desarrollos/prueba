@@ -123,7 +123,25 @@ public class Quejas extends HttpServlet {
         try {
             ResultSet rs = null;
             PreparedStatement stmt = null;
-            String sql = " INSERT INTO quejas (codunifami,quejconsecut,quejciclpago,codtipoidentidadpers,quejidentifi,quejfecha,tipquecodigo,queclacodigo,codtipoidentidad,numidentfunc,quejobservac,ususiscodigo,fecharegistro,quejarchdocu,quejarchdocu_nombre) VALUES (" + (dkda.o(vars, "codunifami_quejas").equals("") ? null : "'" + dkda.o(vars, "codunifami_quejas") + "'") + "," + (dkda.o(vars, "quejconsecut_quejas").equals("") ? null : dkda.o(vars, "quejconsecut_quejas")) + "," + (dkda.o(vars, "quejciclpago_quejas").equals("") ? null : dkda.o(vars, "quejciclpago_quejas")) + "," + (dkda.o(vars, "codtipoidentidadpers_quejas").equals("") ? null : "'" + dkda.o(vars, "codtipoidentidadpers_quejas") + "'") + "," + (dkda.o(vars, "quejidentifi_quejas").equals("") ? null : "'" + dkda.o(vars, "quejidentifi_quejas") + "'") + "," + (dkda.o(vars, "quejfecha_quejas").equals("") ? null : "'" + dkda.o(vars, "quejfecha_quejas") + "'") + "," + (dkda.o(quejaclasificacion_quejas_1, "tipquecodigo").equals("") ? null : "'" + dkda.o(quejaclasificacion_quejas_1, "tipquecodigo") + "'") + "," + (dkda.o(quejaclasificacion_quejas_1, "queclacodigo").equals("") ? null : "'" + dkda.o(quejaclasificacion_quejas_1, "queclacodigo") + "'") + "," + (dkda.o(vars, "codtipoidentidad_quejas").equals("") ? null : "'" + dkda.o(vars, "codtipoidentidad_quejas") + "'") + "," + (dkda.o(vars, "numidentfunc_quejas").equals("") ? null : "'" + dkda.o(vars, "numidentfunc_quejas") + "'") + "," + (dkda.o(vars, "quejobservac_quejas").equals("") ? null : "'" + dkda.o(vars, "quejobservac_quejas") + "'") + "," + "'" + fun.usuarioAutenticado(request) + "'" + "," + "NOW()::date" + "," + (dkda.o(vars, "quejarchdocu_quejas").equals("") ? null : "lo_import('" + fun.temp(request) + dkda.o(vars, "quejarchdocu_quejas") + "')") + "," + (dkda.o(vars, "quejarchdocu_quejas").equals("") ? null : "'" + dkda.o(vars, "quejarchdocu_quejas") + "'") + ")";
+            String sql = " INSERT INTO quejas"
+                    + " (codunifami,quejconsecut,quejciclpago,codtipoidentidadpers,quejidentifi,quejfecha,tipquecodigo,queclacodigo,codtipoidentidad,"
+                    + "numidentfunc,quejobservac,ususiscodigo,fecharegistro,quejarchdocu,quejarchdocu_nombre) VALUES"
+                    + " (" + (dkda.o(vars, "codunifami_quejas").equals("") ? null : "'" + dkda.o(vars, "codunifami_quejas") + "'")
+                    + "," + (dkda.o(vars, "quejconsecut_quejas").equals("") ? null : dkda.o(vars, "quejconsecut_quejas")) + ","
+                    + (dkda.o(vars, "quejciclpago_quejas").equals("") ? null : dkda.o(vars, "quejciclpago_quejas")) + ","
+                    + (dkda.o(vars, "codtipoidentidadpers_quejas").equals("") ? null : "'" + dkda.o(vars, "codtipoidentidadpers_quejas") + "'")
+                    + "," + (dkda.o(vars, "quejidentifi_quejas").equals("") ? null : "'" + dkda.o(vars, "quejidentifi_quejas") + "'") + ","
+                    + (dkda.o(vars, "quejfecha_quejas").equals("") ? null : "'" + dkda.o(vars, "quejfecha_quejas") + "'") + ","
+                    + (dkda.o(quejaclasificacion_quejas_1, "tipquecodigo").equals("") ? null : "'"
+                    + dkda.o(quejaclasificacion_quejas_1, "tipquecodigo") + "'") + ","
+                    + (dkda.o(quejaclasificacion_quejas_1, "queclacodigo").equals("") ? null : "'"
+                    + dkda.o(quejaclasificacion_quejas_1, "queclacodigo") + "'") + ","
+                    + (dkda.o(vars, "codtipoidentidad_quejas").equals("") ? null : "'"
+                    + dkda.o(vars, "codtipoidentidad_quejas") + "'") + "," + (dkda.o(vars, "numidentfunc_quejas").equals("") ? null : "'"
+                    + dkda.o(vars, "numidentfunc_quejas") + "'") + "," + (dkda.o(vars, "quejobservac_quejas").equals("") ? null : "'"
+                    + dkda.o(vars, "quejobservac_quejas") + "'") + "," + "'" + fun.usuarioAutenticado(request) + "'" + "," + "NOW()::date" + ","
+                    + (dkda.o(vars, "quejarchdocu_quejas").equals("") ? null : "lo_import('" + fun.temp(request) + dkda.o(vars, "quejarchdocu_quejas")
+                    + "')") + "," + (dkda.o(vars, "quejarchdocu_quejas").equals("") ? null : "'" + dkda.o(vars, "quejarchdocu_quejas") + "'") + ")";
 
 
             System.out.println(sql);
@@ -143,7 +161,14 @@ public class Quejas extends HttpServlet {
         try {
             ResultSet rs = null;
             PreparedStatement stmt = null;
-            String sql = "UPDATE quejas SET codunifami = " + (dkda.o(vars, "codunifami_quejas").equals("") ? null : "'" + dkda.o(vars, "codunifami_quejas") + "'") + ",quejconsecut = " + (dkda.o(vars, "quejconsecut_quejas").equals("") ? null : dkda.o(vars, "quejconsecut_quejas")) + ",quejciclpago = " + (dkda.o(vars, "quejciclpago_quejas").equals("") ? null : dkda.o(vars, "quejciclpago_quejas")) + ",codtipoidentidadpers = " + (dkda.o(vars, "codtipoidentidadpers_quejas").equals("") ? null : "'" + dkda.o(vars, "codtipoidentidadpers_quejas") + "'") + ",quejidentifi = " + (dkda.o(vars, "quejidentifi_quejas").equals("") ? null : "'" + dkda.o(vars, "quejidentifi_quejas") + "'") + ",quejfecha = " + (dkda.o(vars, "quejfecha_quejas").equals("") ? null : "'" + dkda.o(vars, "quejfecha_quejas") + "'") + ",tipquecodigo = " + (dkda.o(quejaclasificacion_quejas_1, "tipquecodigo").equals("") ? null : "'" + dkda.o(quejaclasificacion_quejas_1, "tipquecodigo") + "'") + ",queclacodigo = " + (dkda.o(quejaclasificacion_quejas_1, "queclacodigo").equals("") ? null : "'" + dkda.o(quejaclasificacion_quejas_1, "queclacodigo") + "'") + ",codtipoidentidad = " + (dkda.o(vars, "codtipoidentidad_quejas").equals("") ? null : "'" + dkda.o(vars, "codtipoidentidad_quejas") + "'") + ",numidentfunc = " + (dkda.o(vars, "numidentfunc_quejas").equals("") ? null : "'" + dkda.o(vars, "numidentfunc_quejas") + "'") + ",quejobservac = " + (dkda.o(vars, "quejobservac_quejas").equals("") ? null : "'" + dkda.o(vars, "quejobservac_quejas") + "'") + ",ususiscodigo = " + "'" + fun.usuarioAutenticado(request) + "'" + ",fecharegistro = " + "NOW()::date" + ",quejarchdocu = " + (dkda.o(vars, "quejarchdocu_quejas").equals("") ? null : "lo_import('" + fun.temp(request) + dkda.o(vars, "quejarchdocu_quejas") + "')") + ",quejarchdocu_nombre = " + (dkda.o(vars, "quejarchdocu_quejas").equals("") ? null : "'" + dkda.o(vars, "quejarchdocu_quejas") + "'") + " WHERE codunifami = '" + dkda.o(sel, "codunifami") + "' AND quejconsecut = " + dkda.o(sel, "quejconsecut") + " ";
+            String sql = "UPDATE quejas SET codunifami = " + (dkda.o(vars, "codunifami_quejas").equals("") ? null : "'" +
+                    dkda.o(vars, "codunifami_quejas") + "'") + ",quejconsecut = " + (dkda.o(vars, "quejconsecut_quejas").equals("") ? null : 
+                    dkda.o(vars, "quejconsecut_quejas")) + ",quejciclpago = " + (dkda.o(vars, "quejciclpago_quejas").equals("") ? null : 
+                    dkda.o(vars, "quejciclpago_quejas")) + ",codtipoidentidadpers = " + (dkda.o(vars, "codtipoidentidadpers_quejas").equals("") ? null :
+                    "'" + dkda.o(vars, "codtipoidentidadpers_quejas") + "'") + ",quejidentifi = " + (dkda.o(vars, "quejidentifi_quejas").equals("") ? 
+                    null : "'" + dkda.o(vars, "quejidentifi_quejas") + "'") + ",quejfecha = " + (dkda.o(vars, "quejfecha_quejas").equals("") ? null :
+                    "'" + dkda.o(vars, "quejfecha_quejas") + "'") + ",tipquecodigo = " + (dkda.o(quejaclasificacion_quejas_1, "tipquecodigo").equals("") ?
+                    null : "'" + dkda.o(quejaclasificacion_quejas_1, "tipquecodigo") + "'") + ",queclacodigo = " + (dkda.o(quejaclasificacion_quejas_1, "queclacodigo").equals("") ? null : "'" + dkda.o(quejaclasificacion_quejas_1, "queclacodigo") + "'") + ",codtipoidentidad = " + (dkda.o(vars, "codtipoidentidad_quejas").equals("") ? null : "'" + dkda.o(vars, "codtipoidentidad_quejas") + "'") + ",numidentfunc = " + (dkda.o(vars, "numidentfunc_quejas").equals("") ? null : "'" + dkda.o(vars, "numidentfunc_quejas") + "'") + ",quejobservac = " + (dkda.o(vars, "quejobservac_quejas").equals("") ? null : "'" + dkda.o(vars, "quejobservac_quejas") + "'") + ",ususiscodigo = " + "'" + fun.usuarioAutenticado(request) + "'" + ",fecharegistro = " + "NOW()::date" + ",quejarchdocu = " + (dkda.o(vars, "quejarchdocu_quejas").equals("") ? null : "lo_import('" + fun.temp(request) + dkda.o(vars, "quejarchdocu_quejas") + "')") + ",quejarchdocu_nombre = " + (dkda.o(vars, "quejarchdocu_quejas").equals("") ? null : "'" + dkda.o(vars, "quejarchdocu_quejas") + "'") + " WHERE codunifami = '" + dkda.o(sel, "codunifami") + "' AND quejconsecut = " + dkda.o(sel, "quejconsecut") + " ";
             System.out.println(sql);
             stmt = con.con.prepareStatement(sql);
             stmt.executeUpdate();
@@ -184,10 +209,96 @@ public class Quejas extends HttpServlet {
         try {
             ResultSet rs = null;
             PreparedStatement stmt = null;
-            String sql = "";
+            String sql = ""
+                    + "SELECT quejas.\"codunifami\"                     AS quejas_codunifami, "
+                    + "       quejas.\"quejconsecut\"                   AS quejas_quejconsecut, "
+                    + "       quejas.\"quejciclpago\"                   AS quejas_quejciclpago, "
+                    + "       quejas.\"codtipoidentidadpers\"           AS quejas_codtipoidentidadpers, "
+                    + "       quejas.\"quejidentifi\"                   AS quejas_quejidentifi, "
+                    + "       quejas.\"quejfecha\"                      AS quejas_quejfecha, "
+                    + "       quejas.\"tipquecodigo\"                   AS quejas_tipquecodigo, "
+                    + "       quejas.\"queclacodigo\"                   AS quejas_queclacodigo, "
+                    + "       quejas.\"codtipoidentidad\"               AS quejas_codtipoidentidad, "
+                    + "       quejas.\"numidentfunc\"                   AS quejas_numidentfunc, "
+                    + "       quejas.\"quejobservac\"                   AS quejas_quejobservac, "
+                    + "       quejas.\"quejarchdocu_nombre\"            AS quejas_quejarchdocu_nombre, "
+                    
+                    + " CASE WHEN quejas.quejarchdocu_nombre  IS NULL OR quejas.quejarchdocu_nombre  = '' THEN 0 "
+                    + " ELSE lo_export(quejas.quejarchdocu, '" + fun.temp(request) + "' || quejas.quejarchdocu_nombre ) END, "                    
+                    
+                    + "       quejaclasificacion.\"tipquecodigo\"       AS "
+                    + "       quejaclasificacion_tipquecodigo, "
+                    + "       quejaclasificacion.\"queclacodigo\"       AS "
+                    + "       quejaclasificacion_queclacodigo, "
+                    + "       quejaclasificacion.\"quecladescri\"       AS "
+                    + "       quejaclasificacion_quecladescri, "
+                    + "       tipoidentificacion_1.\"codtipoidentidad\" AS "
+                    + "       tipoidentificacion_codtipoidentidad_1, "
+                    + "       tipoidentificacion_1.\"descripcion\"      AS "
+                    + "       tipoidentificacion_descripcion_1, "
+                    + "       tipoidentificacion_2.\"codtipoidentidad\" AS "
+                    + "       tipoidentificacion_codtipoidentidad_2, "
+                    + "       tipoidentificacion_2.\"descripcion\"      AS "
+                    + "       tipoidentificacion_descripcion_2, "
+                    + "       inscripcion.\"codunifami\"                AS inscripcion_codunifami "
+                    + "FROM   \"public\".\"inscripcion\" inscripcion "
+                    + "       INNER JOIN \"public\".\"quejas\" quejas "
+                    + "         ON inscripcion.\"codunifami\" = quejas.\"codunifami\" "
+                    + "       INNER JOIN \"public\".\"quejaclasificacion\" quejaclasificacion "
+                    + "         ON quejas.\"tipquecodigo\" = quejaclasificacion.\"tipquecodigo\" "
+                    + "            AND quejaclasificacion.\"queclacodigo\" = quejas.\"queclacodigo\" "
+                    + "       INNER JOIN \"public\".\"tipoidentificacion\" tipoidentificacion_1 "
+                    + "         ON quejas.\"codtipoidentidadpers\" = "
+                    + "            tipoidentificacion_1.\"codtipoidentidad\" "
+                    + "       INNER JOIN \"public\".\"tipoidentificacion\" tipoidentificacion_2 "
+                    + "         ON quejas.\"codtipoidentidad\" = tipoidentificacion_2.\"codtipoidentidad\"   WHERE "
+                    + "quejas.codunifami = '" + dkda.o(sel, "codunifami") + "' AND quejas.quejconsecut = " + dkda.o(sel, "quejconsecut") + " ";
+            System.out.println(sql);
             stmt = con.con.prepareStatement(sql);
             rs = stmt.executeQuery();
             rs.next();
+
+            info += "text|#quejobservac_quejas|" + (rs.getString("quejas_quejobservac") == null ? ""
+                    : rs.getString("quejas_quejobservac")) + ":_";                                    
+            
+            info += "text|#quejarchdocu_quejas|" + (rs.getString("quejas_quejarchdocu_nombre") == null ? ""
+                    : rs.getString("quejas_quejarchdocu_nombre")) + ":_";                        
+            
+            info += "text|#numidentfunc_quejas|" + (rs.getString("quejas_numidentfunc") == null ? ""
+                    : rs.getString("quejas_numidentfunc")) + ":_";            
+
+            info += "combo|#codtipoidentidad_quejas|" + rs.getString("tipoidentificacion_codtipoidentidad_2")
+                    + "|llenarCombo('codtipoidentidad_quejas', '"
+                    + rs.getString("tipoidentificacion_codtipoidentidad_2") + "', '" + rs.getString("tipoidentificacion_descripcion_2") + "'):_";
+            
+            // quejaclasificacion   tipquecodigo  1   queclacodigo  3   
+            info += "combo|#quejaclasificacion_quejas_1|" + "quejaclasificacion   tipquecodigo  " + rs.getString("quejaclasificacion_tipquecodigo") + "   "
+                    + "queclacodigo  " + rs.getString("quejaclasificacion_queclacodigo") + "|llenarCombo('quejaclasificacion_quejas_1', '"
+                    + "quejaclasificacion   tipquecodigo  " + rs.getString("quejaclasificacion_tipquecodigo") + "   "
+                    + "queclacodigo  " + rs.getString("quejaclasificacion_queclacodigo") + "', '" + rs.getString("quejaclasificacion_quecladescri") + "'):_";
+
+            info += "text|#_fecha_quejfecha_quejas|" + (rs.getString("quejas_quejfecha") == null ? ""
+                    : rs.getString("quejas_quejfecha")) + ":_";
+
+            info += "text|#quejidentifi_quejas|" + (rs.getString("quejas_quejidentifi") == null ? ""
+                    : rs.getString("quejas_quejidentifi")) + ":_";
+
+            info += "combo|#codtipoidentidadpers_quejas|" + rs.getString("tipoidentificacion_codtipoidentidad_1")
+                    + "|llenarCombo('codtipoidentidadpers_quejas', '"
+                    + rs.getString("tipoidentificacion_codtipoidentidad_1") + "', '" + rs.getString("tipoidentificacion_descripcion_1") + "'):_";
+
+            info += "text|#quejciclpago_quejas|" + (rs.getString("quejas_quejciclpago") == null ? ""
+                    : rs.getString("quejas_quejciclpago")) + ":_";
+
+            info += "text|#quejconsecut_quejas|" + (rs.getString("quejas_quejconsecut") == null ? ""
+                    : rs.getString("quejas_quejconsecut")) + ":_";
+
+            info += "combo|#codunifami_quejas|" + rs.getString("quejas_codunifami")
+                    + "|llenarCombo('codunifami_quejas', '"
+                    + rs.getString("quejas_codunifami") + "', '" + rs.getString("quejas_codunifami") + "'):_";
+
+
+
             respuesta = "opcion=obtener_quejas&&estado=si&&error=no&&errorDes=no&&codigo=" + codigo + "&&info=" + info.replace("\"", "");
         } catch (SQLException e) {
             respuesta = "opcion=obtener_quejas&&estado=no&&error=si&&errorDes=" + dkda.convertirACarEspecial(e.getMessage());
@@ -203,7 +314,12 @@ public class Quejas extends HttpServlet {
         Connection conexion = bdS.getConexion();
         boolean existe = true;
         try {
-            pQuery = conexion.prepareStatement("SELECT COUNT(*) FROM quejas  WHERE codunifami = '" + dkda.o(sel, "codunifami") + "'" + " AND quejconsecut = " + dkda.o(sel, "quejconsecut") + "");
+            String sql = "SELECT COUNT(*) FROM quejas  WHERE "
+                    + "codunifami = '" + dkda.o(vars, "codunifami_quejas") + "'" + " AND "
+                    + "quejconsecut = " + dkda.o(vars, "quejconsecut_quejas") + "";
+
+            System.out.println(sql);
+            pQuery = conexion.prepareStatement(sql);
             rQuery = pQuery.executeQuery();
             rQuery.next();
             existe = rQuery.getInt(1) > 0 ? true : false;
@@ -239,7 +355,7 @@ public class Quejas extends HttpServlet {
             error = "Identificación Persona Queja: no puede ser vacio.";
         } else if (dkda.o(vars, "quejfecha_quejas").isEmpty()) {
             error = "Fecha Queja: no puede ser vacio.";
-        } else if (dkda.o(vars, "tipquecodigo_quejas").isEmpty()) {
+        } else if (dkda.o(quejaclasificacion_quejas_1, "tipquecodigo").isEmpty()) {
             error = "Código Tipo de Queja: no puede ser vacio.";
         } else if (dkda.o(vars, "codtipoidentidad_quejas").isEmpty()) {
             error = "Tipo Identificacion Funcionario Recibe la Queja: no puede ser vacio.";
@@ -525,19 +641,37 @@ public class Quejas extends HttpServlet {
         return respuesta;
     }// 
 
-    /** * Handles the HTTP GET method. * @param request servlet request * @param response servlet response * @throws ServletException if a servlet-specific error occurs * @throws IOException if an I/O error occurs */
+    /**
+     * * Handles the HTTP GET method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processRequest(request, response);
     }
 
-    /** * Handles the HTTP POST method. * @param request servlet request * @param response servlet response * @throws ServletException if a servlet-specific error occurs * @throws IOException if an I/O error occurs */
+    /**
+     * * Handles the HTTP POST method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processRequest(request, response);
     }
 
-    /** * Returns a short description of the servlet. * @return a String containing servlet description */
+    /**
+     * * Returns a short description of the servlet.
+     *
+     * @return a String containing servlet description
+     */
     @Override
     public String getServletInfo() {
         return "Short description";

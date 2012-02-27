@@ -1,92 +1,92 @@
 //## {flexiTipoRequisito-tiporequisito}
 flexiTipoRequisito = { 
-	url : '../edinstancias?parametros=opcion=tabla-tabla=tiporequisito-principal=codtiporequisito-seleccion=descripcion-tipo=modificar', 
-	dataType : 'xml', 
-	height: 280, 
-	width : 850, 
-	usepager : true, 
-	rp : 30, 
-	sortname: 'codtiporequisito', 
-	sortorder: 'asc', 
-	buttons : [ 
-	{ 
-	name : 'Agregar Nuevo Requisito', 
-	bclass : 'anadir' 
-	} 
-	] 
+    url : '../edinstancias?parametros=opcion=tabla-tabla=tiporequisito-principal=codtiporequisito-seleccion=descripcion-tipo=modificar', 
+    dataType : 'xml', 
+    height: 280, 
+    width : 850, 
+    usepager : true, 
+    rp : 30, 
+    sortname: 'codtiporequisito', 
+    sortorder: 'asc', 
+    buttons : [ 
+    { 
+        name : 'Agregar Nuevo Requisito', 
+        bclass : 'anadir' 
+    } 
+    ] 
 }; 
 
 //## {flexiRequisitosFamilias-requisitos}
 flexiRequisitosFamilias = { 
-	url : '../edinstancias?parametros=opcion=tabla-tabla=requisitos-principal=codtiporequisito,coditipben,codactividadsalud-seleccion=requisdescri-tipo=modificar', 
-	dataType : 'xml', 
-	height: 280, 
-	width : 850, 
-	usepager : true, 
-	rp : 30, 
-	sortname: 'codactividadsalud', 
-	sortorder: 'asc', 
-	buttons : [ 
-	{ 
-	name : 'Agregar Nuevo Requisito ', 
-	bclass : 'anadir' 
-	} 
-	] 
+    url : '../edinstancias?parametros=opcion=tabla-tabla=requisitos-principal=codtiporequisito,coditipben,codactividadsalud-seleccion=requisdescri-tipo=modificar', 
+    dataType : 'xml', 
+    height: 280, 
+    width : 850, 
+    usepager : true, 
+    rp : 30, 
+    sortname: 'codactividadsalud', 
+    sortorder: 'asc', 
+    buttons : [ 
+    { 
+        name : 'Agregar Nuevo Requisito ', 
+        bclass : 'anadir' 
+    } 
+    ] 
 }; 
 
 
 //## {flexiTipoCorporativa-tipocorporativa}
 flexiTipoCorporativa = { 
-	url : '../edinstancias?parametros=opcion=tabla-tabla=tipocorporativa-principal=tipcorcodigo-seleccion=tipcordescripc-tipo=modificar', 
-	dataType : 'xml', 
-	height: 280, 
-	width : 850, 
-	usepager : true, 
-	rp : 30, 
-	sortname: 'tipcorcodigo', 
-	sortorder: 'asc', 
-	buttons : [ 
-	{ 
-	name : 'Agregar Nuevo Tipo Corporativa', 
-	bclass : 'anadir' 
-	} 
-	] 
+    url : '../edinstancias?parametros=opcion=tabla-tabla=tipocorporativa-principal=tipcorcodigo-seleccion=tipcordescripc-tipo=modificar', 
+    dataType : 'xml', 
+    height: 280, 
+    width : 850, 
+    usepager : true, 
+    rp : 30, 
+    sortname: 'tipcorcodigo', 
+    sortorder: 'asc', 
+    buttons : [ 
+    { 
+        name : 'Agregar Nuevo Tipo Corporativa', 
+        bclass : 'anadir' 
+    } 
+    ] 
 }; 
 
 //## {flexiEstadoCorporativa-estadocorporativa}
 flexiEstadoCorporativa = { 
-	url : '../edinstancias?parametros=opcion=tabla-tabla=estadocorporativa-principal=estcorcodigo-seleccion=estcordescripc-tipo=modificar', 
-	dataType : 'xml', 
-	height: 280, 
-	width : 850, 
-	usepager : true, 
-	rp : 30, 
-	sortname: 'estcorcodigo', 
-	sortorder: 'asc', 
-	buttons : [ 
-	{ 
-	name : 'Agregar Nuevo Estado Corporativa', 
-	bclass : 'anadir' 
-	} 
-	] 
+    url : '../edinstancias?parametros=opcion=tabla-tabla=estadocorporativa-principal=estcorcodigo-seleccion=estcordescripc-tipo=modificar', 
+    dataType : 'xml', 
+    height: 280, 
+    width : 850, 
+    usepager : true, 
+    rp : 30, 
+    sortname: 'estcorcodigo', 
+    sortorder: 'asc', 
+    buttons : [ 
+    { 
+        name : 'Agregar Nuevo Estado Corporativa', 
+        bclass : 'anadir' 
+    } 
+    ] 
 }; 
 
 //## {flexiImagenCorporativa-imagencorporativa}
 flexiImagenCorporativa = { 
-	url : '../edinstancias?parametros=opcion=tabla-tabla=imagencorporativa-principal=imacorid-seleccion=imacorid-tipo=modificar', 
-	dataType : 'xml', 
-	height: 280, 
-	width : 850, 
-	usepager : true, 
-	rp : 30, 
-	sortname: 'imacorid', 
-	sortorder: 'asc', 
-	buttons : [ 
-	{ 
-	name : 'Agregar Nueva Imagen Corporativa', 
-	bclass : 'anadir' 
-	} 
-	] 
+    url : '../edinstancias?parametros=opcion=tabla-tabla=imagencorporativa-principal=imacorid-seleccion=imacorid-tipo=modificar', 
+    dataType : 'xml', 
+    height: 280, 
+    width : 850, 
+    usepager : true, 
+    rp : 30, 
+    sortname: 'imacorid', 
+    sortorder: 'asc', 
+    buttons : [ 
+    { 
+        name : 'Agregar Nueva Imagen Corporativa', 
+        bclass : 'anadir' 
+    } 
+    ] 
 }; 
 
 //## {flexiEstadoCumplimactividad-estadocumplimactividad}
@@ -1454,7 +1454,7 @@ flexiQuejaClasificacion = {
 }
 //## {flexiQuejas-quejas}
 flexiQuejas ={
-    url : '../edinstancias?parametros=opcion=tabla-tabla=quejas-principal=quejconsecut,codunifami',
+    url : '../edinstancias?parametros=opcion=tabla-tabla=quejas-principal=quejconsecut,codunifami-tipo=modificar-seleccion=quejconsecut',
     dataType : 'xml',
     height: 280,
     width : 850,
@@ -1463,15 +1463,6 @@ flexiQuejas ={
     sortname: 'quejconsecut',
     sortorder: 'asc',
     buttons : [{
-        name : 'Modificar', 
-        onpress : modificarElemento,
-        bclass : 'modificar'
-    },
-    {
-        name : 'Eliminar', 
-        onpress : eliminarElementos,
-        bclass : 'eliminar'
-    },{
         name : 'Agregar Nueva Clasificación Queja',
         bclass : 'anadir'
     }],

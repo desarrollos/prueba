@@ -55,8 +55,11 @@
                             <tr>
                                 <td> <input type="text" id="quejidentifi_quejas" name="quejidentifi_quejas"/></td>
                                 <td><input type="text" id="_fecha_quejfecha_quejas" name="quejfecha_quejas" value="" maxlength="19" readonly="readonly" /></td>
-                                <td> <select  id="quejaclasificacion_quejas" name="quejaclasificacion_quejas" onfocus="tabla(flexiQuejaClasificacion, 'Código Tipo de Queja', 'quejaclasificacion_quejas' )" onclick="tabla(flexiQuejaClasificacion, 'Código Tipo de Queja', 'quejaclasificacion_quejas' )"></select></td>
-                                <td> <input type="text" id="codtipoidentidad_quejas" name="codtipoidentidad_quejas"/></td>
+                                <td> <select  id="quejaclasificacion_quejas_1" name="quejaclasificacion_quejas_1" onfocus="tabla(flexiQuejaClasificacion, 'Código Tipo de Queja', 'quejaclasificacion_quejas_1' )" onclick="tabla(flexiQuejaClasificacion, 'Código Tipo de Queja', 'quejaclasificacion_quejas_1' )"></select></td>
+
+                                <td> <select  id="codtipoidentidad_quejas" name="codtipoidentidad_quejas" onfocus="tabla(flexiTipoIdentificacion,
+                                    'Tipo Identificaci&oacute;n Funcionario Recibe Queja', 'codtipoidentidad_quejas' )"
+                                              onclick="tabla(flexiTipoIdentificacion, 'Tipo Identificaci&oacute;n Persona Queja', 'codtipoidentidad_quejas' )"></select></td>
                             </tr>
                             <tr>
                                 <td>Numero Dcumento Funcionario</td>
@@ -66,10 +69,7 @@
                             <tr>
                                 <td> <input type="text" id="numidentfunc_quejas" name="numidentfunc_quejas"/></td>
                                 <td><input name="quejarchdocu_quejas" type="text" id="quejarchdocu_quejas" size="17" value="" readonly="readonly" onclick="abrirCargaArchivo('quejarchdocu_quejas')" />   <img src="../images/descargar_1.png" width="30" height="30" onclick="reHref('quejarchdocu_quejas' )" alt="Descargar" /></td>
-                                <td colspan="2"> 
-                                    <textarea id="quejobservac_quejas" name="quejobservac_quejas" cols="50" rows="4">
-
-                                    </textarea></td>
+                                <td colspan="2"><textarea id="quejobservac_quejas" name="quejobservac_quejas" cols="50" rows="4"></textarea></td>
                             </tr>
                         </table>
                     </div>
@@ -86,9 +86,9 @@
                             </tr>
                             <tr>
                                 <td><select name="quejas_quejadocumento_1" id="quejas_quejadocumento_1" 
-                                            onfocus="tabla(flexiQuejaBeneficiario, 'Codigo Unico Familia',
-                                                'quejas_quejadocumento_1' )" onclick="tabla(flexiQuejaBeneficiario, 
-                                                'Codigo Unico Familia', 'quejas_quejadocumento_1' )"></select></td>
+                                            onfocus="tabla(flexiQuejas, 'Quejas',
+                                                'quejas_quejadocumento_1' )" onclick="tabla(flexiQuejas, 
+                                                'Quejas', 'quejas_quejadocumento_1' )"></select></td>
 
 
                                 <td><select name="codtipodctoasociado_quejasDocumentos" id="codtipodctoasociado_quejasDocumentos" 
@@ -107,10 +107,10 @@
                                 <div id="switch_quedocentreg_quejasDocumentos"></div>
                                 <input type="hidden" name="quedocentreg_quejasDocumentos" id="quedocentreg_quejasDocumentos" /></td>
 
-                            <td><input name="quedocarchi_quejasDocumentos" type="text" id="quedocarchi_quejasDocumentos" value="" readonly="readonly" 
-                                       onclick="abrirCargaArchivo('archivoactoadmin')" /> <a href="../descargarArchivo?nombreArchivo=" 
-                                       target="_blank" onclick="this.href = reHref( this.href, 'quejarchdocu_quejasRegistro' )">
-                                    <img src="../images/descargar_1.png" alt="Descargar" width="30" height="30" onclick="" /></a></td>
+                            <td><input name="quedocarchi_quejadocumento" type="text" id="quedocarchi_quejadocumento"
+                                       size="17" value="" readonly="readonly" onclick="abrirCargaArchivo('quedocarchi_quejadocumento')" /> 
+                                <img src="../images/descargar_1.png" width="30" height="30"  alt="Subir Archivo" onclick="reHref('quedocarchi_quejadocumento' )" /></td>
+
                         </table>
                     </div>
                     <div id="tabs-3"><br />
