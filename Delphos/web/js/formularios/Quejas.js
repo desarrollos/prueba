@@ -1,4 +1,25 @@
 $(document).ready( function( ) {
+    config = {
+        selDep : [
+        {
+            id : 'beneficiario_quejabeneficiario_1',
+            tabla : 'beneficiario',
+            selectRel : [
+            { 
+                id : 'quejas_quejabeneficiario_1', 
+                rel : 'beneficiario.codunifami|',
+                sel : 'codunifami',
+                erMeg : 'Primero debe seleccionar la queja.'
+            }
+            ]
+        }
+             
+        ]
+    }
+    configuraciones(config);
+    
+    
+    
     $("#ajax").ajaxStop( function() {
         datos = $("#respuestaAjax").val();
         mapaDatos = mapa(datos);

@@ -1,3 +1,22 @@
+//## {flexiQuejaRespuesta-quejarespuesta}
+flexiQuejaRespuesta = { 
+	url : '../edinstancias?parametros=opcion=tabla-tabla=quejarespuesta-principal=codunifami,quejconsecut-seleccion=codunifami-tipo=modificar', 
+	dataType : 'xml', 
+	height: 280, 
+	width : 850, 
+	usepager : true, 
+	rp : 30, 
+	sortname: 'codunifami', 
+	sortorder: 'asc', 
+	buttons : [ 
+	{ 
+	name : 'Agregar Nuev', 
+	bclass : 'anadir' 
+	} 
+	] 
+}; 
+
+
 //## {flexiTipoRequisito-tiporequisito}
 flexiTipoRequisito = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=tiporequisito-principal=codtiporequisito-seleccion=descripcion-tipo=modificar', 
@@ -1231,7 +1250,7 @@ flexiDocumentoCausal = {
 };
 //## {flexiDocumentoQuejas-quejadocumento}
 flexiDocumentoQuejas = {
-    url : '../edinstancias?parametros=opcion=tabla-tabla=quejadocumento-principal=codunifami,quejconsecut,codtipodctoasociado asociado-tipo=modificar',
+    url : '../edinstancias?parametros=opcion=tabla-tabla=quejadocumento-principal=codunifami,quejconsecut,codtipodctoasociado-tipo=modificar',
     dataType : 'xml',
     height: 280,
     width : 850,
@@ -1477,7 +1496,7 @@ flexiQuejas ={
 
 //## {flexiQuejaBeneficiario-inscripcion}
 flexiQuejaBeneficiario ={
-    url : '../edinstancias?parametros=opcion=tabla-tabla=inscripcion-principal=codunifami-seleccion=codunifami-tipo=modificar',
+    url : '../edinstancias?parametros=opcion=tabla-tabla=quejabeneficiario-principal=codunifami,quejconsecut,codtipoidentidad,identbenef-seleccion=codunifami-tipo=modificar',
     dataType : 'xml',
     height: 280,
     width : 850,

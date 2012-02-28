@@ -91,10 +91,10 @@
                                                 'Quejas', 'quejas_quejadocumento_1' )"></select></td>
 
 
-                                <td><select name="codtipodctoasociado_quejasDocumentos" id="codtipodctoasociado_quejasDocumentos" 
+                                <td><select name="codtipodctoasociado_quejadocumento" id="codtipodctoasociado_quejadocumento" 
                                             onfocus="tabla(flexiTipoDocumentoAsociado, 'Codigo Tipo Documento Asociado',
-                                                'codtipodctoasociado_quejasDocumentos' )" onclick="tabla(flexiTipoDocumentoAsociado, 
-                                                'Codigo Tipo Documento Asociado', 'codtipodctoasociado_quejasDocumentos' )"></select></td>
+                                                'codtipodctoasociado_quejadocumento' )" onclick="tabla(flexiTipoDocumentoAsociado, 
+                                                'Codigo Tipo Documento Asociado', 'codtipodctoasociado_quejadocumento' )"></select></td>
 
 
                             </tr>
@@ -104,116 +104,116 @@
 
                             </tr>
                             <td>
-                                <div id="switch_quedocentreg_quejasDocumentos"></div>
-                                <input type="hidden" name="quedocentreg_quejasDocumentos" id="quedocentreg_quejasDocumentos" /></td>
 
-                            <td><input name="quedocarchi_quejadocumento" type="text" id="quedocarchi_quejadocumento"
-                                       size="17" value="" readonly="readonly" onclick="abrirCargaArchivo('quedocarchi_quejadocumento')" /> 
-                                <img src="../images/descargar_1.png" width="30" height="30"  alt="Subir Archivo" onclick="reHref('quedocarchi_quejadocumento' )" /></td>
+                                <div id="switch_quedocentreg_quejadocumento"></div>
+                                <input type="hidden" name="quedocentreg_quejadocumento" id="quedocentreg_quejadocumento" />
+
+
+                                <td><input name="quedocarchi_quejadocumento" type="text" id="quedocarchi_quejadocumento"
+                                           size="17" value="" readonly="readonly" onclick="abrirCargaArchivo('quedocarchi_quejadocumento')" /> 
+                                    <img src="../images/descargar_1.png" width="30" height="30"  alt="Subir Archivo" onclick="reHref('quedocarchi_quejadocumento' )" /></td>
 
                         </table>
                     </div>
                     <div id="tabs-3"><br />
-                        <div class="boton"><input type="submit" value="Mostrar Afectados Registradas" onclick="return tabla(flexiListaOpcion, 'Lista Opción', '' )" /></div>
+                        <div class="boton"><input type="submit" value="Mostrar Afectados Registradas" onclick="return tabla(flexiQuejaBeneficiario, 'Beneficiarios Afectados Queja', '' )" /></div>
                         <br />
                         <table>
-                            <tr>
 
-                                <td>C&oacute;digo &Uacute;nico de Familia</td>
-                                <td>Consecutivo Queja</td>
-                                <td>Tipo Identificacion Beneficiario</td>
-                                <td>Edentificacion Beneficiario</td>
+                            <tr>
+                                <td>Quejas</td>
+                                <td>Beneficiario</td>
+                            </tr>
+                            <tr>
+                                <td> <select  id="quejas_quejabeneficiario_1" name="quejas_quejabeneficiario_1" 
+                                              onfocus="tabla(flexiQuejas, 'Quejas', 'quejas_quejabeneficiario_1' )" 
+                                              onclick="tabla(flexiQuejas, 'Quejas', 'quejas_quejabeneficiario_1' )"></select></td>
+
+                                <td> <select  id="beneficiario_quejabeneficiario_1" name="beneficiario_quejabeneficiario_1" 
+                                              onfocus="tabla(flexiBeneficiario, 'Queja', 'beneficiario_quejabeneficiario_1' )" 
+                                              onclick="tabla(flexiBeneficiario, 'Queja', 'beneficiario_quejabeneficiario_1' )"></select></td>
 
                             </tr>
                             <tr>
-                                <td><select name="codunifami_quejasAfectados" id="codunifami_quejasAfectados" 
-                                            onfocus="tabla(flexiQuejaBeneficiario, 'Codigo Unico Familia',
-                                                'codunifami_quejasAfectados' )" onclick="tabla(flexiQuejaBeneficiario, 
-                                                'Codigo Unico Familia', 'codunifami_quejasAfectados' )"></select></td>
-
-                                <td><select name="quejconsecut_quejasAfectados" id="quejconsecut_quejasAfectados" 
-                                            onfocus="tabla(flexiQuejas, 'Consecutivo Queja',
-                                                'quejconsecut_quejasAfectados' )" onclick="tabla(flexiQuejas, 
-                                                'Consecutivo Queja', 'quejconsecut_quejasAfectados' )"></select></td> 
-
-                                <td><select name="codtipoidentidad_quejasAfectados" id="codtipoidentidad_quejasAfectados" 
-                                            onfocus="tabla(flexiTipoIdentificacion, 'Codigo tipo identificacion',
-                                                'codtipoidentidad_quejasAfectados' )" onclick="tabla(flexiTipoIdentificacion, 
-                                                'Codigo tipo identificacion', 'codtipoidentidad_quejasAfectados' )"></select></td>
-                                <td><input type="text" name="identbenef_quejasAfectados" id="identbenef_quejasAfectados" value=""/></td>
+                                <td>Observaciones Beneficiario Queja</td>
                             </tr>
                             <tr>
-                                <td>Observaciones</td>
-                            </tr>
-                            <tr>
-                                <td colspan = "4" ><textarea name="quebenobserv_quejaAfectados" id="quebenobserv_quejaAfectados"> </textarea></td>
+                                <td colspan="2"> <textarea id="quebenobserv_quejabeneficiario" name="quebenobserv_quejabeneficiario" 
+                                                           cols="50" rows="4"></textarea></td>
                             </tr>
                         </table>
                     </div>
                     <div id="tabs-4"><br />
-                        <div class="boton"><input type="submit" value="Mostrar Respuestas Registrados" onclick="return tabla(flexiNivelsegopcion, 'Lista Perfiles', '' )" /></div>
+                        <div class="boton"><input type="submit" value="Mostrar Respuestas Registrados" onclick="return tabla(flexiQuejaRespuesta, 'Respuestas Quejas', '' )" /></div>
                         <br />
                         <table>
                             <tr>
-                                <td>C&oacute;digo &Uacute;nico de Familia</td>
-                                <td>Consecutivo Queja</td>
+                                <td>Quejas</td>
                                 <td>Fecha Respuesta Queja</td>
                                 <td>C&oacute;digo Clasificaci&oacute;n Respuesta</td>
                             </tr>
 
                             <tr>
-                                <td><select name="codunifami_quejasRespuestas" id="codunifami_quejasRespuestas" 
-                                            onfocus="tabla(flexiQuejaBeneficiario, 'Codigo Unico Familia',
-                                                'codunifami_quejasRespuestas' )" onclick="tabla(flexiQuejaBeneficiario, 
-                                                'Codigo Unico Familia', 'codunifami_quejasRespuestas' )"></select></td>
+                                <td><select name="quejas_quejarespuesta_1" id="quejas_quejarespuesta_1" 
+                                            onfocus="tabla(flexiQuejas, 'Quejas',
+                                                'quejas_quejarespuesta_1' )" onclick="tabla(flexiQuejaBeneficiario, 
+                                                'Quejas', 'quejas_quejarespuesta_1' )"></select></td>
 
-                                <td><select name="quejconsecut_quejasRespuestas" id="quejconsecut_quejasRespuestas" 
-                                            onfocus="tabla(flexiQuejas, 'Consecutivo Queja',
-                                                'quejconsecut_quejasRespuestas' )" onclick="tabla(flexiQuejas, 
-                                                'Consecutivo Queja', 'quejconsecut_quejasRespuestas' )"></select></td> 
 
-                                <td><input type="text" name="queresfecha_quejaRespuestas" id="_fecha_queresfecha_quejaRespuestas" value=""/></td>
+                                <td><input type="text" name="queresfecha_quejarespuesta" readonly="readonly" id="_fecha_queresfecha_quejarespuesta" value=""/></td>
 
-                                <td><select name="resclacodigo_quejasRespuestas" id="resclacodigo_quejasRespuestas" 
+                                <td><select name="resclacodigo_quejarespuesta" id="resclacodigo_quejarespuesta" 
                                             onfocus="tabla(flexiRespuestaClasificacion, 'Codigo Clasificacion Respuesta',
-                                                'resclacodigo_quejasRespuestas' )" onclick="tabla(flexiRespuestaClasificacion,
-                                                'Codigo Clasificacion Respuesta', 'resclacodigo_quejasRespuestas' )"></select></td>
+                                                'resclacodigo_quejarespuesta' )" onclick="tabla(flexiRespuestaClasificacion,
+                                                'Codigo Clasificacion Respuesta', 'resclacodigo_quejarespuesta' )"></select></td>
                             </tr>
                             <tr>
                                 <td>Tipo Identificacion Funcionario</td>
                                 <td>Documento Identidad de Funcionario</td>
-                                <td colspan="2">Percepción Usuario ante Respuesta Queja</td>
+                                
                             </tr>
 
                             <tr>
-                                <td><select name="codtipoidentidad_quejasRespuestas" id="codtipoidentidad_quejasRespuestas" 
+                                <td><select name="codtipoidentidad_quejarespuesta" id="codtipoidentidad_quejarespuesta" 
                                             onfocus="tabla(flexiTipoIdentificacion, 'Codigo tipo identificacion',
-                                                'codtipoidentidad_quejasRespuestas' )" onclick="tabla(flexiTipoIdentificacion, 
-                                                'Codigo tipo identificacion', 'codtipoidentidad_quejasRespuestas' )"></select></td>
+                                                'codtipoidentidad_quejarespuesta' )" onclick="tabla(flexiTipoIdentificacion, 
+                                                'Codigo tipo identificacion', 'codtipoidentidad_quejarespuesta' )"></select></td>
                                 <td>
-                                    <input type="text" name="numidentfunc_quejasRespuestas" id="numidentfunc_quejasRespuestas" value=""/>
+                                    <input type="text" name="numidentfunc_quejarespuesta" id="numidentfunc_quejarespuesta" value=""/>
                                 </td>
-                                <td colspan = "2" ><textarea name="querespercep_quejaRespuestas" id="querespercep_quejaRespuestas"> </textarea></td>
+                                
                             </tr>
 
                             <tr>
                                 <td>C&oacute;digo Tipo de Satisfacci&oacute;n</td>
                                 <td>Archivo Documento Respuesta Queja</td>
-                                <td>Observaciones Respuesta</td>
+                                
                             </tr>
 
                             <tr>
-                                <td><select name="codtipoidentidad_quejasRespuestas" id="codtipoidentidad_quejasRespuestas" 
+                                <td><select name="tipsatcodigo_quejarespuesta" id="tipsatcodigo_quejarespuesta" 
                                             onfocus="tabla(flexiSatifaccionTipo, 'Código Tipo de Satisfacción',
-                                                'codtipoidentidad_quejasRespuestas' )" onclick="tabla(flexiSatifaccionTipo, 
-                                                'Código Tipo de Satisfacción', 'codtipoidentidad_quejasRespuestas' )"></select></td>
-                                <td>
-                                    <input name="queresarchiv_quejasRespuestas" type="text" id="queresarchiv_quejasRespuestas" value="" readonly="readonly" 
-                                           onclick="abrirCargaArchivo('archivoactoadmin')" /> <a href="../descargarArchivo?nombreArchivo=" 
-                                           target="_blank" onclick="this.href = reHref( this.href, 'queresarchiv_quejasRespuestas' )">
-                                        <img src="../images/descargar_1.png" alt="Descargar" width="30" height="30" onclick="" /></a>
-                                </td>
-                                <td colspan = "2" ><textarea name="queresobserv_quejaRespuestas" id="queresobserv_quejaRespuestas"></textarea></td>
+                                                'tipsatcodigo_quejarespuesta' )" onclick="tabla(flexiSatifaccionTipo, 
+                                                'Código Tipo de Satisfacción', 'tipsatcodigo_quejarespuesta' )"></select></td>
+                                
+                                <td><input name="queresarchiv_quejarespuesta" type="text" id="queresarchiv_quejarespuesta"
+                                           size="17" value="" readonly="readonly" onclick="abrirCargaArchivo('queresarchiv_quejarespuesta')" /> 
+                                    <img src="../images/descargar_1.png" width="30" height="30"  alt="Subir Archivo" onclick="reHref('queresarchiv_quejarespuesta' )" /></td>
+                                
+                            </tr>
+                            <tr>
+                                <td colspan="2">Percepción Usuario ante Respuesta Queja</td>
+                                
+                            </tr>
+                            <tr>
+                                <td colspan = "2" ><textarea name="querespercep_quejarespuesta" id="querespercep_quejarespuesta" cols="45"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td>Observaciones Respuesta</td>
+                                
+                            </tr>
+                            <tr>
+                                <td colspan = "2" ><textarea name="queresobserv_quejarespuesta" id="queresobserv_quejarespuesta" cols="45"></textarea></td>
                             </tr>
                         </table>
                     </div>
