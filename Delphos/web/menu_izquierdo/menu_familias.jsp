@@ -245,7 +245,7 @@
             <li><span class="folder">Violencia intrafamiliar</span>
                 <ul>
                     <span class="file"> <li>
-                            <a href="<%= FamiliasEnAccion%>RegistroAccionViolencia.jsp">Registro Violencia</a>
+                            <a href="<%= formularios%>ViolenciaIntrafamiliar.jsp">Registro Violencia</a>
                         </li></span>
                     <li><span class="folder">Configuraci&oacute;n B&aacute;sica</span>
                         <ul>
