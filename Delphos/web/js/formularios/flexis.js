@@ -1,111 +1,123 @@
 //## {flexiNormas-normas}
 flexiNormas = { 
-	url : '../edinstancias?parametros=opcion=tabla-tabla=normas-principal=codtiponorma,codnorma,fechanorma-seleccion=codtiponorma-tipo=modificar', 
-	dataType : 'xml', 
-	height: 280, 
-	width : 850, 
-	usepager : true, 
-	rp : 30, 
-	sortname: 'codtiponorma', 
-	sortorder: 'asc', 
-	buttons : [ 
-	{ 
-	name : 'Agregar Nueva NormA', 
-	bclass : 'anadir' 
-	} 
-	] 
+    url : '../edinstancias?parametros=opcion=tabla-tabla=normas-principal=codtiponorma,codnorma,fechanorma-seleccion=codtiponorma-tipo=modificar', 
+    dataType : 'xml', 
+    form : '', 
+    height: 280, 
+    width : 850, 
+    usepager : true, 
+    rp : 30, 
+    sortname: 'codtiponorma', 
+    sortorder: 'asc', 
+    buttons : [ 
+    { 
+        name : 'Agregar Nueva NormA', 
+        bclass : 'anadir',
+        onpress : agregar 
+    } 
+    ] 
 }; 
 
 
 //## {flexiSubsidioAsignado-subsidioasignado}
 flexiSubsidioAsignado = { 
-	url : '../edinstancias?parametros=opcion=tabla-tabla=subsidioasignado-principal=codunifami,codtipoidentidad,subpotidenti-seleccion=codunifami-tipo=modificar', 
-	dataType : 'xml', 
-	height: 280, 
-	width : 850, 
-	usepager : true, 
-	rp : 30, 
-	sortname: 'codunifami', 
-	sortorder: 'asc', 
-	buttons : [ 
-	{ 
-	name : 'Agregar Nuevo Subsidio Asignado', 
-	bclass : 'anadir' 
-	} 
-	] 
+    url : '../edinstancias?parametros=opcion=tabla-tabla=subsidioasignado-principal=codunifami,codtipoidentidad,subpotidenti-seleccion=codunifami-tipo=modificar', 
+    dataType : 'xml', 
+    form : '', 
+    height: 280, 
+    width : 850, 
+    usepager : true, 
+    rp : 30, 
+    sortname: 'codunifami', 
+    sortorder: 'asc', 
+    buttons : [ 
+    { 
+        name : 'Agregar Nuevo Subsidio Asignado', 
+        bclass : 'anadir',
+        onpress : agregar 
+    } 
+    ] 
 }; 
 
 //## {flexiSubsidioPotencial-subsidiopotencial}
 flexiSubsidioPotencial = { 
-	url : '../edinstancias?parametros=opcion=tabla-tabla=subsidiopotencial-principal=codunifami,codtipoidentidad,subpotidenti-seleccion=codunifami-tipo=modificar', 
-	dataType : 'xml', 
-	height: 280, 
-	width : 850, 
-	usepager : true, 
-	rp : 30, 
-	sortname: 'codunifami', 
-	sortorder: 'asc', 
-	buttons : [ 
-	{ 
-	name : 'Agregar Nuevo Subsidio Potencial', 
-	bclass : 'anadir' 
-	} 
-	] 
+    url : '../edinstancias?parametros=opcion=tabla-tabla=subsidiopotencial-principal=codunifami,codtipoidentidad,subpotidenti-seleccion=codunifami-tipo=modificar', 
+    dataType : 'xml', 
+    form : '', 
+    height: 280, 
+    width : 850, 
+    usepager : true, 
+    rp : 30, 
+    sortname: 'codunifami', 
+    sortorder: 'asc', 
+    buttons : [ 
+    { 
+        name : 'Agregar Nuevo Subsidio Potencial', 
+        bclass : 'anadir',
+        onpress : agregar 
+    } 
+    ] 
 }; 
 
 //## {flexiSubsidioMunicipio-subsidiomunicipio}
 flexiSubsidioMunicipio = { 
-	url : '../edinstancias?parametros=opcion=tabla-tabla=subsidiomunicipio-principal=subscodigo,coddepartamento,codmunicipio-seleccion=subscodigo-tipo=modificar', 
-	dataType : 'xml', 
-	height: 280, 
-	width : 850, 
-	usepager : true, 
-	rp : 30, 
-	sortname: 'subscodigo', 
-	sortorder: 'asc', 
-	buttons : [ 
-	{ 
-	name : 'Agregar Nuevo Subsidio Municipio', 
-	bclass : 'anadir' 
-	} 
-	] 
+    url : '../edinstancias?parametros=opcion=tabla-tabla=subsidiomunicipio-principal=subscodigo,coddepartamento,codmunicipio-seleccion=subscodigo-tipo=modificar', 
+    dataType : 'xml', 
+    form : '', 
+    height: 280, 
+    width : 850, 
+    usepager : true, 
+    rp : 30, 
+    sortname: 'subscodigo', 
+    sortorder: 'asc', 
+    buttons : [ 
+    { 
+        name : 'Agregar Nuevo Subsidio Municipio', 
+        bclass : 'anadir',
+        onpress : agregar 
+    } 
+    ] 
 }; 
 
 //## {flexiSubsidio-subsidio}
 flexiSubsidio = { 
-	url : '../edinstancias?parametros=opcion=tabla-tabla=subsidio-principal=subscodigo-seleccion=subsdescripc-tipo=modificar', 
-	dataType : 'xml', 
-	height: 280, 
-	width : 850, 
-	usepager : true, 
-	rp : 30, 
-	sortname: 'subscodigo', 
-	sortorder: 'asc', 
-	buttons : [ 
-	{ 
-	name : 'Agregar Nuevo Subsidio', 
-	bclass : 'anadir' 
-	} 
-	] 
+    url : '../edinstancias?parametros=opcion=tabla-tabla=subsidio-principal=subscodigo-seleccion=subsdescripc-tipo=modificar', 
+    dataType : 'xml', 
+    form : '', 
+    height: 280, 
+    width : 850, 
+    usepager : true, 
+    rp : 30, 
+    sortname: 'subscodigo', 
+    sortorder: 'asc', 
+    buttons : [ 
+    { 
+        name : 'Agregar Nuevo Subsidio', 
+        bclass : 'anadir',
+        onpress : agregar 
+    } 
+    ] 
 }; 
 
 
 //## {flexiQuejaRespuesta-quejarespuesta}
 flexiQuejaRespuesta = { 
-	url : '../edinstancias?parametros=opcion=tabla-tabla=quejarespuesta-principal=codunifami,quejconsecut-seleccion=codunifami-tipo=modificar', 
-	dataType : 'xml', 
-	height: 280, 
-	width : 850, 
-	usepager : true, 
-	rp : 30, 
-	sortname: 'codunifami', 
-	sortorder: 'asc', 
-	buttons : [ 
-	{ 
-	name : 'Agregar Nuev', 
-	bclass : 'anadir' 
-	} 
-	] 
+    url : '../edinstancias?parametros=opcion=tabla-tabla=quejarespuesta-principal=codunifami,quejconsecut-seleccion=codunifami-tipo=modificar', 
+    dataType : 'xml', 
+    form : '', 
+    height: 280, 
+    width : 850, 
+    usepager : true, 
+    rp : 30, 
+    sortname: 'codunifami', 
+    sortorder: 'asc', 
+    buttons : [ 
+    { 
+        name : 'Agregar Nuev', 
+        bclass : 'anadir',
+        onpress : agregar 
+    } 
+    ] 
 }; 
 
 
@@ -113,6 +125,7 @@ flexiQuejaRespuesta = {
 flexiTipoRequisito = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=tiporequisito-principal=codtiporequisito-seleccion=descripcion-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -122,7 +135,8 @@ flexiTipoRequisito = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Requisito', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -131,6 +145,7 @@ flexiTipoRequisito = {
 flexiRequisitosFamilias = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=requisitos-principal=codtiporequisito,coditipben,codactividadsalud-seleccion=requisdescri-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -140,7 +155,8 @@ flexiRequisitosFamilias = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Requisito ', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -150,6 +166,7 @@ flexiRequisitosFamilias = {
 flexiTipoCorporativa = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=tipocorporativa-principal=tipcorcodigo-seleccion=tipcordescripc-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -159,7 +176,8 @@ flexiTipoCorporativa = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Tipo Corporativa', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -168,6 +186,7 @@ flexiTipoCorporativa = {
 flexiEstadoCorporativa = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=estadocorporativa-principal=estcorcodigo-seleccion=estcordescripc-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -177,7 +196,8 @@ flexiEstadoCorporativa = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Estado Corporativa', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -186,6 +206,7 @@ flexiEstadoCorporativa = {
 flexiImagenCorporativa = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=imagencorporativa-principal=imacorid-seleccion=imacorid-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -195,7 +216,8 @@ flexiImagenCorporativa = {
     buttons : [ 
     { 
         name : 'Agregar Nueva Imagen Corporativa', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -204,6 +226,7 @@ flexiImagenCorporativa = {
 flexiEstadoCumplimactividad = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=estadocumplimactividad-principal=codestadocumplimactividad-seleccion=descripcion-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -213,7 +236,8 @@ flexiEstadoCumplimactividad = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Estado Cumplimiento', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -223,6 +247,7 @@ flexiEstadoCumplimactividad = {
 flexiEscolaridadPeriodico = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=escregperiodico-principal=codtipoidentidadins,codempresa,codtipoidentidad,escidentific,escvigencia,espefechinic,espefechfina-seleccion=codtipoidentidadins-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -232,7 +257,8 @@ flexiEscolaridadPeriodico = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Escolaridad Periodico', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -242,6 +268,7 @@ flexiEscolaridadPeriodico = {
 flexiEscolaridadNovedad = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=escolaridadnovedad-principal=codtipoideninsact,codempresaact,codtipoidentidadest,escidentificest,escvigencia,escnovconsec-seleccion=escnovconsec-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -251,7 +278,8 @@ flexiEscolaridadNovedad = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Escolaridad Novedad', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -261,6 +289,7 @@ flexiEscolaridadNovedad = {
 flexiEscolaridadEstado = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=escolaridadestado-principal=escestcodigo-seleccion=escescdescri-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -270,7 +299,8 @@ flexiEscolaridadEstado = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Escolaridad Estado', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -280,6 +310,7 @@ flexiEscolaridadEstado = {
 flexiViolenciaIntraFamiliar = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=violenciaintrafamiliar-principal=viointid-seleccion=viointid-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -289,7 +320,8 @@ flexiViolenciaIntraFamiliar = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Registro Acción Violencia', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -298,6 +330,7 @@ flexiViolenciaIntraFamiliar = {
 flexiEstadoRegistro = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=estadoregistro-principal=codestadoregistro-seleccion=descripcion-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -307,7 +340,8 @@ flexiEstadoRegistro = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Estado Registro', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -316,6 +350,7 @@ flexiEstadoRegistro = {
 flexiEncabezadoArchivo = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=encabezadoarchivo-principal=idencabezado-seleccion=idencabezado-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -325,7 +360,8 @@ flexiEncabezadoArchivo = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Encabezado', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -334,6 +370,7 @@ flexiEncabezadoArchivo = {
 flexiListaCamposArchivo = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=listacamposarchivo-principal=codcampoarchivo-seleccion=descripcion-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -343,7 +380,8 @@ flexiListaCamposArchivo = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Lista Campo Archivo', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -352,6 +390,7 @@ flexiListaCamposArchivo = {
 flexiTipoNovedad = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=tiponovedad-principal=codtiponovedad-seleccion=descripcion-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -361,7 +400,8 @@ flexiTipoNovedad = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Tipo Novedad', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -370,6 +410,7 @@ flexiTipoNovedad = {
 flexiNovedadDocumento = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=novedaddocumento-principal=noveconsecut,codtipodctoasociado,codtiponovedad,novcaucodigo-seleccion=noveconsecut-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -379,7 +420,8 @@ flexiNovedadDocumento = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Novedad Documento', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -388,6 +430,7 @@ flexiNovedadDocumento = {
 flexiNovedadCampo = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=novedadcampo-principal=idusuario,codtiponovedad,codcampoarchivo,fecha-seleccion=idusuario-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -397,7 +440,8 @@ flexiNovedadCampo = {
     buttons : [ 
     { 
         name : 'Agregar Nueva Novedad Campo', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -406,6 +450,7 @@ flexiNovedadCampo = {
 flexiNovedad = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=novedad-principal=noveconsecut-seleccion=noveconsecut-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -415,7 +460,8 @@ flexiNovedad = {
     buttons : [ 
     { 
         name : 'Agregar Nueva Novedad', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -425,6 +471,7 @@ flexiNovedad = {
 flexiTipoPersona = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=tipopersona-principal=tippercodigo-seleccion=tipperdescri-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -434,7 +481,8 @@ flexiTipoPersona = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Tipo Persona', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -443,6 +491,7 @@ flexiTipoPersona = {
 flexiTipoTitular = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=tipotitular-principal=coditiptit-seleccion=desctiptit-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -452,7 +501,8 @@ flexiTipoTitular = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Tipo Tiular', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -462,6 +512,7 @@ flexiTipoTitular = {
 flexiGrupoTiular = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=grupotitular-principal=codclagrutit,codunifami,codtipoidentidad,identitfam-seleccion=identitfam-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -471,7 +522,8 @@ flexiGrupoTiular = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Grupo Titular', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -481,6 +533,7 @@ flexiGrupoTiular = {
 flexiRequisitos = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=requisitos-principal=codtiporequisito,coditipben,codactividadsalud-seleccion=codtiporequisito-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -490,7 +543,8 @@ flexiRequisitos = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Requisito', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -500,6 +554,7 @@ flexiRequisitos = {
 flexiTitularFamilia = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=titularfamilia-principal=codclagrutit,codunifami,codtipoidentidad,identitfam-seleccion=identitfam-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -509,7 +564,8 @@ flexiTitularFamilia = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Titular Familia', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -519,6 +575,7 @@ flexiTitularFamilia = {
 flexiRegistroEstimulacionTemprana = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=estimulaciontemprana-principal=esttemid-seleccion=esttemid-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -528,7 +585,8 @@ flexiRegistroEstimulacionTemprana = {
     buttons : [ 
     { 
         name : 'Agregar Nueva Estimulacion Temprana', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -538,6 +596,7 @@ flexiRegistroEstimulacionTemprana = {
 flexiActividadesNutricionales = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=nutricionregistro-principal=nutregid-seleccion=nutregid-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -547,7 +606,8 @@ flexiActividadesNutricionales = {
     buttons : [ 
     { 
         name : 'Agregar Nueva Actividad Nutricional', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -556,6 +616,7 @@ flexiActividadesNutricionales = {
 flexiTipoViolencia = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=tipoviolencia-principal=tipviocodigo-seleccion=tipviodescri-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -565,7 +626,8 @@ flexiTipoViolencia = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Tipo Violencia Intrafamiliar', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -573,6 +635,7 @@ flexiTipoViolencia = {
 flexiEstadoincripIps = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=estadoincripips-principal=esinipscodigo-seleccion=esinipsdescri-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -582,7 +645,8 @@ flexiEstadoincripIps = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Estado Inscripci&oacute;n IPS', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -591,6 +655,7 @@ flexiEstadoincripIps = {
 flexiTipoEstimulacion = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=tipoestimulacion-principal=tipestcodigo-seleccion=tipestdescri-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -600,7 +665,8 @@ flexiTipoEstimulacion = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Tipo Estimulacion Temprana', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -609,6 +675,7 @@ flexiTipoEstimulacion = {
 flexiSubsidioCategoria = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=subsidiocategoria-principal=subcatcodigo-seleccion=subcatdescri-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -618,7 +685,8 @@ flexiSubsidioCategoria = {
     buttons : [ 
     { 
         name : 'Agregar Nueva Categoria Subsidio', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -627,6 +695,7 @@ flexiSubsidioCategoria = {
 FlexiGrupoActividad = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=grupoactividad-principal=codgrupoactividad-seleccion=descripcion-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -636,7 +705,8 @@ FlexiGrupoActividad = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Grupo Actividad', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -646,6 +716,7 @@ FlexiGrupoActividad = {
 flexiActividadSalud = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=actividadsalud-principal=codactividadsalud-seleccion=descripcion-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -655,26 +726,29 @@ flexiActividadSalud = {
     buttons : [ 
     { 
         name : 'Agregar Nueva Actividad Salud', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
 //## {flexiClaseBeneficiario-clasebeneficiario}
 flexiClaseBeneficiario = { 
-	url : '../edinstancias?parametros=opcion=tabla-tabla=clasebeneficiario-principal=clabencodigo-seleccion=clabencodigo-tipo=modificar', 
-	dataType : 'xml', 
-	height: 280, 
-	width : 850, 
-	usepager : true, 
-	rp : 30, 
-	sortname: 'clabencodigo', 
-	sortorder: 'asc', 
-	buttons : [ 
-	{ 
-	name : 'Agregar Nueva Clase Beneficiario', 
-	bclass : 'anadir' 
-	} 
-	] 
+    url : '../edinstancias?parametros=opcion=tabla-tabla=clasebeneficiario-principal=clabencodigo-seleccion=clabencodigo-tipo=modificar', 
+    dataType : 'xml', 
+    form : '', 
+    height: 280, 
+    width : 850, 
+    usepager : true, 
+    rp : 30, 
+    sortname: 'clabencodigo', 
+    sortorder: 'asc', 
+    buttons : [ 
+    { 
+        name : 'Agregar Nueva Clase Beneficiario', 
+        bclass : 'anadir',
+        onpress : agregar 
+    } 
+    ] 
 }; 
 
 
@@ -682,6 +756,7 @@ flexiClaseBeneficiario = {
 flexiSubsidioCategoria = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=subsidiocategoria-principal=subcatcodigo-seleccion=subcatdescri-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -691,7 +766,8 @@ flexiSubsidioCategoria = {
     buttons : [ 
     { 
         name : 'Agregar Nueva Categoria Subsidio', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -701,6 +777,7 @@ flexiSubsidioCategoria = {
 flexiManualActividad = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=manualactividad-principal=codmanualactividad-seleccion=descripcion-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -710,7 +787,8 @@ flexiManualActividad = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Manual Actividad', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -719,6 +797,7 @@ flexiManualActividad = {
 flexiProtocoloActividad = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=protocoloactividad-principal=codprotocolo-seleccion=descripcion-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -728,7 +807,8 @@ flexiProtocoloActividad = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Protocolo Actividad', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -737,6 +817,7 @@ flexiProtocoloActividad = {
 flexiCategoriaActividad = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=categoriaactividad-principal=codcategactividad-seleccion=descripcion-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -746,7 +827,8 @@ flexiCategoriaActividad = {
     buttons : [ 
     { 
         name : 'Agregar Nueva Categoria Actividad', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -755,6 +837,7 @@ flexiCategoriaActividad = {
 flexiTipoActividad = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=tipoactividad-principal=codtipoactividad-seleccion=descripcion-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -764,7 +847,8 @@ flexiTipoActividad = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Tipo Actividad', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -773,6 +857,7 @@ flexiTipoActividad = {
 flexiConceptoServicio = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=conceptoservicio-principal=codconceptoservicio-seleccion=descripcion-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -782,7 +867,8 @@ flexiConceptoServicio = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Concepto Servicio', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -791,6 +877,7 @@ flexiConceptoServicio = {
 flexiClaseActividad = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=claseactividad-principal=codclaseactividad-seleccion=descripcion-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -800,7 +887,8 @@ flexiClaseActividad = {
     buttons : [ 
     { 
         name : 'Agregar Nueva Clase Actividad', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -809,6 +897,7 @@ flexiClaseActividad = {
 flexiAmbitoActividad = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=ambitoactividad-principal=codambito-seleccion=descripcion-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -818,7 +907,8 @@ flexiAmbitoActividad = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Ambito Actividad', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -827,6 +917,7 @@ flexiAmbitoActividad = {
 flexiSubGrupoAcitivdad = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=subgrupoactividad-principal=codgrupoactividad,codsubgrupo-seleccion=descripcion-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -836,7 +927,8 @@ flexiSubGrupoAcitivdad = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Sub Grupo Actividad', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -845,6 +937,7 @@ flexiSubGrupoAcitivdad = {
 flexiEscGrupoGrado = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=escgrupogrado-principal=grugracodigo-seleccion=grugradescri-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -854,7 +947,8 @@ flexiEscGrupoGrado = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Grupo Escolaridad', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -863,6 +957,7 @@ flexiEscGrupoGrado = {
 flexiEscolaridad = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=escolaridad-principal=codtipoidentidadins,codempresa,codtipoidentidad,escidentific,escvigencia-seleccion=codempresa-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -872,7 +967,8 @@ flexiEscolaridad = {
     buttons : [ 
     { 
         name : 'Agregar Nueva Escolaridad', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -880,6 +976,7 @@ flexiEscolaridad = {
 flexiEstadoBeneficiario = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=estadobeneficiario-principal=codiestben-seleccion=descestben-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -889,7 +986,8 @@ flexiEstadoBeneficiario = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Estado  Beneficiario', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -898,6 +996,7 @@ flexiEstadoBeneficiario = {
 flexiEscolaridadGrado = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=escolaridadgrado-principal=escgracodigo-seleccion=escgradescri-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -907,7 +1006,8 @@ flexiEscolaridadGrado = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Nivel Escolaridad', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -917,6 +1017,7 @@ flexiEscolaridadGrado = {
 flexiTipoParentesco = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=tipoparentesco-principal=codtipoparentesco-seleccion=descripcion-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -926,7 +1027,8 @@ flexiTipoParentesco = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Tipo Parentesco', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -937,6 +1039,7 @@ flexiTipoParentesco = {
 flexiFinalidadConsulta = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=finalidadconsulta-principal=codfinalidadconsulta-seleccion=descripcion-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -946,7 +1049,8 @@ flexiFinalidadConsulta = {
     buttons : [ 
     { 
         name : 'Agregar Nueva Finalidad Consulta', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -954,6 +1058,7 @@ flexiFinalidadConsulta = {
 flexiNutricionValoracion = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=nutricionvaloracion-principal=nutridregist-seleccion=nutrcantidad-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -963,7 +1068,8 @@ flexiNutricionValoracion = {
     buttons : [ 
     { 
         name : 'Agregar Nueva Valoracion Nutricional', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -972,6 +1078,7 @@ flexiNutricionValoracion = {
 flexiSubgrupoDiagnostico = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=subgrupodiagnostico-principal=codgrupodiagn,codsubgrupodiagn-seleccion=descripcion-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -981,7 +1088,8 @@ flexiSubgrupoDiagnostico = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Grupo Diagnostico', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -989,6 +1097,7 @@ flexiSubgrupoDiagnostico = {
 flexiNivelComplejidad = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=nivelcomplejidad-principal=codnivelcomplejidad-seleccion=descripcion-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -998,7 +1107,8 @@ flexiNivelComplejidad = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Nivel Complejidad', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -1006,6 +1116,7 @@ flexiNivelComplejidad = {
 flexiProtocoloDiagnostico = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=protocolodiagnostico-principal=codprotocodiagn-seleccion=descripcion-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -1015,7 +1126,8 @@ flexiProtocoloDiagnostico = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Protocolo Diagnostico', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -1023,6 +1135,7 @@ flexiProtocoloDiagnostico = {
 flexiManualDiagnostico = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=manualdiagnostico-principal=codmanualdiagnostico-seleccion=descripcion-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -1032,7 +1145,8 @@ flexiManualDiagnostico = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Manual Diagnostico', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -1040,6 +1154,7 @@ flexiManualDiagnostico = {
 flexiEventoEpidemiologico = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=eventoepidemiologico-principal=codeventoepidem-seleccion=descripcion-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -1049,7 +1164,8 @@ flexiEventoEpidemiologico = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Evento Epidemiologico', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -1057,6 +1173,7 @@ flexiEventoEpidemiologico = {
 flexiAmbitoDiagnostico = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=ambitodiagnostico-principal=codambitodiagnostico-seleccion=descripcion-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -1066,7 +1183,8 @@ flexiAmbitoDiagnostico = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Ambito Diagnostico', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -1074,6 +1192,7 @@ flexiAmbitoDiagnostico = {
 flexiClaseDiagnostico = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=clasediagnostico-principal=codclasediagnostico-seleccion=descripcion-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -1083,7 +1202,8 @@ flexiClaseDiagnostico = {
     buttons : [ 
     { 
         name : 'Agregar Nueva Clase Diagnostico', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -1091,6 +1211,7 @@ flexiClaseDiagnostico = {
 flexiDiagnostico3char = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=diagnostico3char-principal=coddiagnostico3char-seleccion=descripcion-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -1100,7 +1221,8 @@ flexiDiagnostico3char = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Diagnostico  3 Char', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -1108,6 +1230,7 @@ flexiDiagnostico3char = {
 flexiDiagnosticos298 = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=diagnostico298-principal=coddiag298-seleccion=descripcion-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -1117,7 +1240,8 @@ flexiDiagnosticos298 = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Diagnostico 298', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -1125,6 +1249,7 @@ flexiDiagnosticos298 = {
 flexiDiagnostico = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=diagnostico-principal=coddiagnostico-seleccion=descripcion-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -1134,7 +1259,8 @@ flexiDiagnostico = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Diagnostico ', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -1142,6 +1268,7 @@ flexiDiagnostico = {
 flexiTipoEducacion = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=tipoeducacion-principal=tipeducodigo-seleccion=tipedudescri-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -1151,7 +1278,8 @@ flexiTipoEducacion = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Tipo Educacion', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -1159,6 +1287,7 @@ flexiTipoEducacion = {
 flexiFirmasAutorizadas = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=firmasautorizadas-principal=codtipoidentidadfir,firmidentifi-seleccion=firmidentifi-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -1168,7 +1297,8 @@ flexiFirmasAutorizadas = {
     buttons : [ 
     { 
         name : 'Agregar Nueva Firma Autorizada', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 };
@@ -1176,6 +1306,7 @@ flexiFirmasAutorizadas = {
 flexiGradoEscolaridad = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=escolaridadgrado-principal=escgracodigo-seleccion=escgradescri-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -1185,7 +1316,8 @@ flexiGradoEscolaridad = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Grado Escolaridad', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -1193,6 +1325,7 @@ flexiGradoEscolaridad = {
 flexiTipoSubsidio = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=tiposubsidio-principal=subtipcodigo-seleccion=subtipdescri-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -1202,7 +1335,8 @@ flexiTipoSubsidio = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Tipo Subsidio', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -1211,6 +1345,7 @@ flexiTipoSubsidio = {
 flexiDocumentoInscripcion = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=documentoinscripcion-principal=codunifami,codtipodctoasociado-seleccion=descripcion-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -1220,7 +1355,8 @@ flexiDocumentoInscripcion = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Documento Inscripción', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -1228,7 +1364,8 @@ flexiDocumentoInscripcion = {
 //## {flexiFuncionario-funcionario}
 flexiFuncionario = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=funcionario-principal=codtipoidentidad,numidentfunc-seleccion=nombre-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1238,14 +1375,16 @@ flexiFuncionario = {
     buttons : [
     {
         name : 'Agregar Nuevo Funcionario',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }
     ]
 };
 //## {flexiTipoBeneficiario-tipobeneficiario}
 flexiTipoBeneficiario = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=tipobeneficiario-principal=coditipben-seleccion=desctipben-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1255,7 +1394,8 @@ flexiTipoBeneficiario = {
     buttons : [
     {
         name : 'Agregar Nuevo Tipo Beneficiario',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }
     ]
 
@@ -1264,7 +1404,8 @@ flexiTipoBeneficiario = {
 //## {flexiEstadoEscolaridad-escolaridadestado}
 flexiEstadoEscolaridad = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=escolaridadestado-principal=escestcodigo-seleccion=escescdescri-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1274,7 +1415,8 @@ flexiEstadoEscolaridad = {
     buttons : [
     {
         name : 'Agregar Nuevo Estado Escolaridad',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }
     ]
 
@@ -1283,7 +1425,8 @@ flexiEstadoEscolaridad = {
 //## {flexiBeneficiario-beneficiario}
 flexiBeneficiario = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=beneficiario-principal=codunifami,codtipoidentidad,identbenef-seleccion=identbenef-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1293,7 +1436,8 @@ flexiBeneficiario = {
     buttons : [
     {
         name : 'Agregar Nuevo Beneficiario',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }
     ]
 
@@ -1303,7 +1447,8 @@ flexiBeneficiario = {
 //## {flexiBanco-banco}
 flexiBanco = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=banco-principal=codbanco-seleccion=descripcion-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1313,7 +1458,8 @@ flexiBanco = {
     buttons : [
     {
         name : 'Agregar Nuevo Banco',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }
     ]
 
@@ -1322,7 +1468,8 @@ flexiBanco = {
 //## {flexiVinculacion-inscripcion}
 flexiVinculacion = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=inscripcion-principal=codunifami-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1332,7 +1479,8 @@ flexiVinculacion = {
     buttons : [
     {
         name : 'Agregar Nueva Inscripcion',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }
     ]
 
@@ -1341,7 +1489,8 @@ flexiVinculacion = {
 //## {flexiDocumentoCausal-documentocausal}
 flexiDocumentoCausal = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=documentocausal-principal=codtiponovedad,novcaucodigo,codtipodctoasociado-tipo=modificar-seleccion=codtipodctoasociado',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1351,7 +1500,8 @@ flexiDocumentoCausal = {
     buttons : [
     {
         name : 'Agregar Nuevo Documento Causal',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }
     ]
 
@@ -1360,7 +1510,8 @@ flexiDocumentoCausal = {
 //## {flexiDocumentoQuejas-quejadocumento}
 flexiDocumentoQuejas = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=quejadocumento-principal=codunifami,quejconsecut,codtipodctoasociado-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1370,7 +1521,8 @@ flexiDocumentoQuejas = {
     buttons : [
     {
         name : 'Agregar Nuevo Documento Queja',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }
     ]
 
@@ -1380,7 +1532,8 @@ flexiDocumentoQuejas = {
 //## {flexiClaseGrupoTitular-clasegrupotitular}
 flexiClaseGrupoTitular = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=clasegrupotitular-principal=codclagrutit-seleccion=descclagrutit-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1390,7 +1543,8 @@ flexiClaseGrupoTitular = {
     buttons : [
     {
         name : 'Agregar Nueva Clase Grupo Titular',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }
     ]
 
@@ -1399,7 +1553,8 @@ flexiClaseGrupoTitular = {
 //## {flexiEstadoTitular-estadotitular}
 flexiEstadoTitular = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=estadotitular-principal=codiesttit',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1409,7 +1564,8 @@ flexiEstadoTitular = {
     buttons : [
     {
         name : 'Agregar Nuevo Estado Titular',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }
 
 
@@ -1420,7 +1576,8 @@ flexiEstadoTitular = {
 //## {flexiTipoTitular-tipotitular}
 flexiTipoTitular = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=tipotitular-principal=coditiptit-seleccion=desctiptit',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1430,7 +1587,8 @@ flexiTipoTitular = {
     buttons : [
     {
         name : 'Agregar Nuevo Tipo Titular',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }
 
 
@@ -1441,7 +1599,8 @@ flexiTipoTitular = {
 //## {flexiEstadoFamilia-estadofamilia}
 flexiEstadoFamilia = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=estadofamilia-principal=codiestfam-seleccion=descestfam',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1451,7 +1610,8 @@ flexiEstadoFamilia = {
     buttons : [
     {
         name : 'Agregar Nuevo Estado Familia',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }
 
 
@@ -1462,7 +1622,8 @@ flexiEstadoFamilia = {
 //## {flexiTipoPoblacion-tipopoblacion}
 flexiTipoPoblacion = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=tipopoblacion-principal=codtipopoblacion',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1472,7 +1633,8 @@ flexiTipoPoblacion = {
     buttons : [
     {
         name : 'Agregar Nuevo Tipo Poblacion',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }
 
 
@@ -1484,7 +1646,8 @@ flexiTipoPoblacion = {
 //## {flexiQuejasDocumentos-reclamodocumento}
 flexiQuejasDocumentos = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=reclamodocumento-principal=codtipopoblacion',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1494,7 +1657,8 @@ flexiQuejasDocumentos = {
     buttons : [
     {
         name : 'Agregar Nuevo Tipo Poblacion',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }
 
 
@@ -1506,7 +1670,8 @@ flexiQuejasDocumentos = {
 //## {flexiTipoNovedadCausal-tiponovedad}
 flexiTipoNovedadCausal ={
     url : '../edinstancias?parametros=opcion=tabla-tabla=tiponovedad-principal=codtiponovedad-seleccion=descripcion-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1515,7 +1680,8 @@ flexiTipoNovedadCausal ={
     sortorder: 'asc',
     buttons : [{
         name : 'Agregar Nuevo Tipo Novedad Causal',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -1527,7 +1693,8 @@ flexiTipoNovedadCausal ={
 //## {flexiNovedadCausal-novedadcausal}
 flexiNovedadCausal ={
     url : '../edinstancias?parametros=opcion=tabla-tabla=novedadcausal-principal=codtiponovedad,novcaucodigo-seleccion=novcaudescri-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1536,7 +1703,8 @@ flexiNovedadCausal ={
     sortorder: 'asc',
     buttons : [{
         name : 'Agregar Nueva Novedad Causal',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -1548,7 +1716,8 @@ flexiNovedadCausal ={
 //## {flexiEntidadSalud-entidadsalud}
 flexiEntidadSalud = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=entidadsalud-principal=codregimenes,codentidadsalud-seleccion=nombrehabilitacion-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1557,7 +1726,8 @@ flexiEntidadSalud = {
     sortorder: 'asc',
     buttons : [{
         name : 'Agregar nueva entidad salud',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }
     ]
 };
@@ -1567,7 +1737,8 @@ flexiEntidadSalud = {
 flexiQuejaClasificacion = {
  
     url : '../edinstancias?parametros=opcion=tabla-tabla=quejaclasificacion-seleccion=quecladescri-principal=tipquecodigo,queclacodigo',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1576,14 +1747,16 @@ flexiQuejaClasificacion = {
     sortorder: 'asc',
     buttons : [{
         name : 'Agregar Nuevo Reclamo Clasificacion',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }]
 
 }
 //## {flexiQuejas-quejas}
 flexiQuejas ={
     url : '../edinstancias?parametros=opcion=tabla-tabla=quejas-principal=quejconsecut,codunifami-tipo=modificar-seleccion=quejconsecut',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1592,7 +1765,8 @@ flexiQuejas ={
     sortorder: 'asc',
     buttons : [{
         name : 'Agregar Nueva Clasificación Queja',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -1606,7 +1780,8 @@ flexiQuejas ={
 //## {flexiQuejaBeneficiario-inscripcion}
 flexiQuejaBeneficiario ={
     url : '../edinstancias?parametros=opcion=tabla-tabla=quejabeneficiario-principal=codunifami,quejconsecut,codtipoidentidad,identbenef-seleccion=codunifami-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1615,7 +1790,8 @@ flexiQuejaBeneficiario ={
     sortorder: 'asc',
     buttons : [{
         name : 'Agregar Nueva Clasificación Queja',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -1627,7 +1803,8 @@ flexiQuejaBeneficiario ={
 //## {flexiReclamoTipo-reclamotipo}
 flexiReclamoTipo ={
     url : '../edinstancias?parametros=opcion=tabla-tabla=reclamotipo-principal=rectipcodigo-seleccion=rectipdescri-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1636,7 +1813,8 @@ flexiReclamoTipo ={
     sortorder: 'asc',
     buttons : [{
         name : 'Agregar Nuevo Tipo Reclamo',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -1648,7 +1826,8 @@ flexiReclamoTipo ={
 //## {flexiReclamoTipo-reclamotipo}
 flexiReclamoTipo ={
     url : '../edinstancias?parametros=opcion=tabla-tabla=reclamotipo-principal=rectipcodigo-seleccion=rectipdescri-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1657,7 +1836,8 @@ flexiReclamoTipo ={
     sortorder: 'asc',
     buttons : [{
         name : 'Agregar Nuevo Tipo Reclamo',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -1669,7 +1849,8 @@ flexiReclamoTipo ={
 //## {flexiTipoSatisfaccion-satisfacciontipo}
 flexiTipoSatisfaccion ={
     url : '../edinstancias?parametros=opcion=tabla-tabla=satisfacciontipo-principal=tipsatcodigo-seleccion=tipsatdescri-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1678,7 +1859,8 @@ flexiTipoSatisfaccion ={
     sortorder: 'asc',
     buttons : [{
         name : 'Agregar Nuevo Tipo Satisfaccion',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -1690,7 +1872,8 @@ flexiTipoSatisfaccion ={
 //## {flexiRespuestaClasificacion-respuestaclasificacion}
 flexiRespuestaClasificacion ={
     url : '../edinstancias?parametros=opcion=tabla-tabla=respuestaclasificacion-principal=resclacodigo-seleccion=rescladescri-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1699,7 +1882,8 @@ flexiRespuestaClasificacion ={
     sortorder: 'asc',
     buttons : [{
         name : 'Agregar Nuevo Respuesta Clasificacion',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -1711,7 +1895,8 @@ flexiRespuestaClasificacion ={
 //## {flexiTipoQueja-tipoqueja}
 flexiTipoQueja ={
     url : '../edinstancias?parametros=opcion=tabla-tabla=tipoqueja-principal=tipquecodigo-seleccion=tipquedescri-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1720,7 +1905,8 @@ flexiTipoQueja ={
     sortorder: 'asc',
     buttons : [{
         name : 'Agregar Nuevo Tipo Queja',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -1732,7 +1918,8 @@ flexiTipoQueja ={
 //## {flexiEncuentroreunion-encuentroreunion}
 flexiEncuentroreunion ={
     url : '../edinstancias?parametros=opcion=tabla-tabla=encuentroreunion-principal=encuencodigo-seleccion=encuencodigo-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1741,7 +1928,8 @@ flexiEncuentroreunion ={
     sortorder: 'asc',
     buttons : [{
         name : 'Agregar Nuevo Encuentro o Reunion',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -1753,7 +1941,8 @@ flexiEncuentroreunion ={
 //## {flexiClasificacionReclamo-reclamoclasificacion}
 flexiClasificacionReclamo ={
     url : '../edinstancias?parametros=opcion=tabla-tabla=reclamoclasificacion-principal=rectipcodigo,recclacodigo-seleccion=reccladescri-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1762,7 +1951,8 @@ flexiClasificacionReclamo ={
     sortorder: 'asc',
     buttons : [{
         name : 'Agregar Nueva Clasificación Reclamo',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -1775,7 +1965,8 @@ flexiClasificacionReclamo ={
 flexiReclamoClasificacion = {
  
     url : '../edinstancias?parametros=opcion=tabla-tabla=reclamoclasificacion-seleccion=reccladescri-principal=rectipcodigo,recclacodigo',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1784,7 +1975,8 @@ flexiReclamoClasificacion = {
     sortorder: 'asc',
     buttons : [{
         name : 'Agregar Nuevo Reclamo Clasificacion',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }]
 
 }
@@ -1793,7 +1985,7 @@ flexiReclamoClasificacion = {
 //## {flexiInscripcion-inscripcion}
 flexiInscripcion ={
     url : '../edinstancias?parametros=opcion=tabla-tabla=inscripcion-principal=codunifami-seleccion=codunifami-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
     form : 'Vinculacion.jsp?#tabs-1',
     height: 280,
     width : 850,
@@ -1804,6 +1996,7 @@ flexiInscripcion ={
     buttons : [{
         name : 'Agregar Nueva Inscripción',
         bclass : 'anadir',
+        onpress : agregar,
         onpress : agregar
     }],
     
@@ -1815,7 +2008,8 @@ flexiInscripcion ={
 //## {flexiTipoReclamo-reclamotipo}
 flexiTipoReclamo ={
     url : '../edinstancias?parametros=opcion=tabla-tabla=reclamotipo-principal=rectipcodigo-seleccion=rectipdescri-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1824,7 +2018,8 @@ flexiTipoReclamo ={
     sortorder: 'asc',
     buttons : [{
         name : 'Agregar Nuevo Tipo Reclamo',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -1836,7 +2031,8 @@ flexiTipoReclamo ={
 //## {flexiAsistencia-asistentesreunion}
 flexiAsistencia ={
     url : '../edinstancias?parametros=opcion=tabla-tabla=asistentesreunion-principal=encuencodigo,codtipoidentidad,asisteidenti-seleccion=encuencodigo-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1845,7 +2041,8 @@ flexiAsistencia ={
     sortorder: 'asc',
     buttons : [{
         name : 'Agregar Nueva Asistencia',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -1858,7 +2055,8 @@ flexiAsistencia ={
 flexiGrupoSeguridad = {
  
     url : '../edinstancias?parametros=opcion=tabla-tabla=gruposeguridad-seleccion=grusegdescripcion-principal=grusegcodigo-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -1867,19 +2065,22 @@ flexiGrupoSeguridad = {
     sortorder: 'asc',
     buttons : [{
         name : 'Agregar Nuevo Grupo Seguridad',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }]
 
 }
 //## {flexiTipoReunion-tiporeunion}
 flexiTipoReunion = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=tiporeunion-principal=coditiporeun-seleccion=desctiporeun-tipo=modificar-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     buttons : [{
         name : 'Agregar Nuevo Tipo Reunion',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -1890,12 +2091,14 @@ flexiTipoReunion = {
 //## {flexiTipoSistema-tiposistema}
 flexiTipoSistema = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=tiposistema-principal=tisiscodigo-seleccion=tisisdescrip-tipo=modificar-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     buttons : [{
         name : 'Agregar Nuevo Tipo Sistema',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -1906,12 +2109,14 @@ flexiTipoSistema = {
 //## {flexiEstadosUsuarios-estadousuasistema}
 flexiEstadosUsuarios = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=estadousuasistema-principal=codestusuasistema-seleccion=descripcion-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     buttons : [{
         name : 'Agregar Nuevo Estado Usuario',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -1922,12 +2127,14 @@ flexiEstadosUsuarios = {
 //## {flexiPlanSalud-plansalud}
 flexiPlanSalud = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=plansalud-principal=codplansalud-seleccion=descripcion-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     buttons : [{
         name : 'Agregar Nuevo Plan Salud',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -1939,12 +2146,14 @@ flexiPlanSalud = {
 //## {flexiActividadEconomica-actividadeconomica}
 flexiActividadEconomica = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=actividadeconomica-principal=codactividadeconomica-seleccion=descripcion-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     buttons : [{
         name : 'Agregar Nueva Actividad Economica',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -1955,12 +2164,14 @@ flexiActividadEconomica = {
 //## {flexiTipoAportante-tipoaportante}
 flexiTipoAportante = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=tipoaportante-principal=codtipoaportante-seleccion=descripcion-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     buttons : [{
         name : 'Agregar Nueva Actividad Economica',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -1971,12 +2182,14 @@ flexiTipoAportante = {
 //## {flexiTipoContribuyente-tipocontribuyente}
 flexiTipoContribuyente = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=tipocontribuyente-principal=codtipocontribuyente-seleccion=descripcion-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     buttons : [{
         name : 'Agregar Nueva Actividad Economica',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -1987,12 +2200,14 @@ flexiTipoContribuyente = {
 //## {flexiBarrio-barrio}
 flexiBarrio = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=barrio-principal=coddepartamento,codmunicipio,codsubgrupo,codbarrio-seleccion=nombre-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     buttons : [{
         name : 'Agregar Nuevo Barrio',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -2003,12 +2218,14 @@ flexiBarrio = {
 //## {flexiClasePersona-clasepersona}
 flexiClasePersona = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=clasepersona-principal=codclasepersona-seleccion=descripcion-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     buttons : [{
         name : 'Agregar Nueva Clase Persona',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -2020,12 +2237,14 @@ flexiClasePersona = {
 //## {flexiSubGrupoGeografico-subgrupogeografico}
 flexiSubGrupoGeografico = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=subgrupogeografico-principal=codsubgrupo-seleccion=nombre-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     buttons : [{
         name : 'Agregar Nuevo Sub Grupo Geografico',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -2036,12 +2255,14 @@ flexiSubGrupoGeografico = {
 //## {flexiMunicipio-municipio}
 flexiMunicipio = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=municipio-principal=coddepartamento,codmunicipio-seleccion=nombre-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     buttons : [{
         name : 'Agregar Nuevo Municipio',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -2052,12 +2273,14 @@ flexiMunicipio = {
 //## {flexiDepartamento-departamento}
 flexiDepartamento = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=departamento-principal=coddepartamento-seleccion=nombre-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     buttons : [{
         name : 'Agregar Nuevo Departamento',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -2069,7 +2292,8 @@ flexiDepartamento = {
 //## {flexiOrigenRecurso-origenrecurso}
 flexiOrigenRecurso = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=origenrecurso-seleccion=ordescripcion-principal=orcodigo-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -2078,7 +2302,8 @@ flexiOrigenRecurso = {
     sortorder: 'asc',
     buttons : [{
         name : 'Agregar Nuevo Origen Recurso',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }]
 }
 
@@ -2086,7 +2311,8 @@ flexiOrigenRecurso = {
 //## {flexiReclamos-reclamo}
 flexiReclamos = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=reclamo-seleccion=reclamconsec-principal=codunifami,reclamconsec-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -2095,7 +2321,8 @@ flexiReclamos = {
     sortorder: 'asc',
     buttons : [{
         name : 'Agregar Nuevo Reclamo',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -2106,7 +2333,8 @@ flexiReclamos = {
 //## {flexiTipoDocumentoAsociado-tipodctoasociado}
 flexiTipoDocumentoAsociado = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=tipodctoasociado-seleccion=descripcion-principal=codtipodctoasociado-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -2115,7 +2343,8 @@ flexiTipoDocumentoAsociado = {
     sortorder: 'asc',
     buttons : [{
         name : 'Agregar Nuevo Tipo Documento Asociado',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -2126,7 +2355,8 @@ flexiTipoDocumentoAsociado = {
 //## {flexiSatifaccionTipo-satisfacciontipo}
 flexiSatifaccionTipo = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=satisfacciontipo-seleccion=tipsatdescri-principal=tipsatcodigo-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -2135,7 +2365,8 @@ flexiSatifaccionTipo = {
     sortorder: 'asc',
     buttons : [{
         name : 'Agregar Nuevo Tipo Satisfacción',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -2146,7 +2377,8 @@ flexiSatifaccionTipo = {
 //## {flexiReclamoDocumentos-reclamodocumento}
 flexiReclamoDocumentos = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=reclamodocumento-seleccion=reclamconsec-principal=reclamconsec,codunifami,codtipodctoasociado-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -2155,7 +2387,8 @@ flexiReclamoDocumentos = {
     sortorder: 'asc',
     buttons : [{
         name : 'Agregar Nuevo Documento Reclamo',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -2166,7 +2399,8 @@ flexiReclamoDocumentos = {
 //## {flexiReclamoBeneficiario-reclamobeneficiaro}
 flexiReclamoBeneficiario = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=reclamobeneficiaro-seleccion=reclamconsec-principal=codunifami,reclamconsec,codtipoidentidad,identbenef-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -2175,7 +2409,8 @@ flexiReclamoBeneficiario = {
     sortorder: 'asc',
     buttons : [{
         name : 'Agregar Nuevo Reclamo Beneficiario',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -2186,7 +2421,8 @@ flexiReclamoBeneficiario = {
 //## {flexiRespuestasReclamo-respuestareclamo}
 flexiRespuestasReclamo = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=respuestareclamo-seleccion=reclamconsec-principal=codunifami,reclamconsec-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -2195,7 +2431,8 @@ flexiRespuestasReclamo = {
     sortorder: 'asc',
     buttons : [{
         name : 'Agregar Nuevo Reclamo Beneficiario',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -2209,7 +2446,8 @@ flexiEmpresas = {
     
     url : '../edinstancias?parametros=opcion=tabla-tabla=empresa-seleccion=nombre-principal=codtipoidentidad,codempresa-servlet=Empresas-tipo=modificar',
     form : 'Empresas.jsp',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -2219,13 +2457,15 @@ flexiEmpresas = {
     buttons : [{
         name : 'Agregar Nueva Empresa',
         bclass : 'anadir',
+        onpress : agregar,
         onpress : agregar
     }]
 }
 //## {flexiComplejidad-nivelcomplejidad}
 flexiComplejidad = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=nivelcomplejidad-principal=codnivelcomplejidad-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     usepager : true,
@@ -2234,18 +2474,21 @@ flexiComplejidad = {
     sortorder: 'asc',
     buttons : [{
         name : 'Agregar Nueva Complejidad',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }]
 };
 //## {flexiEstadoentidadsalud-estadoentidadsalud}
 flexiEstadoentidadsalud = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=estadoentidadsalud-seleccion=descripcion-principal=codestadoentidad-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     buttons : [{
         name : 'Agregar Nuevo Estado Entidad Salud',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
    
     usepager : true,
@@ -2257,12 +2500,14 @@ flexiEstadoentidadsalud = {
 //## {flexiTipoatencion-tipoatencion}
 flexiTipoatencion = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=tipoatencion-seleccion=descripcion-principal=codtipoatencion-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     buttons : [{
         name : 'Agregar Nueva Atencion',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     usepager : true,
     rp : 30,
@@ -2272,12 +2517,14 @@ flexiTipoatencion = {
 //## {flexiTipoespecializacionsalud-tipoespecializacionsalud}
 flexiTipoespecializacionsalud = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=tipoespecializacionsalud-principal=codtipoespecializacion-seleccion=descripcion-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     buttons : [{
         name : 'Agregar Nueva Especializacion',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -2288,12 +2535,14 @@ flexiTipoespecializacionsalud = {
 //## {flexiEstadosGruposSeguridad-estadogruposeguridad}
 flexiEstadosGruposSeguridad =  {
     url : '../edinstancias?parametros=opcion=tabla-tabla=estadogruposeguridad-principal=esgrsecodigo-seleccion=esgrsedescripcion-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     buttons : [{
         name : 'Agregar Nuevo Estado Grupo Seguridad',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -2304,7 +2553,8 @@ flexiEstadosGruposSeguridad =  {
 //## {flexiNivelsegopcion-nivelsegopcion}
 flexiNivelsegopcion ={
     url : '../edinstancias?parametros=opcion=tabla-tabla=nivelsegopcion-principal=niseopcodigo-seleccion=niseopdescripcion-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     buttons : [{
@@ -2313,7 +2563,8 @@ flexiNivelsegopcion ={
         bclass : 'modificar'
     },{
         name : 'Agregar Nuevo Perfil',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -2324,7 +2575,8 @@ flexiNivelsegopcion ={
 //## {flexiTipoActividad-tipoactividad}
 flexiTipoActividad ={
     url : '../edinstancias?parametros=opcion=tabla-tabla=tipoactividad-principal=codtipoactividad-seleccion=descripcion-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     buttons : [{
@@ -2333,7 +2585,8 @@ flexiTipoActividad ={
         bclass : 'modificar'
     },{
         name : 'Agregar Nuevo Tipo Actividad',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -2345,12 +2598,14 @@ flexiTipoActividad ={
 //## {flexiTipoAsistente-tipoasistente}
 flexiTipoAsistente ={
     url : '../edinstancias?parametros=opcion=tabla-tabla=tipoasistente-principal=tipasicodigo-seleccion=tipasidescri-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     buttons : [{
         name : 'Agregar Nuevo Tipo Asistente',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -2362,12 +2617,14 @@ flexiTipoAsistente ={
 //## {flexiAsistenteExterno-encuenasistenteexterno}
 flexiAsistenteExterno ={
     url : '../edinstancias?parametros=opcion=tabla-tabla=encuenasistenteexterno-principal=encuencodigo,codtipoidentidad,externidenti-seleccion=externidenti-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     buttons : [{
         name : 'Agregar Nuevo Asistente',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -2380,12 +2637,14 @@ flexiAsistenteExterno ={
 //## {flexiListaOpcion-listaopcion}
 flexiListaOpcion =  {
     url : '../edinstancias?parametros=opcion=tabla-tabla=listaopcion-principal=lisopccodigo-seleccion=lisopcdescripcion-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     buttons : [{
         name : 'Agregar Nueva Lista Opcion',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -2397,12 +2656,14 @@ flexiListaOpcion =  {
 //## {flexiGruposSeguridad-gruposeguridad}
 flexiGruposSeguridad =  {
     url : '../edinstancias?parametros=opcion=tabla-tabla=gruposeguridad-principal=grusegcodigo-seleccion=grusegdescripcion-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     buttons : [{
         name : 'Agregar Nuevo Grupo Seguridad',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -2413,12 +2674,14 @@ flexiGruposSeguridad =  {
 //## {flexiSectorEntidad-sectorentidad}
 flexiSectorEntidad =  {
     url : '../edinstancias?parametros=opcion=tabla-tabla=sectorentidad-principal=codsectorentidad-seleccion=descripcion-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     buttons : [{
         name : 'Agregar Nuevo Sector Entidad',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -2430,6 +2693,7 @@ flexiSectorEntidad =  {
 flexiEncuentroActividad = { 
     url : '../edinstancias?parametros=opcion=tabla-tabla=encuentroactividad-principal=encuencodigo,codtipoactividad-seleccion=encuencodigo-tipo=modificar', 
     dataType : 'xml', 
+    form : '', 
     height: 280, 
     width : 850, 
     usepager : true, 
@@ -2439,7 +2703,8 @@ flexiEncuentroActividad = {
     buttons : [ 
     { 
         name : 'Agregar Nuevo Encuentro Actividad', 
-        bclass : 'anadir' 
+        bclass : 'anadir',
+        onpress : agregar 
     } 
     ] 
 }; 
@@ -2451,12 +2716,15 @@ flexiEncuentroActividad = {
 //## {flexiTipoIdentificacion-tipoidentificacion}
 flexiTipoIdentificacion = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=tipoidentificacion-principal=codtipoidentidad-seleccion=descripcion-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     buttons : [{
         name : 'Agregar Nuevo Tipo Identificacion',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar,
+        onpress : agregar
     }],
     
     usepager : true,
@@ -2467,13 +2735,15 @@ flexiTipoIdentificacion = {
 //## {flexiClasificacionentidad-clasificacionentidad}
 flexiClasificacionentidad = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=clasificacionentidad-principal=codclasifentidad-seleccion=descripcion-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     
     buttons : [{
         name : 'Agregar Nueva Clasificacion Entidad',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }],
     
     usepager : true,
@@ -2485,12 +2755,14 @@ flexiClasificacionentidad = {
 flexiRegimen = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=regimen-principal=codregimen-seleccion=descripcion-tipo=modificar',
     form : 'Regimen.jsp',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     buttons : [{
         name : 'Agregar Nuevo Regimen',
         bclass : 'anadir',
+        onpress : agregar,
             
         onpress : agregar
     }
@@ -2504,12 +2776,14 @@ flexiRegimen = {
 //## {flexiEntidad-tipoentidadsalud}
 flexiEntidad = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=tipoentidadsalud-principal=codtipoentidadsalud-seleccion=descripcion-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     buttons : [{
         name : 'Agregar Nueva Entidad',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }
     ],
     usepager : true,
@@ -2520,12 +2794,14 @@ flexiEntidad = {
 //## {flexiEstadoUsuario-estadousuasistema}
 flexiEstadoUsuario = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=estadousuasistema-principal=codestusuasistema-seleccion=descripcion-tipo=modificar',
-    dataType : 'xml',
+    dataType : 'xml', 
+    form : '',
     height: 280,
     width : 850,
     buttons : [{
         name : 'Agregar Nuevo Estado Usuario',
-        bclass : 'anadir'
+        bclass : 'anadir',
+        onpress : agregar
     }
     ],
     usepager : true,

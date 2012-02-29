@@ -613,7 +613,10 @@ function urlDecodificar(urlCodificada,  sp) {
 }
 
 function agregar() {
-    console.log( 'Form : ' + form );
+    if( form == '' ) {
+        bottomMensaje('El formulario que esta intentando abrir no existe.', 'Error formulario', 'e', 'n');
+        return;
+    } 
     abrirPagina('../formularios/' + form);
 }
 function abrirPagina( url ) {
