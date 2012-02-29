@@ -1,3 +1,95 @@
+//## {flexiNormas-normas}
+flexiNormas = { 
+	url : '../edinstancias?parametros=opcion=tabla-tabla=normas-principal=codtiponorma,codnorma,fechanorma-seleccion=codtiponorma-tipo=modificar', 
+	dataType : 'xml', 
+	height: 280, 
+	width : 850, 
+	usepager : true, 
+	rp : 30, 
+	sortname: 'codtiponorma', 
+	sortorder: 'asc', 
+	buttons : [ 
+	{ 
+	name : 'Agregar Nueva NormA', 
+	bclass : 'anadir' 
+	} 
+	] 
+}; 
+
+
+//## {flexiSubsidioAsignado-subsidioasignado}
+flexiSubsidioAsignado = { 
+	url : '../edinstancias?parametros=opcion=tabla-tabla=subsidioasignado-principal=codunifami,codtipoidentidad,subpotidenti-seleccion=codunifami-tipo=modificar', 
+	dataType : 'xml', 
+	height: 280, 
+	width : 850, 
+	usepager : true, 
+	rp : 30, 
+	sortname: 'codunifami', 
+	sortorder: 'asc', 
+	buttons : [ 
+	{ 
+	name : 'Agregar Nuevo Subsidio Asignado', 
+	bclass : 'anadir' 
+	} 
+	] 
+}; 
+
+//## {flexiSubsidioPotencial-subsidiopotencial}
+flexiSubsidioPotencial = { 
+	url : '../edinstancias?parametros=opcion=tabla-tabla=subsidiopotencial-principal=codunifami,codtipoidentidad,subpotidenti-seleccion=codunifami-tipo=modificar', 
+	dataType : 'xml', 
+	height: 280, 
+	width : 850, 
+	usepager : true, 
+	rp : 30, 
+	sortname: 'codunifami', 
+	sortorder: 'asc', 
+	buttons : [ 
+	{ 
+	name : 'Agregar Nuevo Subsidio Potencial', 
+	bclass : 'anadir' 
+	} 
+	] 
+}; 
+
+//## {flexiSubsidioMunicipio-subsidiomunicipio}
+flexiSubsidioMunicipio = { 
+	url : '../edinstancias?parametros=opcion=tabla-tabla=subsidiomunicipio-principal=subscodigo,coddepartamento,codmunicipio-seleccion=subscodigo-tipo=modificar', 
+	dataType : 'xml', 
+	height: 280, 
+	width : 850, 
+	usepager : true, 
+	rp : 30, 
+	sortname: 'subscodigo', 
+	sortorder: 'asc', 
+	buttons : [ 
+	{ 
+	name : 'Agregar Nuevo Subsidio Municipio', 
+	bclass : 'anadir' 
+	} 
+	] 
+}; 
+
+//## {flexiSubsidio-subsidio}
+flexiSubsidio = { 
+	url : '../edinstancias?parametros=opcion=tabla-tabla=subsidio-principal=subscodigo-seleccion=subsdescripc-tipo=modificar', 
+	dataType : 'xml', 
+	height: 280, 
+	width : 850, 
+	usepager : true, 
+	rp : 30, 
+	sortname: 'subscodigo', 
+	sortorder: 'asc', 
+	buttons : [ 
+	{ 
+	name : 'Agregar Nuevo Subsidio', 
+	bclass : 'anadir' 
+	} 
+	] 
+}; 
+
+
 //## {flexiQuejaRespuesta-quejarespuesta}
 flexiQuejaRespuesta = { 
 	url : '../edinstancias?parametros=opcion=tabla-tabla=quejarespuesta-principal=codunifami,quejconsecut-seleccion=codunifami-tipo=modificar', 
@@ -566,6 +658,23 @@ flexiActividadSalud = {
         bclass : 'anadir' 
     } 
     ] 
+}; 
+//## {flexiClaseBeneficiario-clasebeneficiario}
+flexiClaseBeneficiario = { 
+	url : '../edinstancias?parametros=opcion=tabla-tabla=clasebeneficiario-principal=clabencodigo-seleccion=clabencodigo-tipo=modificar', 
+	dataType : 'xml', 
+	height: 280, 
+	width : 850, 
+	usepager : true, 
+	rp : 30, 
+	sortname: 'clabencodigo', 
+	sortorder: 'asc', 
+	buttons : [ 
+	{ 
+	name : 'Agregar Nueva Clase Beneficiario', 
+	bclass : 'anadir' 
+	} 
+	] 
 }; 
 
 

@@ -265,6 +265,10 @@
         <servlet-name>ViolenciaIntrafamiliar</servlet-name>
         <servlet-class>formularios.ViolenciaIntrafamiliar</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Subsidios</servlet-name>
+        <servlet-class>formularios.Subsidio</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletSeleccionarMunicipios</servlet-name>
         <url-pattern>/ServletSeleccionarMunicipios</url-pattern>
@@ -520,6 +524,10 @@
     <servlet-mapping>
         <servlet-name>ViolenciaIntrafamiliar</servlet-name>
         <url-pattern>/ViolenciaIntrafamiliar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Subsidios</servlet-name>
+        <url-pattern>/Subsidios</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>-1</session-timeout>

@@ -13,7 +13,7 @@
             <li><span class="folder">Inscripci&oacute;n</span>
                 <ul>
                     <li><span class="file"><a href="<%= formularios%>Vinculacion.jsp?#tabs-1">Inscripci&oacute;n</a></span>
-                        
+
                     </li>
                     <li><span class="folder">Novedad</span>
                         <ul>
@@ -279,17 +279,9 @@
             <li><span class="folder">Subsidios</span>
                 <ul>
                     <span class="file"> <li>
-                            <a href="<%= FamiliasEnAccion%>Subsidios.jsp">Subsidios</a>
+                            <a href="<%= formularios%>Subsidio.jsp">Subsidios</a>
                         </li></span>
-                    <span class="file">   <li>
-                            <a href="<%= FamiliasEnAccion%>SubsidiosMunicipio.jsp">Subsidios Municipio</a>
-                        </li></span>
-                    <span class="file">  <li>
-                            <a href="<%= FamiliasEnAccion%>SubsidioPotencial.jsp">Subsidio Potencial</a>
-                        </li></span>
-                    <span class="file">  <li>
-                            <a href="<%= FamiliasEnAccion%>SubsidioAsignado.jsp">Subsidio Asignado</a>
-                        </li></span>
+                    
                     <li><span class="folder">Configuraci&oacute;n B&aacute;sica</span>
                         <ul>
                             <span class="file">   <li>
