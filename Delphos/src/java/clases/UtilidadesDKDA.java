@@ -523,7 +523,7 @@ public class UtilidadesDKDA {
 
     public static String o(HashMap vars, String clave) {
         if (vars.containsKey(clave)) {
-            return vars.get(clave).toString();
+            return vars.get(clave).toString().trim();
         }
         return "";
 

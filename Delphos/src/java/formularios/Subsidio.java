@@ -44,6 +44,7 @@ public class Subsidio extends HttpServlet {
         municipio_subsidiopotencial_1 = fun.map(dkda.o(vars, "municipio_subsidiopotencial_1").toString());
         subsidiopotencial_subsidioasignado_1 = fun.map(dkda.o(vars, "subsidiopotencial_subsidioasignado_1").toString());
         municipio_subsidioasignado_1 = fun.map(dkda.o(vars, "municipio_subsidioasignado_1").toString());
+        
         try {
             String opcion = dkda.o(vars, "accion").toString();
             String pestana = dkda.o(vars, "pestana").toString();
@@ -202,6 +203,7 @@ public class Subsidio extends HttpServlet {
                     + "       subsidio.\"codnorma\"              AS subsidio_codnorma, "
                     + "       subsidio.\"fechanorma\"            AS subsidio_fechanorma, "
                     + "       subsidio.\"subsobservac\"          AS subsidio_subsobservac, "
+                    + "       normas.\"referencia\"          AS normas_referencia, "
                     + "       clasebeneficiario.\"clabendescri\" AS clasebeneficiario_clabendescri, "
                     + "       tiposubsidio.\"subtipdescri\"      AS tiposubsidio_subtipdescri, "
                     + "       escgrupogrado.\"grugradescri\"     AS escgrupogrado_grugradescri "
@@ -221,6 +223,48 @@ public class Subsidio extends HttpServlet {
             rs = stmt.executeQuery();
             rs.next();
             
+           
+            info += "text|#subsobservac_subsidio|" + (rs.getString("subsidio_subsobservac") == null ? "" : 
+                    rs.getString("subsidio_subsobservac")) + ":_";
+            
+            info += "combo|#normas_subsidio_1|" + "normas   codtiponorma  "
+                    + rs.getString("subsidio_codtiponorma") + "   "
+                    + "codnorma  " + rs.getString("subsidio_codnorma") + "   "
+                    + "fechanorma  " + rs.getString("subsidio_fechanorma")
+                    + "|llenarCombo('normas_subsidio_1', '"
+                    + "normas   codtiponorma  "
+                    + rs.getString("subsidio_codtiponorma") + "   "
+                    + "codnorma  " + rs.getString("subsidio_codnorma") + "   "
+                    + "fechanorma  " + rs.getString("subsidio_fechanorma")
+                    + "', '" + rs.getString("normas_referencia") + "'):_";
+            
+            info += "text|#subsvalobase_subsidio|" + (rs.getString("subsidio_subsvalobase") == null ? "" : 
+                    rs.getString("subsidio_subsvalobase")) + ":_";
+
+            info += "combo|#grugracodigo_subsidio|" + rs.getString("subsidio_grugracodigo")
+                    + "|llenarCombo('grugracodigo_subsidio', '"
+                    + rs.getString("subsidio_grugracodigo") + "', '" +
+                    rs.getString("escgrupogrado_grugradescri") + "'):_";                        
+            
+            info += "combo|#clabencodigo_subsidio|" + rs.getString("subsidio_clabencodigo")
+                    + "|llenarCombo('clabencodigo_subsidio', '"
+                    + rs.getString("subsidio_clabencodigo") + "', '" +
+                    rs.getString("clasebeneficiario_clabendescri") + "'):_";                        
+            
+            info += "combo|#subtipcodigo_subsidio|" + rs.getString("subsidio_subtipcodigo")
+                    + "|llenarCombo('subtipcodigo_subsidio', '"
+                    + rs.getString("subsidio_subtipcodigo") + "', '" +
+                    rs.getString("tiposubsidio_subtipdescri") + "'):_";            
+            
+            info += "text|#_fecha_subsfechfina_subsidio|" + (rs.getString("subsidio_subsfechfina") == null ? "" : 
+                    rs.getString("subsidio_subsfechfina")) + ":_";
+            
+            info += "text|#_fecha_subsfechinic_subsidio|" + (rs.getString("subsidio_subsfechinic") == null ? "" : 
+                    rs.getString("subsidio_subsfechinic")) + ":_";
+            
+            info += "text|#subsdescripc_subsidio|" + (rs.getString("subsidio_subsdescripc") == null ? "" : 
+                    rs.getString("subsidio_subsdescripc")) + ":_";
+            
             info += "text|#subscodigo_subsidio|" + (rs.getString("subsidio_subscodigo") == null ? "" : 
                     rs.getString("subsidio_subscodigo")) + ":_";
             
@@ -239,7 +283,11 @@ public class Subsidio extends HttpServlet {
         Connection conexion = bdS.getConexion();
         boolean existe = true;
         try {
-            pQuery = conexion.prepareStatement("SELECT COUNT(*) FROM subsidio  WHERE subscodigo = '" + dkda.o(vars, "subscodigo") + "'");
+            String sql = "SELECT COUNT(*) FROM subsidio  WHERE "
+                    + "subscodigo = '" + dkda.o(vars, "subscodigo_subsidio") + "'";
+            System.out.println( sql );
+            pQuery = conexion.prepareStatement(sql);
+            
             rQuery = pQuery.executeQuery();
             rQuery.next();
             existe = rQuery.getInt(1) > 0 ? true : false;
@@ -257,7 +305,7 @@ public class Subsidio extends HttpServlet {
 
         Boolean existe = existe_subsidio();
         if (dkda.o(vars, "accion").toString().equals("Actualizar")) {
-            if (!(dkda.o(sel, "subscodigo").toString().equals(dkda.o(vars, "subscodigo_subsidio"))) && existe == true) {
+            if (!(dkda.o(vars, "codigo").toString().equals(dkda.o(vars, "subscodigo_subsidio"))) && existe == true) {
                 error = "Ya existe un registro en la tabla con esta informacion. Verifique los campos";
             }
         } else {
@@ -279,7 +327,7 @@ public class Subsidio extends HttpServlet {
             error = "Código Grupo Grado Escolaridad: no puede ser vacio.";
         } else if (dkda.o(vars, "subsvalobase_subsidio").isEmpty()) {
             error = "Valor Base Subsidio: no puede ser vacio.";
-        } else if (dkda.o(vars, "codtiponorma_subsidio").isEmpty()) {
+        } else if (dkda.o(normas_subsidio_1, "codtiponorma").isEmpty()) {
             error = "Codigo Tipo Norma: no puede ser vacio.";
         } else if (dkda.o(vars, "subsobservac_subsidio").isEmpty()) {
             error = "Observaciones Subsidio: no puede ser vacio.";

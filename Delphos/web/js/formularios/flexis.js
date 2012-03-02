@@ -1,6 +1,6 @@
 //## {flexiNormas-normas}
 flexiNormas = { 
-    url : '../edinstancias?parametros=opcion=tabla-tabla=normas-principal=codtiponorma,codnorma,fechanorma-seleccion=codtiponorma-tipo=modificar', 
+    url : '../edinstancias?parametros=opcion=tabla-tabla=normas-principal=codtiponorma,codnorma,fechanorma-seleccion=referencia-tipo=modificar', 
     dataType : 'xml', 
     form : '', 
     height: 280, 
@@ -18,6 +18,23 @@ flexiNormas = {
     ] 
 }; 
 
+//## {flexiTipoNorma-tiponorma}
+flexiTipoNorma = { 
+	url : '../edinstancias?parametros=opcion=tabla-tabla=tiponorma-principal=codtiponorma-seleccion=descripcion-tipo=modificar', 
+	dataType : 'xml', 
+	height: 280, 
+	width : 850, 
+	usepager : true, 
+	rp : 30, 
+	sortname: 'codtiponorma', 
+	sortorder: 'asc', 
+	buttons : [ 
+	{ 
+	name : 'Agregar Nuevo Tipo Norma', 
+	bclass : 'anadir' 
+	} 
+	] 
+}; 
 
 //## {flexiSubsidioAsignado-subsidioasignado}
 flexiSubsidioAsignado = { 

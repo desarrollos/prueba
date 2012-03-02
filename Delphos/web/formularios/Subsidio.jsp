@@ -68,7 +68,9 @@
                                 <td>Observaciones Subsidio</td>
                             </tr>
                             <tr>
-                                <td> <select  id="normas_subsidio" name="normas_subsidio" onfocus="tabla(flexiNormas, 'Codigo Tipo Norma', 'normas_subsidio' )" onclick="tabla(flexiNormas, 'Codigo Tipo Norma', 'normas_subsidio' )"></select></td>
+                                <td> <select  id="normas_subsidio_1" name="normas_subsidio_1" onfocus="tabla(flexiNormas, 
+                                    'Codigo Tipo Norma', 'normas_subsidio_1' )" onclick="tabla(flexiNormas, 'Codigo Tipo Norma', 'normas_subsidio_1' )"></select></td>
+                                
                                 <td colspan="3"> <textarea id="subsobservac_subsidio" name="subsobservac_subsidio" cols="80" rows="4"></textarea></td>
                             </tr>
 
