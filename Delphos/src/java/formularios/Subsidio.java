@@ -839,10 +839,97 @@ public class Subsidio extends HttpServlet {
         try {
             ResultSet rs = null;
             PreparedStatement stmt = null;
-            String sql = "";
+            String sql = ""
+                    + "SELECT subsidioasignado.\"codunifami\"       AS subsidioasignado_codunifami, "
+                    + "       subsidioasignado.\"codtipoidentidad\" AS subsidioasignado_codtipoidentidad, "
+                    + "       subsidioasignado.\"subpotidenti\"     AS subsidioasignado_subpotidenti, "
+                    + "       subsidioasignado.\"subasifecini\"     AS subsidioasignado_subasifecini, "
+                    + "       subsidioasignado.\"subasifecfin\"     AS subsidioasignado_subasifecfin, "
+                    + "       subsidioasignado.\"subscodigo\"       AS subsidioasignado_subscodigo, "
+                    + "       subsidioasignado.\"subasivalsub\"     AS subsidioasignado_subasivalsub, "
+                    + "       subsidioasignado.\"coddepartamento\"  AS subsidioasignado_coddepartamento, "
+                    + "       subsidioasignado.\"codmunicipio\"     AS subsidioasignado_codmunicipio, "
+                    + "       subsidioasignado.\"subasidescri\"     AS subsidioasignado_subasidescri, "
+                    + "       subsidioasignado.\"codbanco\"         AS subsidioasignado_codbanco, "
+                    + "       subsidioasignado.\"subasireqedu\"     AS subsidioasignado_subasireqedu, "
+                    + "       subsidioasignado.\"subasireqsal\"     AS subsidioasignado_subasireqsal, "
+                    + "       subsidioasignado.\"subasiusosub\"     AS subsidioasignado_subasiusosub, "
+                    + "       subsidioasignado.\"subasiobserv\"     AS subsidioasignado_subasiobserv, "
+                    + "       municipio.\"nombre\"                  AS municipio_nombre, "
+                    + "       banco.\"descripcion\"                 AS banco_descripcion, "
+                    + "       subsidio.\"subsdescripc\"             AS subsidio_subsdescripc "
+                    + "FROM   \"public\".\"banco\" banco "
+                    + "       INNER JOIN \"public\".\"subsidioasignado\" subsidioasignado "
+                    + "         ON banco.\"codbanco\" = subsidioasignado.\"codbanco\" "
+                    + "       INNER JOIN \"public\".\"municipio\" municipio "
+                    + "         ON subsidioasignado.\"coddepartamento\" = municipio.\"coddepartamento\" "
+                    + "            AND municipio.\"codmunicipio\" = subsidioasignado.\"codmunicipio\" "
+                    + "       INNER JOIN \"public\".\"subsidio\" subsidio "
+                    + "         ON subsidioasignado.\"subscodigo\" = subsidio.\"subscodigo\" "
+                    + "       INNER JOIN \"public\".\"subsidiopotencial\" subsidiopotencial "
+                    + "         ON subsidioasignado.\"codunifami\" = subsidiopotencial.\"codunifami\" "
+                    + "            AND subsidiopotencial.\"subpotidenti\" = "
+                    + "                subsidioasignado.\"subpotidenti\" "
+                    + "            AND subsidiopotencial.\"codtipoidentidad\" = "
+                    + "                subsidioasignado.\"codtipoidentidad\" "
+                    + "WHERE subsidioasignado.codunifami = '" + dkda.o(sel, "codunifami") + "' "
+                    + "AND subsidioasignado.codtipoidentidad = '" + dkda.o(sel, "codtipoidentidad") + "' "
+                    + "AND subsidioasignado.subpotidenti = '" + dkda.o(sel, "subpotidenti") + "' ";
             stmt = con.con.prepareStatement(sql);
             rs = stmt.executeQuery();
             rs.next();
+            
+            info += "text|#subasiobserv_subsidioasignado|" + (rs.getString("subsidioasignado_subasiobserv") == null ? ""
+                    : rs.getString("subsidioasignado_subasiobserv")) + ":_";
+            
+            info += "text|#subasidescri_subsidioasignado|" + (rs.getString("subsidioasignado_subasidescri") == null ? ""
+                    : rs.getString("subsidioasignado_subasidescri")) + ":_";
+            
+            info += "switch|switch_subasiusosub_subsidioasignado|" + rs.getString("subsidioasignado_subasiusosub") + ":_";
+            
+            info += "switch|switch_subasireqsal_subsidioasignado|" + rs.getString("subsidioasignado_subasireqsal") + ":_";
+            
+            info += "switch|switch_subasireqedu_subsidioasignado|" + rs.getString("subsidioasignado_subasireqedu") + ":_";
+            
+            info += "combo|#codbanco_subsidioasignado|" + rs.getString("subsidioasignado_codbanco") 
+                    + "|llenarCombo('codbanco_subsidioasignado', '"
+                    + rs.getString("subsidioasignado_codbanco") + "', '" + rs.getString("banco_descripcion") + "'):_";
+            
+            info += "combo|#municipio_subsidioasignado_1|" + "municipio   coddepartamento  "
+                    + rs.getString("subsidioasignado_coddepartamento") + "   "
+                    + "codmunicipio  " + rs.getString("subsidioasignado_codmunicipio")
+                    + "|llenarCombo('municipio_subsidioasignado_1', '"
+                     + "municipio   coddepartamento  "
+                    + rs.getString("subsidioasignado_coddepartamento") + "   "
+                    + "codmunicipio  " + rs.getString("subsidioasignado_codmunicipio")
+                    + "', '"
+                    + rs.getString("municipio_nombre") + "'):_";
+            
+            info += "text|#subasivalsub_subsidioasignado|" + (rs.getString("subsidioasignado_subasivalsub") == null ? ""
+                    : rs.getString("subsidioasignado_subasivalsub")) + ":_";
+
+            info += "combo|#subscodigo_subsidioasignado|" + rs.getString("subsidioasignado_subscodigo") 
+                    + "|llenarCombo('subscodigo_subsidioasignado', '"
+                    + rs.getString("subsidioasignado_subscodigo") + "', '" + rs.getString("subsidio_subsdescripc") + "'):_";
+
+            info += "text|#_fecha_subasifecfin_subsidioasignado|" + (rs.getString("subsidioasignado_subasifecfin") == null ? ""
+                    : rs.getString("subsidioasignado_subasifecfin")) + ":_";
+
+            info += "text|#_fecha_subasifecini_subsidioasignado|" + (rs.getString("subsidioasignado_subasifecini") == null ? ""
+                    : rs.getString("subsidioasignado_subasifecini")) + ":_";
+
+            info += "combo|#subsidiopotencial_subsidioasignado_1|" + "subsidiopotencial   codunifami  "
+                    + rs.getString("subsidioasignado_codunifami") + "   "
+                    + "codtipoidentidad  " + rs.getString("subsidioasignado_codtipoidentidad") + "   subpotidenti  "
+                    + rs.getString("subsidioasignado_subpotidenti")
+                    + "|llenarCombo('subsidiopotencial_subsidioasignado_1', '"
+                    + "subsidiopotencial   codunifami  "
+                    + rs.getString("subsidioasignado_codunifami") + "   "
+                    + "codtipoidentidad  " + rs.getString("subsidioasignado_codtipoidentidad") + "   subpotidenti  "
+                    + rs.getString("subsidioasignado_subpotidenti")
+                    + "', '"
+                    + rs.getString("subsidioasignado_codunifami") + "'):_";
+
             respuesta = "opcion=obtener_subsidioasignado&&estado=si&&error=no&&errorDes=no&&codigo=" + codigo + "&&info=" + info.replace("\"", "");
         } catch (SQLException e) {
             respuesta = "opcion=obtener_subsidioasignado&&estado=no&&error=si&&errorDes=" + dkda.convertirACarEspecial(e.getMessage());
@@ -852,9 +939,81 @@ public class Subsidio extends HttpServlet {
         return respuesta;
     }
 
+    private boolean existe_subsidioasignado() {
+        PreparedStatement pQuery = null;
+        ResultSet rQuery = null;
+        Connection conexion = bdS.getConexion();
+        boolean existe = true;
+        try {
+            pQuery = conexion.prepareStatement("SELECT COUNT(*) FROM subsidioasignado  WHERE"
+                    + " codunifami = '" + dkda.o(subsidiopotencial_subsidioasignado_1, "codunifami") + "'" + " AND "
+                    + "codtipoidentidad = '" + dkda.o(subsidiopotencial_subsidioasignado_1, "codtipoidentidad") + "'" + " AND "
+                    + "subpotidenti = '" + dkda.o(subsidiopotencial_subsidioasignado_1, "subpotidenti") + "'");
+            
+            rQuery = pQuery.executeQuery();
+            rQuery.next();
+            existe = rQuery.getInt(1) > 0 ? true : false;
+            pQuery.close();
+            rQuery.close();
+        } catch (SQLException e) {
+            System.err.println("( existe_subsidioasignado() ) " + estadosSQL.getM(e.getSQLState(), e.getMessage()));
+        }
+        return existe;
+    }
+
     public String validarFormulario_subsidioasignado() {
         String direccion = "opcion=registrar_subsidioasignado&&estado=no&&error=si&&errorDes=";
         String error = "";
+
+        Boolean existe = existe_subsidioasignado();
+        if (dkda.o(vars, "accion").toString().equals("Actualizar")) {
+            if (!(dkda.o(sel, "codunifami").toString().equals(dkda.o(subsidiopotencial_subsidioasignado_1, "codunifami")) && 
+                    dkda.o(sel, "codtipoidentidad").toString().equals(dkda.o(subsidiopotencial_subsidioasignado_1, "codtipoidentidad")) &&
+                    dkda.o(sel, "subpotidenti").toString().equals(dkda.o(subsidiopotencial_subsidioasignado_1, "subpotidenti"))) && existe == true) {
+                error = "Ya existe un registro en la tabla con esta informacion. Verifique los campos";
+            }
+        } else {
+            error = (existe) ? "Ya existe un registro en la tabla con esta informacion. Verifique los campos" : "";
+        }
+        if (dkda.o(subsidiopotencial_subsidioasignado_1, "codunifami").isEmpty()) {
+            error = "Código Único Familia: no puede ser vacio.";
+        } else if (dkda.o(vars, "subasifecini_subsidioasignado").isEmpty()) {
+            error = "Fecha Inicial Vigencia Subsidio: no puede ser vacio.";
+        } else if (dkda.o(vars, "subasifecfin_subsidioasignado").isEmpty()) {
+            error = "Fecha Final Vigencia Subsidio: no puede ser vacio.";
+        } else if (dkda.o(vars, "subscodigo_subsidioasignado").isEmpty()) {
+            error = "Subsidio: no puede ser vacio.";
+        } else if (dkda.o(vars, "subasivalsub_subsidioasignado").isEmpty()) {
+            error = "Valor Pago Subsidio: no puede ser vacio.";
+        } else if (dkda.o(municipio_subsidioasignado_1, "coddepartamento").isEmpty()) {
+            error = "Municipio: no puede ser vacio.";
+        } else if (dkda.o(vars, "codbanco_subsidioasignado").isEmpty()) {
+            error = "Banco: no puede ser vacio.";
+        } else if (dkda.o(vars, "subasireqedu_subsidioasignado").isEmpty()) {
+            error = "Cumple Requisito Educación (S/N): no puede ser vacio.";
+        } else if (dkda.o(vars, "subasireqsal_subsidioasignado").isEmpty()) {
+            error = "Cumple Requisito Salud (S/N): no puede ser vacio.";
+        } else if (dkda.o(vars, "subasiusosub_subsidioasignado").isEmpty()) {
+            error = "Uso Subsidio (S/N): no puede ser vacio.";
+        } else if (dkda.o(vars, "subasidescri_subsidioasignado").isEmpty()) {
+            error = "Descripción Subsidio Asignado: no puede ser vacio.";
+        } else if (dkda.o(vars, "subasiobserv_subsidioasignado").isEmpty()) {
+            error = "Observaciones Subsidio Asignado: no puede ser vacio.";
+        } else if (!v.numDecimal(dkda.o(vars, "subasivalsub_subsidioasignado"))) {
+            error = "Valor Pago Subsidio: Tiene Caracteres no permitidos.";
+        } else if (dkda.o(vars, "subasireqedu_subsidioasignado").length() > 1) {
+            error = "Cumple Requisito Educación (S/N): Valor demasiado Largo.";
+        } else if (dkda.o(vars, "subasireqsal_subsidioasignado").length() > 1) {
+            error = "Cumple Requisito Salud (S/N): Valor demasiado Largo.";
+        } else if (dkda.o(vars, "subasiusosub_subsidioasignado").length() > 1) {
+            error = "Uso Subsidio (S/N): Valor demasiado Largo.";
+        } else if (dkda.o(vars, "subasidescri_subsidioasignado").length() > 50) {
+            error = "Descripción Subsidio Asignado: Valor demasiado Largo.";
+        } else if (dkda.o(vars, "subasiobserv_subsidioasignado").length() > 400) {
+            error = "Observaciones Subsidio Asignado: Valor demasiado Largo.";
+        }
+
+
         respuesta = (error.length() > 1 ? direccion + "" + error + "" : "");
         return respuesta;
     }// 
