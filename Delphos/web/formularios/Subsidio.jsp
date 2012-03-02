@@ -114,6 +114,47 @@
                         <br />
                         <table>
 
+                            <tr>
+                                <td>Código Único Familia</td>
+                                <td>Tipo Identificacion Beneficiario Subsidio</td>
+                                <td>Identificación Beneficiario Subsidio</td>
+                                <td>Código Subsidio</td>
+                            </tr>
+                            <tr>
+                                <td> <select  id="codunifami_subsidiopotencial" name="codunifami_subsidiopotencial" 
+                                              onfocus="tabla(flexiInscripcion, 'Código Único Familia', 'codunifami_subsidiopotencial' )" 
+                                              onclick="tabla(flexiInscripcion, 'Código Único Familia', 'codunifami_subsidiopotencial' )">
+                                        
+                                    </select></td>
+                                
+                                <td> <select  id="codtipoidentidad_subsidiopotencial" name="codtipoidentidad_subsidiopotencial" onfocus="tabla(flexiTipoIdentificacion, 'Tipo Identificacion Beneficiario Subsidio', 'codtipoidentidad_subsidiopotencial' )" onclick="tabla(flexiTipoIdentificacion, 'Tipo Identificacion Beneficiario Subsidio', 'codtipoidentidad_subsidiopotencial' )"></select></td>
+                                <td> <input type="text" id="subpotidenti_subsidiopotencial" name="subpotidenti_subsidiopotencial"/></td>
+                                <td> <select  id="subscodigo_subsidiopotencial" name="subscodigo_subsidiopotencial" onfocus="tabla(flexiSubsidio, 'Código Subsidio', 'subscodigo_subsidiopotencial' )" onclick="tabla(flexiSubsidio, 'Código Subsidio', 'subscodigo_subsidiopotencial' )"></select></td>
+                            </tr>
+                            <tr>
+                                <td>Valor Subsidio Potencial</td>
+                                <td>Municipio Segun DANE</td>
+                                
+                                
+                            </tr>
+                            <tr>
+                                <td> <input type="text" id="subpotvalsub_subsidiopotencial" name="subpotvalsub_subsidiopotencial"/></td>
+                                <td> <select  id="municipio_subsidiopotencial_1" name="municipio_subsidiopotencial_1" onfocus="tabla(flexiMunicipio, 'CodigoDeparamento Segun DANE', 'municipio_subsidiopotencial_1' )" onclick="tabla(flexiMunicipio, 'CodigoDeparamento Segun DANE', 'municipio_subsidiopotencial_1' )"></select></td>
+                                
+                                
+                            </tr>
+                            <tr>
+                               <td>Descripción Subsidio Potencial</td> 
+                            </tr>
+                            <tr>
+                                <td colspan="4"> <textarea id="subpotdescri_subsidiopotencial" name="subpotdescri_subsidiopotencial" cols="110" rows="4"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td>Observaciones Subsidio Potencial</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4"> <textarea id="subpotobserv_subsidiopotencial" name="subpotobserv_subsidiopotencial" cols="110" rows="4"></textarea></td>
+                            </tr>
                         </table>
                     </div>
                     <div id="tabs-4">

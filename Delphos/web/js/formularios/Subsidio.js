@@ -66,6 +66,36 @@ $(document).ready( function( ) {
             $("#tabla").flexReload();
         } 
  
+	
+		 
+        if( op == 'registrar_subsidiopotencial' ) {
+            if( es == 'si' && er == 'no' ) bottomMensaje('Subsidio Potencial se registro correctamente','Estado registro', 'ex', 's'); 
+            if( es == 'no' && er == 'si' ) bottomMensaje('Subsidio Potencial no se registro correctamente: <br /><br /><span class="error"> ' + ed + "</span>", 'Algunos elementos del formulario se encuentran vacios', 'e', 'n');
+        }
+		 
+        if( op == 'obtener_subsidiopotencial' ) {
+            if( es == 'no' && er == 'si' ){ 
+                bottomMensaje('Subsidio Potencial no se puede mostrar: <br /><br /><span class="error"> ' + ed + "</span>", 'Error el obtener el registro de la base de datos', 'e'); 
+            }else { 
+                leerDatos( io ); 
+                $("#tablaContenedor").dialog("close"); 
+                configurarBotones('Actualizar'); 
+                $("#codigo").val( mapaDatos['codigo'] ); 
+            }
+        }
+		 
+        if( op == 'actualizar_subsidiopotencial' ) {
+            if( es == 'si' && er == 'no' ) bottomMensaje('Subsidio Potencial se actualizo correctamente','Estado actualizacion', 'ex', 's');
+            if( es == 'no' && er == 'si' ) bottomMensaje('Subsidio Potencial no registro correctamente: <br /><br /><span class="error"> '				  + ed + "</span>", 'Error al actualizar el registro', 'e', 'n'); 
+        } 
+ 
+        if( op == 'eliminar_subsidiopotencial' ) {
+            if( es == 'si' && er == 'no' ) bottomMensaje('Subsidio Potencial se borro correctamente', 'Estado borrado', 'ex', 'n'); 
+            if( es == 'no' && er == 'si' ) bottomMensaje('Subsidio Potencial no se borro: <br /><br /><span class="error"> '
+                + ed + "</span>", 'Error borrando el registro(s)', 'e', 'n');
+            $("#tabla").flexReload();
+        } 
+ 
 		
                  
  
