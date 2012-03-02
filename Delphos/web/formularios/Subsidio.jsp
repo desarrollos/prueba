@@ -70,7 +70,7 @@
                             <tr>
                                 <td> <select  id="normas_subsidio_1" name="normas_subsidio_1" onfocus="tabla(flexiNormas, 
                                     'Codigo Tipo Norma', 'normas_subsidio_1' )" onclick="tabla(flexiNormas, 'Codigo Tipo Norma', 'normas_subsidio_1' )"></select></td>
-                                
+
                                 <td colspan="3"> <textarea id="subsobservac_subsidio" name="subsobservac_subsidio" cols="80" rows="4"></textarea></td>
                             </tr>
 
@@ -83,6 +83,27 @@
                         <br />
                         <table>
 
+                            <tr>
+                                <td>Subsidio</td>
+                                <td>Municipio</td>
+                                <td>Valor Subsidio Municipio</td>
+                                <td>Código Tipo de Subsidio</td>
+                            </tr>
+                            <tr>
+                                <td> <select  id="subscodigo_subsidiomunicipio" 
+                                              name="subscodigo_subsidiomunicipio" onfocus="tabla(flexiSubsidio, 'Código Subsidio', 'subscodigo_subsidiomunicipio' )" onclick="tabla(flexiSubsidio, 'Código Subsidio', 'subscodigo_subsidiomunicipio' )"></select></td>
+                                <td> <select  id="municipio_subsidiomunicipio_1" name="municipio_subsidiomunicipio_1" onfocus="tabla(flexiMunicipio, 'Municipio', 'municipio_subsidiomunicipio_1' )" onclick="tabla(flexiMunicipio, 'Municipio', 'municipio_subsidiomunicipio_1' )"></select></td>
+                                <td> <input type="text" id="submunvalsub_subsidiomunicipio" name="submunvalsub_subsidiomunicipio"/></td>
+                                <td> <select  id="subtipcodigo_subsidiomunicipio" name="subtipcodigo_subsidiomunicipio" onfocus="tabla(flexiTipoSubsidio, 'Código Tipo de Subsidio', 'subtipcodigo_subsidiomunicipio' )" onclick="tabla(flexiTipoSubsidio, 'Código Tipo de Subsidio', 'subtipcodigo_subsidiomunicipio' )"></select></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Descripción Subsidio Municipio</td>
+                                <td colspan="2">Observaciones Subsidio Municipio</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"> <textarea id="submundescri_subsidiomunicipio" name="submundescri_subsidiomunicipio" cols="50" rows="4"></textarea></td>
+                                <td colspan="2"> <textarea id="submunobserv_subsidiomunicipio" name="submunobserv_subsidiomunicipio" cols="50" rows="4"></textarea></td>
+                            </tr>
 
                         </table>
                     </div>

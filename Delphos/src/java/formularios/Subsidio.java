@@ -44,7 +44,7 @@ public class Subsidio extends HttpServlet {
         municipio_subsidiopotencial_1 = fun.map(dkda.o(vars, "municipio_subsidiopotencial_1").toString());
         subsidiopotencial_subsidioasignado_1 = fun.map(dkda.o(vars, "subsidiopotencial_subsidioasignado_1").toString());
         municipio_subsidioasignado_1 = fun.map(dkda.o(vars, "municipio_subsidioasignado_1").toString());
-        
+
         try {
             String opcion = dkda.o(vars, "accion").toString();
             String pestana = dkda.o(vars, "pestana").toString();
@@ -222,11 +222,11 @@ public class Subsidio extends HttpServlet {
             stmt = con.con.prepareStatement(sql);
             rs = stmt.executeQuery();
             rs.next();
-            
-           
-            info += "text|#subsobservac_subsidio|" + (rs.getString("subsidio_subsobservac") == null ? "" : 
-                    rs.getString("subsidio_subsobservac")) + ":_";
-            
+
+
+            info += "text|#subsobservac_subsidio|" + (rs.getString("subsidio_subsobservac") == null ? ""
+                    : rs.getString("subsidio_subsobservac")) + ":_";
+
             info += "combo|#normas_subsidio_1|" + "normas   codtiponorma  "
                     + rs.getString("subsidio_codtiponorma") + "   "
                     + "codnorma  " + rs.getString("subsidio_codnorma") + "   "
@@ -237,37 +237,37 @@ public class Subsidio extends HttpServlet {
                     + "codnorma  " + rs.getString("subsidio_codnorma") + "   "
                     + "fechanorma  " + rs.getString("subsidio_fechanorma")
                     + "', '" + rs.getString("normas_referencia") + "'):_";
-            
-            info += "text|#subsvalobase_subsidio|" + (rs.getString("subsidio_subsvalobase") == null ? "" : 
-                    rs.getString("subsidio_subsvalobase")) + ":_";
+
+            info += "text|#subsvalobase_subsidio|" + (rs.getString("subsidio_subsvalobase") == null ? ""
+                    : rs.getString("subsidio_subsvalobase")) + ":_";
 
             info += "combo|#grugracodigo_subsidio|" + rs.getString("subsidio_grugracodigo")
                     + "|llenarCombo('grugracodigo_subsidio', '"
-                    + rs.getString("subsidio_grugracodigo") + "', '" +
-                    rs.getString("escgrupogrado_grugradescri") + "'):_";                        
-            
+                    + rs.getString("subsidio_grugracodigo") + "', '"
+                    + rs.getString("escgrupogrado_grugradescri") + "'):_";
+
             info += "combo|#clabencodigo_subsidio|" + rs.getString("subsidio_clabencodigo")
                     + "|llenarCombo('clabencodigo_subsidio', '"
-                    + rs.getString("subsidio_clabencodigo") + "', '" +
-                    rs.getString("clasebeneficiario_clabendescri") + "'):_";                        
-            
+                    + rs.getString("subsidio_clabencodigo") + "', '"
+                    + rs.getString("clasebeneficiario_clabendescri") + "'):_";
+
             info += "combo|#subtipcodigo_subsidio|" + rs.getString("subsidio_subtipcodigo")
                     + "|llenarCombo('subtipcodigo_subsidio', '"
-                    + rs.getString("subsidio_subtipcodigo") + "', '" +
-                    rs.getString("tiposubsidio_subtipdescri") + "'):_";            
-            
-            info += "text|#_fecha_subsfechfina_subsidio|" + (rs.getString("subsidio_subsfechfina") == null ? "" : 
-                    rs.getString("subsidio_subsfechfina")) + ":_";
-            
-            info += "text|#_fecha_subsfechinic_subsidio|" + (rs.getString("subsidio_subsfechinic") == null ? "" : 
-                    rs.getString("subsidio_subsfechinic")) + ":_";
-            
-            info += "text|#subsdescripc_subsidio|" + (rs.getString("subsidio_subsdescripc") == null ? "" : 
-                    rs.getString("subsidio_subsdescripc")) + ":_";
-            
-            info += "text|#subscodigo_subsidio|" + (rs.getString("subsidio_subscodigo") == null ? "" : 
-                    rs.getString("subsidio_subscodigo")) + ":_";
-            
+                    + rs.getString("subsidio_subtipcodigo") + "', '"
+                    + rs.getString("tiposubsidio_subtipdescri") + "'):_";
+
+            info += "text|#_fecha_subsfechfina_subsidio|" + (rs.getString("subsidio_subsfechfina") == null ? ""
+                    : rs.getString("subsidio_subsfechfina")) + ":_";
+
+            info += "text|#_fecha_subsfechinic_subsidio|" + (rs.getString("subsidio_subsfechinic") == null ? ""
+                    : rs.getString("subsidio_subsfechinic")) + ":_";
+
+            info += "text|#subsdescripc_subsidio|" + (rs.getString("subsidio_subsdescripc") == null ? ""
+                    : rs.getString("subsidio_subsdescripc")) + ":_";
+
+            info += "text|#subscodigo_subsidio|" + (rs.getString("subsidio_subscodigo") == null ? ""
+                    : rs.getString("subsidio_subscodigo")) + ":_";
+
             respuesta = "opcion=obtener_subsidio&&estado=si&&error=no&&errorDes=no&&codigo=" + codigo + "&&info=" + info.replace("\"", "");
         } catch (SQLException e) {
             respuesta = "opcion=obtener_subsidio&&estado=no&&error=si&&errorDes=" + dkda.convertirACarEspecial(e.getMessage());
@@ -285,9 +285,9 @@ public class Subsidio extends HttpServlet {
         try {
             String sql = "SELECT COUNT(*) FROM subsidio  WHERE "
                     + "subscodigo = '" + dkda.o(vars, "subscodigo_subsidio") + "'";
-            System.out.println( sql );
+            System.out.println(sql);
             pQuery = conexion.prepareStatement(sql);
-            
+
             rQuery = pQuery.executeQuery();
             rQuery.next();
             existe = rQuery.getInt(1) > 0 ? true : false;
@@ -409,10 +409,65 @@ public class Subsidio extends HttpServlet {
         try {
             ResultSet rs = null;
             PreparedStatement stmt = null;
-            String sql = "";
+            String sql = ""
+                    + "SELECT subsidiomunicipio.\"subscodigo\"      AS subsidiomunicipio_subscodigo, "
+                    + "       subsidiomunicipio.\"coddepartamento\" AS subsidiomunicipio_coddepartamento, "
+                    + "       subsidiomunicipio.\"codmunicipio\"    AS subsidiomunicipio_codmunicipio, "
+                    + "       subsidiomunicipio.\"submunvalsub\"    AS subsidiomunicipio_submunvalsub, "
+                    + "       subsidiomunicipio.\"subtipcodigo\"    AS subsidiomunicipio_subtipcodigo, "
+                    + "       subsidiomunicipio.\"submundescri\"    AS subsidiomunicipio_submundescri, "
+                    + "       subsidiomunicipio.\"submunobserv\"    AS subsidiomunicipio_submunobserv, "
+                    + "       tiposubsidio.\"subtipdescri\"         AS tiposubsidio_subtipdescri, "
+                    + "       municipio.\"nombre\"                  AS municipio_nombre, "
+                    + "       subsidio.\"subsdescripc\"             AS subsidio_subsdescripc "
+                    + "FROM   \"public\".\"municipio\" municipio "
+                    + "       INNER JOIN \"public\".\"subsidiomunicipio\" subsidiomunicipio "
+                    + "         ON municipio.\"coddepartamento\" = subsidiomunicipio.\"coddepartamento\" "
+                    + "            AND municipio.\"codmunicipio\" = subsidiomunicipio.\"codmunicipio\" "
+                    + "       INNER JOIN \"public\".\"subsidio\" subsidio "
+                    + "         ON subsidiomunicipio.\"subscodigo\" = subsidio.\"subscodigo\" "
+                    + "       INNER JOIN \"public\".\"tiposubsidio\" tiposubsidio "
+                    + "         ON subsidiomunicipio.\"subtipcodigo\" = tiposubsidio.\"subtipcodigo\" "
+                    + "WHERE subsidiomunicipio.subscodigo = '" + dkda.o(sel, "subscodigo") + "' AND "
+                    + "subsidiomunicipio.coddepartamento = " + dkda.o(sel, "coddepartamento") + ""
+                    + " AND subsidiomunicipio.codmunicipio = " + dkda.o(sel, "codmunicipio") + " ";
+            System.out.println( sql );
             stmt = con.con.prepareStatement(sql);
             rs = stmt.executeQuery();
             rs.next();
+
+            info += "text|#submunobserv_subsidiomunicipio|" + (rs.getString("subsidiomunicipio_submunobserv") == null ? ""
+                    : rs.getString("subsidiomunicipio_submunobserv")) + ":_";                        
+            
+            info += "text|#submundescri_subsidiomunicipio|" + (rs.getString("subsidiomunicipio_submundescri") == null ? ""
+                    : rs.getString("subsidiomunicipio_submundescri")) + ":_";            
+
+            info += "combo|#subtipcodigo_subsidiomunicipio|" + rs.getString("subsidiomunicipio_subtipcodigo")
+                    + "|llenarCombo('subtipcodigo_subsidiomunicipio', '"
+                    + rs.getString("subsidiomunicipio_subtipcodigo") + "', '"
+                    + rs.getString("tiposubsidio_subtipdescri") + "'):_";            
+            
+            info += "text|#submunvalsub_subsidiomunicipio|" + (rs.getString("subsidiomunicipio_submunvalsub") == null ? ""
+                    : rs.getString("subsidiomunicipio_submunvalsub")) + ":_";
+            
+            info += "combo|#municipio_subsidiomunicipio_1|" + "municipio   coddepartamento  "
+                    + rs.getString("subsidiomunicipio_coddepartamento") + "   "
+                    + "codmunicipio  " + rs.getString("subsidiomunicipio_codmunicipio")
+                    + "|llenarCombo('municipio_subsidiomunicipio_1', '"
+                    + "municipio   coddepartamento  "
+                    + rs.getString("subsidiomunicipio_coddepartamento") + "   "
+                    + "codmunicipio  " + rs.getString("subsidiomunicipio_codmunicipio")
+                    + "', '"
+                    + rs.getString("municipio_nombre") + "'):_";
+            
+            info += "combo|#subscodigo_subsidiomunicipio|" + rs.getString("subsidiomunicipio_subscodigo")
+                    + "|llenarCombo('subscodigo_subsidiomunicipio', '"
+                    + rs.getString("subsidiomunicipio_subscodigo") + "', '"
+                    + rs.getString("subsidio_subsdescripc") + "'):_";
+            
+            
+            
+            
             respuesta = "opcion=obtener_subsidiomunicipio&&estado=si&&error=no&&errorDes=no&&codigo=" + codigo + "&&info=" + info.replace("\"", "");
         } catch (SQLException e) {
             respuesta = "opcion=obtener_subsidiomunicipio&&estado=no&&error=si&&errorDes=" + dkda.convertirACarEspecial(e.getMessage());
@@ -422,9 +477,64 @@ public class Subsidio extends HttpServlet {
         return respuesta;
     }
 
+    private boolean existe_subsidiomunicipio() {
+        PreparedStatement pQuery = null;
+        ResultSet rQuery = null;
+        Connection conexion = bdS.getConexion();
+        boolean existe = true;
+        try {
+            String sql = "SELECT COUNT(*) FROM subsidiomunicipio "
+                    + " WHERE subscodigo = '" + dkda.o(vars, "subscodigo_subsidiomunicipio") + "'"
+                    + " AND coddepartamento = " + dkda.o(municipio_subsidiomunicipio_1, "coddepartamento") + ""
+                    + " AND codmunicipio = " + dkda.o(municipio_subsidiomunicipio_1, "codmunicipio") + "";
+            System.out.println(sql);
+            pQuery = conexion.prepareStatement(sql);
+            rQuery = pQuery.executeQuery();
+            rQuery.next();
+            existe = rQuery.getInt(1) > 0 ? true : false;
+            pQuery.close();
+            rQuery.close();
+        } catch (SQLException e) {
+            System.err.println("( existe_subsidiomunicipio() ) " + estadosSQL.getM(e.getSQLState(), e.getMessage()));
+        }
+        return existe;
+    }
+
     public String validarFormulario_subsidiomunicipio() {
         String direccion = "opcion=registrar_subsidiomunicipio&&estado=no&&error=si&&errorDes=";
         String error = "";
+
+        Boolean existe = existe_subsidiomunicipio();
+        if (dkda.o(vars, "accion").toString().equals("Actualizar")) {
+            if (!(dkda.o(sel, "subscodigo").toString().equals(dkda.o(vars, "subscodigo_subsidiomunicipio")) && 
+                    dkda.o(sel, "coddepartamento").toString().equals(dkda.o(municipio_subsidiomunicipio_1, "coddepartamento"))
+                    && dkda.o(sel, "codmunicipio").toString().equals(dkda.o(municipio_subsidiomunicipio_1, "codmunicipio")))
+                    && existe == true) {
+                error = "Ya existe un registro en la tabla con esta informacion. Verifique los campos";
+            }
+        } else {
+            error = (existe) ? "Ya existe un registro en la tabla con esta informacion. Verifique los campos" : "";
+        }
+        if (dkda.o(vars, "subscodigo_subsidiomunicipio").isEmpty()) {
+            error = "Código Subsidio: no puede ser vacio.";
+        } else if (dkda.o(municipio_subsidiomunicipio_1, "coddepartamento").isEmpty()) {
+            error = "Municipio: no puede ser vacio.";
+        } else if (dkda.o(vars, "submunvalsub_subsidiomunicipio").isEmpty()) {
+            error = "Valor Subsidio Municipio: no puede ser vacio.";
+        } else if (dkda.o(vars, "subtipcodigo_subsidiomunicipio").isEmpty()) {
+            error = "Código Tipo de Subsidio: no puede ser vacio.";
+        } else if (dkda.o(vars, "submundescri_subsidiomunicipio").isEmpty()) {
+            error = "Descripción Subsidio Municipio: no puede ser vacio.";
+        } else if (dkda.o(vars, "submunobserv_subsidiomunicipio").isEmpty()) {
+            error = "Observaciones Subsidio Municipio: no puede ser vacio.";
+        } else if (!v.numDecimal(dkda.o(vars, "submunvalsub_subsidiomunicipio"))) {
+            error = "Valor Subsidio Municipio: Tiene Caracteres no permitidos.";
+        } else if (dkda.o(vars, "submunobserv_subsidiomunicipio").length() > 400) {
+            error = "Observaciones Subsidio Municipio: Valor demasiado Largo.";
+        }
+
+
+
         respuesta = (error.length() > 1 ? direccion + "" + error + "" : "");
         return respuesta;
     }

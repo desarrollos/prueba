@@ -279,7 +279,7 @@
             <li><span class="folder">Subsidios</span>
                 <ul>
                     <span class="file"> <li>
-                            <a href="<%= formularios%>Subsidio.jsp">Subsidios</a>
+                            <a href="<%= formularios%>Subsidio.jsp?#tabs-1">Subsidios</a>
                         </li></span>
                     
                     <li><span class="folder">Configuraci&oacute;n B&aacute;sica</span>
