@@ -15,99 +15,82 @@
         <form action="" method="post"><input type="hidden" id="combo" /> <input type="hidden" id="nombreFormulario" value="Entidades de salud" /> <input type="hidden" id="servlet" value="EntidadSalud" /></form>
         <div id="dialog" class="c1">
             <div class="encabezado"></div>
-            <div class="titulo">TIPO ENTIDADES DE SALUD</div>
+            <div class="titulo">ENTIDADES DE SALUD</div>
             <br />
             <div>
                 <form id="EntidadSalud" method="post" accept-charset="utf-8" name="EntidadSalud"><input type="hidden" id="codigo" name="codigo" /> <input type="hidden" id="codregimentabla" name="codregimentabla" /> <input type="hidden" name="accion" id="accion" value="" />
                     <div class="boton"><input type="submit" value="Mostrar Entidades Registradas" onclick="return tabla(flexiEntidadSalud, 'Entidades de Salud', '' )" /> <input type="submit" id="accion1" value="Registrar" onclick="accionFormulario('EntidadSalud', 'Registrar', ''); return false" /> <input type="reset" id="resetFormulario1" value="Limpiar Formulario" onclick="redireccionar(urlActual);return false;" /> <input type="submit" id="actualizar1" value="Actualizar" onclick="accionFormulario('EntidadSalud', 'Actualizar', ''); return false" class="c2" /> <input type="submit" id="volver_registro1" value="Volver al formulario de registro" onclick="redireccionar(urlActual);return false" class="c2" /></div>
                     <table>
+
                         <tr>
+                            <td>Codigo Regimen</td>
+                            <td>Codigo Entidad Salud</td>
                             <td>Empresa</td>
-                            <td>Régimen</td>
-                            <td>Código Entidad Salud</td>
-                            <td>Tipo Entidad Salud</td>
+                            <td>Codigo Tipo Entidad Salud</td>
                         </tr>
                         <tr>
-                            <td><select name="empresa_entidadsalud" id="empresa_entidadsalud" onclick="tabla(flexiEmpresas, 'Empresas registradas', 'empresa_entidadsalud' )" onfocus="tabla(flexiEmpresas, 'Empresas registradas', 'empresa_entidadsalud' )"></select></td>
-                            <td><select name="codregimenes_entidadsalud" id="codregimenes_entidadsalud" onclick="tabla(flexiRegimen, 'Regimen', 'codregimenes_entidadsalud' )" onfocus="tabla(flexiRegimen, 'Regimen', 'codregimenes_entidadsalud' )"></select></td>
-                            <td><input name="codentidadsalud_entidadsalud" type="text" id="codentidadsalud_entidadsalud" value="" /></td>
-                            <td><select name="codtipoentidadsalud_entidadsalud" id="codtipoentidadsalud_entidadsalud" onfocus="tabla(flexiEntidad, 'Entidad Salud', 'codtipoentidadsalud_entidadsalud' )" onclick="tabla(flexiEntidad, 'Entidad Salud', 'codtipoentidadsalud_entidadsalud' )">
-                                    <option value="0"></option>
-                                </select></td>
+                            <td> <select  id="codregimenes_entidadsalud" name="codregimenes_entidadsalud" onfocus="tabla(flexiRegimen, 'Codigo Regimen', 'codregimenes_entidadsalud' )" onclick="tabla(flexiRegimen, 'Codigo Regimen', 'codregimenes_entidadsalud' )"></select></td>
+                            <td> <input type="text" id="codentidadsalud_entidadsalud" name="codentidadsalud_entidadsalud"/></td>
+                            <td> <select  id="empresa_entidadsalud_1" name="empresa_entidadsalud_1" onfocus="tabla(flexiEmpresas, 'Empresa', 'empresa_entidadsalud_1' )" onclick="tabla(flexiEmpresas, 'Empresa', 'empresa_entidadsalud_1' )"></select></td>
+                            <td> <select  id="codtipoentidadsalud_entidadsalud" name="codtipoentidadsalud_entidadsalud" onfocus="tabla(flexiEntidad, 'Codigo Tipo Entidad Salud', 'codtipoentidadsalud_entidadsalud' )" onclick="tabla(flexiEntidad, 'Codigo Tipo Entidad Salud', 'codtipoentidadsalud_entidadsalud' )"></select></td>
                         </tr>
                         <tr>
-                            <td>Nivel Complejidad</td>
-                            <td>Clasificación Entidad</td>
-                            <td>Contacto</td>
-                            <td>Cargo Contacto</td>
+                            <td>Codigo Nivel Complejidad</td>
+                            <td>Codigo Clasificacion Entidad Salud</td>
+                            <td>Nombre del contacto</td>
+                            <td>Nombre Cargo Contacto</td>
                         </tr>
                         <tr>
-                            <td><select name="codnivelcomplejidad" id="codnivelcomplejidad" onclick="tabla(flexiComplejidad, 'Complejidades', 'codnivelcomplejidad')" onfocus="tabla(flexiComplejidad, 'Complejidades', 'codnivelcomplejidad')"></select></td>
-                            <td><select name="codclasifentidad" id="codclasifentidad" onclick="tabla(flexiClasificacionentidad, 'Clasificacion entidad', 'codclasifentidad')" onfocus="tabla(flexiClasificacionentidad, 'Clasificacion entidad', 'codclasifentidad')">
-                                    <option value="0"></option>
-                                </select></td>
-                            <td><input name="contacto" type="text" id="contacto" value="" maxlength="60" /></td>
-                            <td><input name="cargocontacto" type="text" id="cargocontacto" value="" maxlength="30" /></td>
+                            <td> <select  id="codnivelcomplejidad_entidadsalud" name="codnivelcomplejidad_entidadsalud" onfocus="tabla(flexiEntidad, 'Codigo Nivel Complejidad', 'codnivelcomplejidad_entidadsalud' )" onclick="tabla(flexiEntidad, 'Codigo Nivel Complejidad', 'codnivelcomplejidad_entidadsalud' )"></select></td>
+                            <td> <select  id="codclasifentidad_entidadsalud" name="codclasifentidad_entidadsalud" onfocus="tabla(flexiClasificacionentidad, 'Codigo Clasificacion Entidad Salud', 'codclasifentidad_entidadsalud' )" onclick="tabla(flexiClasificacionentidad, 'Codigo Clasificacion Entidad Salud', 'codclasifentidad_entidadsalud' )"></select></td>
+                            <td> <input type="text" id="contacto_entidadsalud" name="contacto_entidadsalud"/></td>
+                            <td> <input type="text" id="cargocontacto_entidadsalud" name="cargocontacto_entidadsalud"/></td>
                         </tr>
                         <tr>
-                            <td>Línea Gratuita</td>
-                            <td>Número Funcionarios</td>
-                            <td>Código Barras</td>
-                            <td>Logo</td>
+                            <td>Numero Telefonico Linea Gratuita</td>
+                            <td>Numero Funcionarios</td>
+                            <td>Codigo Barras</td>
+                            <td>Slogan Empresa</td>
                         </tr>
                         <tr>
-                            <td><input name="lineagratuita" type="text" id="lineagratuita" value="" maxlength="20" /></td>
-                            <td><input name="funcionarios" type="text" id="funcionarios" value="0" /></td>
-                            <td><input name="codigobarras" type="text" id="codigobarras" value="" /></td>
-                            <td><input name="logo" type="text" id="logo" onclick="abrirCargaArchivo('logo')" value="" readonly="readonly" /> <!--<img src="../images/subir.png" width="30" height="30" onclick="abrirCargaArchivo('logo')"/>-->
-                                <img src="../images/descargar_1.png" alt="Descargar" width="30" height="30" onclick="reHref('logo' )" /></a></td>
+                            <td> <input type="text" id="lineagratuita_entidadsalud" name="lineagratuita_entidadsalud"/></td>
+                            <td> <input type="text" id="funcionarios_entidadsalud" name="funcionarios_entidadsalud"/></td>
+                            <td> <input type="text" id="codigobarras_entidadsalud" name="codigobarras_entidadsalud"/></td>
+                            <td> <input type="text" id="slogan_entidadsalud" name="slogan_entidadsalud"/></td>
                         </tr>
                         <tr>
-                            <td>Código Habilitación</td>
-                            <td>Nombre Habilitación</td>
-                            <td>Tipo Especialización</td>
-                            <td>Tipo Atención</td>
+                            <td>Codigo Habilitacion</td>
+                            <td>Nombre Habilitacion</td>
+                            <td>Codigo Tipo Especializacion Salud</td>
                         </tr>
                         <tr>
-                            <td><input name="codhabilitacion" type="text" id="codhabilitacion" value="" /></td>
-                            <td><input name="nombrehabilitacion" type="text" id="nombrehabilitacion" value="" /></td>
-                            <td><select name="codtipoespecializacion" id="codtipoespecializacion" onclick="tabla(flexiTipoespecializacionsalud, 'Tipo especializacion salud', 'codtipoespecializacion')" onfocus="tabla(flexiTipoespecializacionsalud, 'Tipo especializacion salud', 'codtipoespecializacion')"></select></td>
-                            <td><select name="codtipoatencion" id="codtipoatencion" tabindex="16" onclick="tabla(flexiTipoatencion, 'Tipo atencion', 'codtipoatencion')" onfocus="tabla(flexiTipoatencion, 'Tipo atencion', 'codtipoatencion')">
-                                    <option value="0"></option>
-                                </select></td>
+                            <td> <input type="text" id="codhabilitacion_entidadsalud" name="codhabilitacion_entidadsalud"/></td>
+                            <td> <input type="text" id="nombrehabilitacion_entidadsalud" name="nombrehabilitacion_entidadsalud"/></td>
+                            <td> <select  id="codtipoespecializacion_entidadsalud" name="codtipoespecializacion_entidadsalud" onfocus="tabla(flexiTipoespecializacionsalud, 'Codigo Tipo Especializacion Salud', 'codtipoespecializacion_entidadsalud' )" onclick="tabla(flexiTipoespecializacionsalud, 'Codigo Tipo Especializacion Salud', 'codtipoespecializacion_entidadsalud' )"></select></td>
                         </tr>
                         <tr>
-                            <td>Estado Entidad</td>
-                            <td>Número Acto Inscripción</td>
+                            <td>Codigo Tipo Atencion Salud</td>
+                            <td>Codigo Estado Entidad Salud</td>
+                            <td>Numero Acto Inscripcion</td>
                             <td>Fecha Acto Administrativo</td>
-                            <td>Archivo Acto Administrativo</td>
                         </tr>
                         <tr>
-                            <td><select name="codestadoentidad" id="codestadoentidad" onclick="tabla(flexiEstadoentidadsalud, 'Estado entidad salud', 'codestadoentidad')" onfocus="tabla(flexiEstadoentidadsalud, 'Estado entidad salud', 'codestadoentidad')"></select></td>
-                            <td><input name="numactoinscripcion" type="text" id="numactoinscripcion" value="" /></td>
-                            <td><input name="fechaactoadmin" type="text" id="fechaactoadmin" value="" readonly="readonly" /></td>
-                            <td><input name="archivoactoadmin" type="text" id="archivoactoadmin" value="" readonly="readonly" 
-                                       onclick="abrirCargaArchivo('archivoactoadmin')" /> 
-                                    <img src="../images/descargar_1.png" alt="Descargar" width="30" height="30" onclick="reHref( 'archivoactoadmin' )" /></a></td>
+                            <td> <select  id="codtipoatencion_entidadsalud" name="codtipoatencion_entidadsalud" onfocus="tabla(flexiTipoatencion, 'Codigo Tipo Atencion Salud', 'codtipoatencion_entidadsalud' )" onclick="tabla(flexiTipoatencion, 'Codigo Tipo Atencion Salud', 'codtipoatencion_entidadsalud' )"></select></td>
+                            <td> <select  id="codestadoentidad_entidadsalud" name="codestadoentidad_entidadsalud" onfocus="tabla(flexiEstadoentidadsalud, 'Codigo Estado Entidad Salud', 'codestadoentidad_entidadsalud' )" onclick="tabla(flexiEstadoentidadsalud, 'Codigo Estado Entidad Salud', 'codestadoentidad_entidadsalud' )"></select></td>
+                            <td> <input type="text" id="numactoinscripcion_entidadsalud" name="numactoinscripcion_entidadsalud"/></td>
+                            <td><input type="text" id="_fecha_fechaactoadmin_entidadsalud" name="fechaactoadmin_entidadsalud" value="" maxlength="19" readonly="readonly" /></td>
                         </tr>
                         <tr>
-                            <td>Archivo Adicional Entidad 1</td>
-                            <td>Archivo Adicional Entidad 2</td>
+                            <td>Archivo Físico</td>
+                            <td>Archivo Físico 2</td>
+                            <td>Logo</td>
+                            <td>Archivo Acto Admin</td>
                         </tr>
                         <tr>
-                            <td><input name="archivofi" type="text" id="archivofi" value="" readonly="readonly" onclick="abrirCargaArchivo('archivofi')" /> <!--<img src="../images/subir.png" width="30" height="30" onclick="abrirCargaArchivo('archivofi')"/>-->
-                                    <img src="../images/descargar_1.png" alt="Descargar" width="30" height="30" onclick="reHref('archivofi' )" /></a></td>
-                            
-                            <td><input name="archivofi2" type="text" id="archivofi2" value="" readonly="readonly" onclick="abrirCargaArchivo('archivofi2')" /> <!--<img src="../images/subir.png" width="30" height="30" onclick="abrirCargaArchivo('archivofi2')"/>-->
-                                    <img src="../images/descargar_1.png" alt="Descargar" width="30" height="30" onclick="reHref('archivofi2' )" /></a></td>
-                        </tr>
-                        <tr>
-                            <td colspan="4"Eslogan</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4">
-                                <textarea name="slogan" id="slogan" cols="115" rows="7">
-                                </textarea></td>
+                            <td><input name="archivofi_entidadsalud" type="text" id="archivofi_entidadsalud" size="17" value="" readonly="readonly" onclick="abrirCargaArchivo('archivofi_entidadsalud')" />   <img src="../images/descargar_1.png" width="30" height="30" onclick="reHref('archivofi_entidadsalud' )" alt="Descargar" /></td>
+                            <td><input name="archivofi2_entidadsalud" type="text" id="archivofi2_entidadsalud" size="17" value="" readonly="readonly" onclick="abrirCargaArchivo('archivofi2_entidadsalud')" />   <img src="../images/descargar_1.png" width="30" height="30" onclick="reHref('archivofi2_entidadsalud' )" alt="Descargar" /></td>
+                            <td><input name="logo_entidadsalud" type="text" id="logo_entidadsalud" size="17" value="" readonly="readonly" onclick="abrirCargaArchivo('logo_entidadsalud')" />   <img src="../images/descargar_1.png" width="30" height="30" onclick="reHref('logo_entidadsalud' )" alt="Descargar" /></td>
+                            <td><input name="archivoactoadmin_entidadsalud" type="text" id="archivoactoadmin_entidadsalud" size="17" value="" readonly="readonly" onclick="abrirCargaArchivo('archivoactoadmin_entidadsalud')" />   <img src="../images/descargar_1.png" width="30" height="30" onclick="reHref('archivoactoadmin_entidadsalud' )" alt="Descargar" /></td>
                         </tr>
                     </table>
                     <br />
@@ -120,6 +103,6 @@
                 <div class="boton"></div>
             </div>
         </div>
-  
+
     </body>
 </html>
