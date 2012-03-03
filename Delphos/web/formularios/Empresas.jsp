@@ -25,113 +25,66 @@
                 <br />
 
                 <table>
-                    <tr>
-                        <td>Tipo Identificaci&oacute;n</td>
-                        <td>Identificaci&oacute;n Empresa</td>
-                        <td>D&iacute;gito Verificaci&oacute;n</td>
-                        <td>Nombre Empresa</td>
-                        <td>Sigla</td>
 
+                    <tr>
+                        <td>Tipo Identificacion</td>
+                        <td>Identificacion Empresa</td>
+                        <td>Digito Verificacion Cuando Documento es NIT</td>
+                        <td>Nombre de la empresa</td>
                     </tr>
                     <tr>
-                        <td><select name="codtipoidentidad_empresa" id="codtipoidentidad_empresa" onfocus="tabla(flexiTipoIdentificacion, 'Tipo Identificación', 'codtipoidentidad_empresa' )" onclick="tabla(flexiTipoIdentificacion, 'Tipo Identificación', 'codtipoidentidad_empresa' )"></select></td>
-                        <td><input name="codempresa_empresa" type="text" id="codempresa_empresa" value="" /></td>
-                        <td><input name="digitoverificacion_empresa" type="text" id="digitoverificacion_empresa" value="" /></td>
-                        <td><input name="nombre_empresa" type="text" id="nombre_empresa" value="" /></td>
-                        <td><input name="sigla_empresa" type="text" id="sigla_empresa" value="" /></td>
+                        <td> <select  id="codtipoidentidad_empresa" name="codtipoidentidad_empresa" onfocus="tabla(flexiTipoIdentificacion, 'Tipo Identificacion', 'codtipoidentidad_empresa' )" onclick="tabla(flexiTipoIdentificacion, 'Tipo Identificacion', 'codtipoidentidad_empresa' )"></select></td>
+                        <td> <input type="text" id="codempresa_empresa" name="codempresa_empresa"/></td>
+                        <td> <input type="text" id="digitoverificacion_empresa" name="digitoverificacion_empresa"/></td>
+                        <td> <input type="text" id="nombre_empresa" name="nombre_empresa"/></td>
                     </tr>
                     <tr>
-                        <td>Tel&eacute;fono</td>
-                        <td>Fax</td>
-                        <td>L&iacute;nea Gratuita</td>
-                        <td>Departamento</td>
-                        <td>Municipio</td>
+                        <td>Sigla Empresa</td>
+                        <td>Numero del telefono</td>
+                        <td>Numero Fax</td>
+                        <td>Linea Telefonica Gratuita</td>
                     </tr>
                     <tr>
-                        <td><input name="telefono_empresa" type="text" id="telefono_empresa" value="" /></td>
-                        <td><input name="fax_empresa" type="text" id="fax_empresa" value="" /></td>
-                        <td><input name="lineagratuita_empresa" type="text" id="lineagratuita_empresa" value="" /></td>
-
-                        <td><select name="coddepartamento_empresa" id="coddepartamento_empresa" 
-                                    onfocus="tabla(flexiDepartamento, 'Departamento', 'coddepartamento_empresa' )" 
-                                    onclick="tabla(flexiDepartamento, 'Departamento', 'coddepartamento_empresa' )"></select></td>
-
-
-                        <td><select name="codmunicipio_empresa" id="codmunicipio_empresa" 
-                                    onfocus="tabla(flexiMunicipio, 'Municipio', 'codmunicipio_empresa' )" 
-                                    onclick="tabla(flexiMunicipio, 'Municipio', 'codmunicipio_empresa' )"></select></td>
-
-
-
-
+                        <td> <input type="text" id="sigla_empresa" name="sigla_empresa"/></td>
+                        <td> <input type="text" id="telefono_empresa" name="telefono_empresa"/></td>
+                        <td> <input type="text" id="fax_empresa" name="fax_empresa"/></td>
+                        <td> <input type="text" id="lineagratuita_empresa" name="lineagratuita_empresa"/></td>
                     </tr>
                     <tr>
-                        <td>C&oacute;digo Sector</td>
-                        <td>C&oacute;digo Barrio</td>
-                        <td>Direcci&oacute;n</td>
-                        <td>Gerente</td>
-                        <td>C&oacute;digo Actividad Econ&oacute;mica</td>
+                        <td>Barrio</td>
+                        <td>Dirección Empresa</td>
+                        <td>Nombre Gerente</td>
+                        <td>Codigo Actividad Economica</td>
                     </tr>
                     <tr>
-
-
-                        <td><select name="codsubgrupo_empresa" id="codsubgrupo_empresa" 
-                                    onfocus="tabla(flexiSubGrupoGeografico, 'Sector', 'codsubgrupo_empresa' )" 
-                                    onclick="tabla(flexiSubGrupoGeografico, 'Sector', 'codsubgrupo_empresa' )"></select></td>
-
-
-                        <td><select name="codbarrio_empresa" id="codbarrio_empresa" 
-                                    onfocus="tabla(flexiBarrio, 'Barrio', 'codbarrio_empresa' )" 
-                                    onclick="tabla(flexiBarrio, 'Barrio', 'codbarrio_empresa' )"></select></td>
-
-
-                        <td><input name="direccion_empresa" type="text" id="direccion_empresa" value="" /></td>
-                        <td><input name="gerente_empresa" type="text" id="gerente_empresa" value="" /></td>
-                        <td><select name="codactividadeconomica_empresa" id="codactividadeconomica_empresa" onfocus="tabla(flexiActividadEconomica, 'Actividad Economica', 'codactividadeconomica_empresa' )" onclick="tabla(flexiActividadEconomica, 'Actividad Economica', 'codactividadeconomica_empresa' )"></select></td>
+                        <td> <select  id="barrio_empresa_1" name="barrio_empresa_1" onfocus="tabla(flexiBarrio, 'Barrio', 'barrio_empresa_1' )" onclick="tabla(flexiBarrio, 'Barrio', 'barrio_empresa_1' )"></select></td>
+                        <td> <input type="text" id="direccion_empresa" name="direccion_empresa"/></td>
+                        <td> <input type="text" id="gerente_empresa" name="gerente_empresa"/></td>
+                        <td> <select  id="codactividadeconomica_empresa" name="codactividadeconomica_empresa" onfocus="tabla(flexiActividadEconomica, 'Codigo Actividad Economica', 'codactividadeconomica_empresa' )" onclick="tabla(flexiActividadEconomica, 'Codigo Actividad Economica', 'codactividadeconomica_empresa' )"></select></td>
                     </tr>
                     <tr>
-                        <td>
-                            Sector Entidad
-                        </td>
-                        <td>Tipo Aportante</td>
+                        <td>Codigo Sector Entidadades</td>
+                        <td>Codigo Tipo Aportante</td>
                         <td>Correo Electronico</td>
-                        <td>P&aacute;gina Web</td>
-                        <td>Tipo Contribuyente DIAN</td>
+                        <td>Nombre Página Web (www.)</td>
                     </tr>
                     <tr>
-                        <td><select name="codsectorentidad_empresa" id="codsectorentidad_empresa" 
-                                    onfocus="tabla(flexiSectorEntidad, 'Sector Entidad', 'codsectorentidad_empresa' )" 
-                                    onclick="tabla(flexiSectorEntidad, 'Sector Entidad', 'codsectorentidad_empresa' )"></select></td>
-
-                        <td><select name="codtipoaportante_empresa" id="codtipoaportante_empresa" 
-                                    onfocus="tabla(flexiTipoAportante, 'Tipo Aportante', 'codtipoaportante_empresa' )" 
-                                    onclick="tabla(flexiTipoAportante, 'Tipo Aportante', 'codtipoaportante_empresa' )"></select></td>
-
-                        <td><input name="email_empresa" type="text" id="email_empresa" value="" /></td>
-                        <td><input name="paginaweb_empresa" type="text" id="paginaweb_empresa" value="" /></td>
-
-                        <td><select name="codtipocontribuyente_empresa" id="codtipocontribuyente_empresa" 
-                                    onfocus="tabla(flexiTipoContribuyente, 'Tipo Tipo Contribuyente', 'codtipocontribuyente_empresa' )" 
-                                    onclick="tabla(flexiTipoContribuyente, 'Tipo Tipo Contribuyente', 'codtipocontribuyente_empresa' )"></select></td>
-
-
-
-                    </tr>
-
-                    <tr>
-                        <td>C&oacute;digo Tipo Persona</td>
-                        <td>Est&aacute; Instalado Sistema</td>
-                        <td>C&oacute;digo Dane Empresa</td>
+                        <td> <select  id="codsectorentidad_empresa" name="codsectorentidad_empresa" onfocus="tabla(flexiSectorEntidad, 'Codigo Sector Entidadades', 'codsectorentidad_empresa' )" onclick="tabla(flexiSectorEntidad, 'Codigo Sector Entidadades', 'codsectorentidad_empresa' )"></select></td>
+                        <td> <select  id="codtipoaportante_empresa" name="codtipoaportante_empresa" onfocus="tabla(flexiTipoAportante, 'Codigo Tipo Aportante', 'codtipoaportante_empresa' )" onclick="tabla(flexiTipoAportante, 'Codigo Tipo Aportante', 'codtipoaportante_empresa' )"></select></td>
+                        <td> <input type="text" id="email_empresa" name="email_empresa"/></td>
+                        <td> <input type="text" id="paginaweb_empresa" name="paginaweb_empresa"/></td>
                     </tr>
                     <tr>
-                        <td><select name="codclasepersona_empresa" id="codclasepersona_empresa" 
-                                    onfocus="tabla(flexiClasePersona, 'Clase Persona', 'codclasepersona_empresa' )" 
-                                    onclick="tabla(flexiClasePersona, 'Clase Persona', 'codclasepersona_empresa' )"></select></td>
-                        <td>
-                            <div id="switch_empresasistema_empresa"></div>
-                            <input type="hidden" name="empresasistema_empresa" id="empresasistema_empresa" />
-                        </td>
-                        <td><input name="empcodigodane_empresa" type="text" id="empcodigodane_empresa" value="" /></td>
+                        <td>Codigo Tipo Contribuyente DIAN</td>
+                        <td>Codigo Tipo Persona</td>
+                        <td>Empresa Instalado Sistema (S/N)</td>
+                        <td>Código Dane Empresa</td>
+                    </tr>
+                    <tr>
+                        <td> <select  id="codtipocontribuyente_empresa" name="codtipocontribuyente_empresa" onfocus="tabla(flexiTipoContribuyente, 'Codigo Tipo Contribuyente DIAN', 'codtipocontribuyente_empresa' )" onclick="tabla(flexiTipoContribuyente, 'Codigo Tipo Contribuyente DIAN', 'codtipocontribuyente_empresa' )"></select></td>
+                        <td> <select  id="codclasepersona_empresa" name="codclasepersona_empresa" onfocus="tabla(flexiClasePersona, 'Codigo Tipo Persona', 'codclasepersona_empresa' )" onclick="tabla(flexiClasePersona, 'Codigo Tipo Persona', 'codclasepersona_empresa' )"></select></td>
+                        <td><div id="switch_empresasistema_empresa"></div> <input type="hidden" id="empresasistema_empresa" name="empresasistema_empresa"  /></td>
+                        <td> <input type="text" id="empcodigodane_empresa" name="empcodigodane_empresa"/></td>
                     </tr>
 
                 </table>
@@ -140,6 +93,6 @@
                 <div class="boton"><input type="submit" id="accion2" value="Registrar" onclick="accionFormulario('Empresas', 'Registrar', ''); return false" /> <input type="reset" id="resetFormulario2" value="Limpiar Formulario" onclick="redireccionar(urlActual);return false;" /> <input type="submit" id="actualizar2" value="Actualizar" onclick="accionFormulario('Empresas', 'Actualizar', ''); return false" class="c2" /> <input type="submit" id="volver_registro2" value="Volver al formulario de registro" onclick="redireccionar(urlActual);return false" class="c2" /></div>
             </form>
         </div>
-       
+
     </body>
 </html>
