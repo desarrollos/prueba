@@ -41,7 +41,7 @@
                             <td>Nombre Cargo Contacto</td>
                         </tr>
                         <tr>
-                            <td> <select  id="codnivelcomplejidad_entidadsalud" name="codnivelcomplejidad_entidadsalud" onfocus="tabla(flexiEntidad, 'Codigo Nivel Complejidad', 'codnivelcomplejidad_entidadsalud' )" onclick="tabla(flexiEntidad, 'Codigo Nivel Complejidad', 'codnivelcomplejidad_entidadsalud' )"></select></td>
+                            <td> <select  id="codnivelcomplejidad_entidadsalud" name="codnivelcomplejidad_entidadsalud" onfocus="tabla(flexiNivelComplejidad, 'Codigo Nivel Complejidad', 'codnivelcomplejidad_entidadsalud' )" onclick="tabla(flexiNivelComplejidad, 'Codigo Nivel Complejidad', 'codnivelcomplejidad_entidadsalud' )"></select></td>
                             <td> <select  id="codclasifentidad_entidadsalud" name="codclasifentidad_entidadsalud" onfocus="tabla(flexiClasificacionentidad, 'Codigo Clasificacion Entidad Salud', 'codclasifentidad_entidadsalud' )" onclick="tabla(flexiClasificacionentidad, 'Codigo Clasificacion Entidad Salud', 'codclasifentidad_entidadsalud' )"></select></td>
                             <td> <input type="text" id="contacto_entidadsalud" name="contacto_entidadsalud"/></td>
                             <td> <input type="text" id="cargocontacto_entidadsalud" name="cargocontacto_entidadsalud"/></td>

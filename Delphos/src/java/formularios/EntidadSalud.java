@@ -70,7 +70,7 @@ public class EntidadSalud extends HttpServlet {
         try {
             ResultSet rs = null;
             PreparedStatement stmt = null;
-            String sql = " INSERT INTO entidadsalud (codregimenes,codentidadsalud,codtipoidentidad,codempresa,codtipoentidadsalud,codnivelcomplejidad,codclasifentidad,contacto,cargocontacto,lineagratuita,funcionarios,codigobarras,slogan,codhabilitacion,nombrehabilitacion,codtipoespecializacion,codtipoatencion,codestadoentidad,numactoinscripcion,fechaactoadmin,archivofi,archivofi2,ususiscodigo,fecharegistro,logo,archivoactoadmin,logo_nombre,archivoactoadmin_nombre,archivofi1_nombre,archivofi2_nombre) VALUES (" + (dkda.o(vars, "codregimenes_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codregimenes_entidadsalud") + "'") + "," + (dkda.o(vars, "codentidadsalud_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codentidadsalud_entidadsalud") + "'") + "," + (dkda.o(empresa_entidadsalud_1, "codtipoidentidad").equals("") ? null : "'" + dkda.o(empresa_entidadsalud_1, "codtipoidentidad") + "'") + "," + (dkda.o(empresa_entidadsalud_1, "codempresa").equals("") ? null : "'" + dkda.o(empresa_entidadsalud_1, "codempresa") + "'") + "," + (dkda.o(vars, "codtipoentidadsalud_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codtipoentidadsalud_entidadsalud") + "'") + "," + (dkda.o(vars, "codnivelcomplejidad_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codnivelcomplejidad_entidadsalud") + "'") + "," + (dkda.o(vars, "codclasifentidad_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codclasifentidad_entidadsalud") + "'") + "," + (dkda.o(vars, "contacto_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "contacto_entidadsalud") + "'") + "," + (dkda.o(vars, "cargocontacto_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "cargocontacto_entidadsalud") + "'") + "," + (dkda.o(vars, "lineagratuita_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "lineagratuita_entidadsalud") + "'") + "," + (dkda.o(vars, "funcionarios_entidadsalud").equals("") ? null : dkda.o(vars, "funcionarios_entidadsalud")) + "," + (dkda.o(vars, "codigobarras_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codigobarras_entidadsalud") + "'") + "," + (dkda.o(vars, "slogan_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "slogan_entidadsalud") + "'") + "," + (dkda.o(vars, "codhabilitacion_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codhabilitacion_entidadsalud") + "'") + "," + (dkda.o(vars, "nombrehabilitacion_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "nombrehabilitacion_entidadsalud") + "'") + "," + (dkda.o(vars, "codtipoespecializacion_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codtipoespecializacion_entidadsalud") + "'") + "," + (dkda.o(vars, "codtipoatencion_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codtipoatencion_entidadsalud") + "'") + "," + (dkda.o(vars, "codestadoentidad_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codestadoentidad_entidadsalud") + "'") + "," + (dkda.o(vars, "numactoinscripcion_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "numactoinscripcion_entidadsalud") + "'") + "," + (dkda.o(vars, "fechaactoadmin_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "fechaactoadmin_entidadsalud") + "'") + "," + (dkda.o(vars, "archivofi_entidadsalud").equals("") ? null : "lo_import('" + fun.temp(request) + dkda.o(vars, "archivofi_entidadsalud") + "')") + "," + (dkda.o(vars, "archivofi2_entidadsalud").equals("") ? null : "lo_import('" + fun.temp(request) + dkda.o(vars, "archivofi2_entidadsalud") + "')") + "," + "'" + fun.usuarioAutenticado(request) + "'" + "," + "NOW()::date" + "," + (dkda.o(vars, "logo_entidadsalud").equals("") ? null : "lo_import('" + fun.temp(request) + dkda.o(vars, "logo_entidadsalud") + "')") + "," + (dkda.o(vars, "archivoactoadmin_entidadsalud").equals("") ? null : "lo_import('" + fun.temp(request) + dkda.o(vars, "archivoactoadmin_entidadsalud") + "')") + "," + (dkda.o(vars, "logo_nombre_entidadsalud").equals("") ? null : "lo_import('" + fun.temp(request) + dkda.o(vars, "logo_nombre_entidadsalud") + "')") + "," + (dkda.o(vars, "archivoactoadmin_nombre_entidadsalud").equals("") ? null : "lo_import('" + fun.temp(request) + dkda.o(vars, "archivoactoadmin_nombre_entidadsalud") + "')") + "," + (dkda.o(vars, "archivofi1_nombre_entidadsalud").equals("") ? null : "lo_import('" + fun.temp(request) + dkda.o(vars, "archivofi1_nombre_entidadsalud") + "')") + "," + (dkda.o(vars, "archivofi2_nombre_entidadsalud").equals("") ? null : "lo_import('" + fun.temp(request) + dkda.o(vars, "archivofi2_nombre_entidadsalud") + "')") + ")";
+            String sql = " INSERT INTO entidadsalud (codregimenes,codentidadsalud,codtipoidentidad,codempresa,codtipoentidadsalud,codnivelcomplejidad,codclasifentidad,contacto,cargocontacto,lineagratuita,funcionarios,codigobarras,slogan,codhabilitacion,nombrehabilitacion,codtipoespecializacion,codtipoatencion,codestadoentidad,numactoinscripcion,fechaactoadmin,archivofi,archivofi2,ususiscodigo,fecharegistro,logo,archivoactoadmin,logo_nombre,archivoactoadmin_nombre,archivofi1_nombre,archivofi2_nombre) VALUES (" + (dkda.o(vars, "codregimenes_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codregimenes_entidadsalud") + "'") + "," + (dkda.o(vars, "codentidadsalud_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codentidadsalud_entidadsalud") + "'") + "," + (dkda.o(empresa_entidadsalud_1, "codtipoidentidad").equals("") ? null : "'" + dkda.o(empresa_entidadsalud_1, "codtipoidentidad") + "'") + "," + (dkda.o(empresa_entidadsalud_1, "codempresa").equals("") ? null : "'" + dkda.o(empresa_entidadsalud_1, "codempresa") + "'") + "," + (dkda.o(vars, "codtipoentidadsalud_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codtipoentidadsalud_entidadsalud") + "'") + "," + (dkda.o(vars, "codnivelcomplejidad_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codnivelcomplejidad_entidadsalud") + "'") + "," + (dkda.o(vars, "codclasifentidad_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codclasifentidad_entidadsalud") + "'") + "," + (dkda.o(vars, "contacto_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "contacto_entidadsalud") + "'") + "," + (dkda.o(vars, "cargocontacto_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "cargocontacto_entidadsalud") + "'") + "," + (dkda.o(vars, "lineagratuita_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "lineagratuita_entidadsalud") + "'") + "," + (dkda.o(vars, "funcionarios_entidadsalud").equals("") ? null : dkda.o(vars, "funcionarios_entidadsalud")) + "," + (dkda.o(vars, "codigobarras_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codigobarras_entidadsalud") + "'") + "," + (dkda.o(vars, "slogan_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "slogan_entidadsalud") + "'") + "," + (dkda.o(vars, "codhabilitacion_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codhabilitacion_entidadsalud") + "'") + "," + (dkda.o(vars, "nombrehabilitacion_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "nombrehabilitacion_entidadsalud") + "'") + "," + (dkda.o(vars, "codtipoespecializacion_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codtipoespecializacion_entidadsalud") + "'") + "," + (dkda.o(vars, "codtipoatencion_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codtipoatencion_entidadsalud") + "'") + "," + (dkda.o(vars, "codestadoentidad_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codestadoentidad_entidadsalud") + "'") + "," + (dkda.o(vars, "numactoinscripcion_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "numactoinscripcion_entidadsalud") + "'") + "," + (dkda.o(vars, "fechaactoadmin_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "fechaactoadmin_entidadsalud") + "'") + "," + (dkda.o(vars, "archivofi_entidadsalud").equals("") ? null : "lo_import('" + fun.temp(request) + dkda.o(vars, "archivofi_entidadsalud") + "')") + "," + (dkda.o(vars, "archivofi2_entidadsalud").equals("") ? null : "lo_import('" + fun.temp(request) + dkda.o(vars, "archivofi2_entidadsalud") + "')") + "," + "'" + fun.usuarioAutenticado(request) + "'" + "," + "NOW()::date" + "," + (dkda.o(vars, "logo_entidadsalud").equals("") ? null : "lo_import('" + fun.temp(request) + dkda.o(vars, "logo_entidadsalud") + "')") + "," + (dkda.o(vars, "archivoactoadmin_entidadsalud").equals("") ? null : "lo_import('" + fun.temp(request) + dkda.o(vars, "archivoactoadmin_entidadsalud") + "')") + "," + (dkda.o(vars, "logo_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "logo_entidadsalud") + "'") + "," + (dkda.o(vars, "archivoactoadmin_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "archivoactoadmin_entidadsalud") + "'") + "," + (dkda.o(vars, "archivofi_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "archivofi_entidadsalud") + "'") + "," + (dkda.o(vars, "archivofi2_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "archivofi2_entidadsalud") + "'") + ")";
 
 
             System.out.println(sql);
@@ -90,7 +90,7 @@ public class EntidadSalud extends HttpServlet {
         try {
             ResultSet rs = null;
             PreparedStatement stmt = null;
-            String sql = "UPDATE entidadsalud SET codregimenes = " + (dkda.o(vars, "codregimenes_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codregimenes_entidadsalud") + "'") + ",codentidadsalud = " + (dkda.o(vars, "codentidadsalud_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codentidadsalud_entidadsalud") + "'") + ",codtipoidentidad = " + (dkda.o(empresa_entidadsalud_1, "codtipoidentidad").equals("") ? null : "'" + dkda.o(empresa_entidadsalud_1, "codtipoidentidad") + "'") + ",codempresa = " + (dkda.o(empresa_entidadsalud_1, "codempresa").equals("") ? null : "'" + dkda.o(empresa_entidadsalud_1, "codempresa") + "'") + ",codtipoentidadsalud = " + (dkda.o(vars, "codtipoentidadsalud_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codtipoentidadsalud_entidadsalud") + "'") + ",codnivelcomplejidad = " + (dkda.o(vars, "codnivelcomplejidad_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codnivelcomplejidad_entidadsalud") + "'") + ",codclasifentidad = " + (dkda.o(vars, "codclasifentidad_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codclasifentidad_entidadsalud") + "'") + ",contacto = " + (dkda.o(vars, "contacto_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "contacto_entidadsalud") + "'") + ",cargocontacto = " + (dkda.o(vars, "cargocontacto_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "cargocontacto_entidadsalud") + "'") + ",lineagratuita = " + (dkda.o(vars, "lineagratuita_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "lineagratuita_entidadsalud") + "'") + ",funcionarios = " + (dkda.o(vars, "funcionarios_entidadsalud").equals("") ? null : dkda.o(vars, "funcionarios_entidadsalud")) + ",codigobarras = " + (dkda.o(vars, "codigobarras_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codigobarras_entidadsalud") + "'") + ",slogan = " + (dkda.o(vars, "slogan_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "slogan_entidadsalud") + "'") + ",codhabilitacion = " + (dkda.o(vars, "codhabilitacion_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codhabilitacion_entidadsalud") + "'") + ",nombrehabilitacion = " + (dkda.o(vars, "nombrehabilitacion_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "nombrehabilitacion_entidadsalud") + "'") + ",codtipoespecializacion = " + (dkda.o(vars, "codtipoespecializacion_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codtipoespecializacion_entidadsalud") + "'") + ",codtipoatencion = " + (dkda.o(vars, "codtipoatencion_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codtipoatencion_entidadsalud") + "'") + ",codestadoentidad = " + (dkda.o(vars, "codestadoentidad_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codestadoentidad_entidadsalud") + "'") + ",numactoinscripcion = " + (dkda.o(vars, "numactoinscripcion_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "numactoinscripcion_entidadsalud") + "'") + ",fechaactoadmin = " + (dkda.o(vars, "fechaactoadmin_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "fechaactoadmin_entidadsalud") + "'") + ",archivofi = " + (dkda.o(vars, "archivofi_entidadsalud").equals("") ? null : "lo_import('" + fun.temp(request) + dkda.o(vars, "archivofi_entidadsalud") + "')") + ",archivofi2 = " + (dkda.o(vars, "archivofi2_entidadsalud").equals("") ? null : "lo_import('" + fun.temp(request) + dkda.o(vars, "archivofi2_entidadsalud") + "')") + ",ususiscodigo = " + "'" + fun.usuarioAutenticado(request) + "'" + ",fecharegistro = " + "NOW()::date" + ",logo = " + (dkda.o(vars, "logo_entidadsalud").equals("") ? null : "lo_import('" + fun.temp(request) + dkda.o(vars, "logo_entidadsalud") + "')") + ",archivoactoadmin = " + (dkda.o(vars, "archivoactoadmin_entidadsalud").equals("") ? null : "lo_import('" + fun.temp(request) + dkda.o(vars, "archivoactoadmin_entidadsalud") + "')") + ",logo_nombre = " + (dkda.o(vars, "logo_nombre_entidadsalud").equals("") ? null : "lo_import('" + fun.temp(request) + dkda.o(vars, "logo_nombre_entidadsalud") + "')") + ",archivoactoadmin_nombre = " + (dkda.o(vars, "archivoactoadmin_nombre_entidadsalud").equals("") ? null : "lo_import('" + fun.temp(request) + dkda.o(vars, "archivoactoadmin_nombre_entidadsalud") + "')") + ",archivofi1_nombre = " + (dkda.o(vars, "archivofi1_nombre_entidadsalud").equals("") ? null : "lo_import('" + fun.temp(request) + dkda.o(vars, "archivofi1_nombre_entidadsalud") + "')") + ",archivofi2_nombre = " + (dkda.o(vars, "archivofi2_nombre_entidadsalud").equals("") ? null : "lo_import('" + fun.temp(request) + dkda.o(vars, "archivofi2_nombre_entidadsalud") + "')") + " WHERE codregimenes = '" + dkda.o(sel, "codregimenes") + "' AND codentidadsalud = '" + dkda.o(sel, "codentidadsalud") + "' ";
+            String sql = "UPDATE entidadsalud SET codregimenes = " + (dkda.o(vars, "codregimenes_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codregimenes_entidadsalud") + "'") + ",codentidadsalud = " + (dkda.o(vars, "codentidadsalud_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codentidadsalud_entidadsalud") + "'") + ",codtipoidentidad = " + (dkda.o(empresa_entidadsalud_1, "codtipoidentidad").equals("") ? null : "'" + dkda.o(empresa_entidadsalud_1, "codtipoidentidad") + "'") + ",codempresa = " + (dkda.o(empresa_entidadsalud_1, "codempresa").equals("") ? null : "'" + dkda.o(empresa_entidadsalud_1, "codempresa") + "'") + ",codtipoentidadsalud = " + (dkda.o(vars, "codtipoentidadsalud_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codtipoentidadsalud_entidadsalud") + "'") + ",codnivelcomplejidad = " + (dkda.o(vars, "codnivelcomplejidad_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codnivelcomplejidad_entidadsalud") + "'") + ",codclasifentidad = " + (dkda.o(vars, "codclasifentidad_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codclasifentidad_entidadsalud") + "'") + ",contacto = " + (dkda.o(vars, "contacto_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "contacto_entidadsalud") + "'") + ",cargocontacto = " + (dkda.o(vars, "cargocontacto_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "cargocontacto_entidadsalud") + "'") + ",lineagratuita = " + (dkda.o(vars, "lineagratuita_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "lineagratuita_entidadsalud") + "'") + ",funcionarios = " + (dkda.o(vars, "funcionarios_entidadsalud").equals("") ? null : dkda.o(vars, "funcionarios_entidadsalud")) + ",codigobarras = " + (dkda.o(vars, "codigobarras_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codigobarras_entidadsalud") + "'") + ",slogan = " + (dkda.o(vars, "slogan_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "slogan_entidadsalud") + "'") + ",codhabilitacion = " + (dkda.o(vars, "codhabilitacion_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codhabilitacion_entidadsalud") + "'") + ",nombrehabilitacion = " + (dkda.o(vars, "nombrehabilitacion_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "nombrehabilitacion_entidadsalud") + "'") + ",codtipoespecializacion = " + (dkda.o(vars, "codtipoespecializacion_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codtipoespecializacion_entidadsalud") + "'") + ",codtipoatencion = " + (dkda.o(vars, "codtipoatencion_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codtipoatencion_entidadsalud") + "'") + ",codestadoentidad = " + (dkda.o(vars, "codestadoentidad_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "codestadoentidad_entidadsalud") + "'") + ",numactoinscripcion = " + (dkda.o(vars, "numactoinscripcion_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "numactoinscripcion_entidadsalud") + "'") + ",fechaactoadmin = " + (dkda.o(vars, "fechaactoadmin_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "fechaactoadmin_entidadsalud") + "'") + ",archivofi = " + (dkda.o(vars, "archivofi_entidadsalud").equals("") ? null : "lo_import('" + fun.temp(request) + dkda.o(vars, "archivofi_entidadsalud") + "')") + ",archivofi2 = " + (dkda.o(vars, "archivofi2_entidadsalud").equals("") ? null : "lo_import('" + fun.temp(request) + dkda.o(vars, "archivofi2_entidadsalud") + "')") + ",ususiscodigo = " + "'" + fun.usuarioAutenticado(request) + "'" + ",fecharegistro = " + "NOW()::date" + ",logo = " + (dkda.o(vars, "logo_entidadsalud").equals("") ? null : "lo_import('" + fun.temp(request) + dkda.o(vars, "logo_entidadsalud") + "')") + ",archivoactoadmin = " + (dkda.o(vars, "archivoactoadmin_entidadsalud").equals("") ? null : "lo_import('" + fun.temp(request) + dkda.o(vars, "archivoactoadmin_entidadsalud") + "')") + ",logo_nombre = " + (dkda.o(vars, "logo_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "logo_entidadsalud") + "'") + ",archivoactoadmin_nombre = " + (dkda.o(vars, "archivoactoadmin_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "archivoactoadmin_entidadsalud") + "'") + ",archivofi1_nombre = " + (dkda.o(vars, "archivofi1_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "archivofi1_entidadsalud") + "'") + ",archivofi2_nombre = " + (dkda.o(vars, "archivofi2_entidadsalud").equals("") ? null : "'" + dkda.o(vars, "archivofi2_entidadsalud") + "'") + " WHERE codregimenes = '" + dkda.o(sel, "codregimenes") + "' AND codentidadsalud = '" + dkda.o(sel, "codentidadsalud") + "' ";
             System.out.println(sql);
             stmt = con.con.prepareStatement(sql);
             stmt.executeUpdate();
@@ -192,6 +192,20 @@ public class EntidadSalud extends HttpServlet {
                     + "       nivelcomplejidad.\"descripcion\"         AS nivelcomplejidad_descripcion, "
                     + "       regimen.\"descripcion\"                  AS regimen_descripcion, "
                     + "       tipoatencion.\"descripcion\"             AS tipoatencion_descripcion, "
+                    
+                    + "CASE WHEN entidadsalud.archivofi1_nombre  IS NULL OR entidadsalud.archivofi1_nombre  = '' THEN 0 "
+                    + "ELSE lo_export(entidadsalud.archivofi, '" + fun.temp(request) + "' || entidadsalud.archivofi1_nombre ) END, "
+                    
+                    + "CASE WHEN entidadsalud.archivofi2_nombre  IS NULL OR entidadsalud.archivofi2_nombre  = '' THEN 0 "
+                    + "ELSE lo_export(entidadsalud.archivofi2, '" + fun.temp(request) + "' || entidadsalud.archivofi2_nombre ) END, "
+
+                    + "CASE WHEN entidadsalud.logo_nombre  IS NULL OR entidadsalud.logo_nombre  = '' THEN 0 "
+                    + "ELSE lo_export(entidadsalud.logo, '" + fun.temp(request) + "' || entidadsalud.logo_nombre ) END, "                    
+
+                    + "CASE WHEN entidadsalud.archivoactoadmin_nombre  IS NULL OR entidadsalud.archivoactoadmin_nombre  = '' THEN 0 "
+                    + "ELSE lo_export(entidadsalud.archivoactoadmin, '" + fun.temp(request) + "' || entidadsalud.archivoactoadmin_nombre ) END, "                                        
+                    
+                    
                     + "       tipoentidadsalud.\"descripcion\"         AS tipoentidadsalud_descripcion, "
                     + "       tipoespecializacionsalud.\"descripcion\" AS "
                     + "       tipoespecializacionsalud_descripcion "
@@ -224,11 +238,97 @@ public class EntidadSalud extends HttpServlet {
             rs = stmt.executeQuery();
             rs.next();
             
+            System.out.println( "PRUEBA : " + rs.getString("entidadsalud_archivofi1_nombre") );
+            
+            info += "text|#archivoactoadmin_entidadsalud|" + (rs.getString("entidadsalud_archivoactoadmin_nombre")
+                    == null ? "" : rs.getString("entidadsalud_archivoactoadmin_nombre")) + ":_";
+            
+            info += "text|#logo_entidadsalud|" + (rs.getString("entidadsalud_logo_nombre")
+                    == null ? "" : rs.getString("entidadsalud_logo_nombre")) + ":_";
+            
+            info += "text|#archivofi2_entidadsalud|" + (rs.getString("entidadsalud_archivofi2_nombre")
+                    == null ? "" : rs.getString("entidadsalud_archivofi2_nombre")) + ":_";
+            
+            info += "text|#archivofi_entidadsalud|" + (rs.getString("entidadsalud_archivofi1_nombre")
+                    == null ? "" : rs.getString("entidadsalud_archivofi1_nombre")) + ":_";
+
+            info += "text|#_fecha_fechaactoadmin_entidadsalud|" + (rs.getString("entidadsalud_fechaactoadmin")
+                    == null ? "" : rs.getString("entidadsalud_fechaactoadmin")) + ":_";
+
+            info += "text|#numactoinscripcion_entidadsalud|" + (rs.getString("entidadsalud_numactoinscripcion")
+                    == null ? "" : rs.getString("entidadsalud_numactoinscripcion")) + ":_";
+
+            info += "combo|#codestadoentidad_entidadsalud|" + rs.getString("entidadsalud_codestadoentidad")
+                    + "|llenarCombo('codestadoentidad_entidadsalud', '"
+                    + rs.getString("entidadsalud_codestadoentidad") + "', '"
+                    + rs.getString("estadoentidadsalud_descripcion") + "'):_";
+
+            info += "combo|#codtipoatencion_entidadsalud|" + rs.getString("entidadsalud_codtipoatencion")
+                    + "|llenarCombo('codtipoatencion_entidadsalud', '"
+                    + rs.getString("entidadsalud_codtipoatencion") + "', '"
+                    + rs.getString("tipoatencion_descripcion") + "'):_";
+
+            info += "combo|#codtipoespecializacion_entidadsalud|" + rs.getString("entidadsalud_codtipoespecializacion")
+                    + "|llenarCombo('codtipoespecializacion_entidadsalud', '"
+                    + rs.getString("entidadsalud_codtipoespecializacion") + "', '"
+                    + rs.getString("tipoespecializacionsalud_descripcion") + "'):_";
+
+            info += "text|#nombrehabilitacion_entidadsalud|" + (rs.getString("entidadsalud_nombrehabilitacion")
+                    == null ? "" : rs.getString("entidadsalud_nombrehabilitacion")) + ":_";
+
+            info += "text|#codhabilitacion_entidadsalud|" + (rs.getString("entidadsalud_codhabilitacion")
+                    == null ? "" : rs.getString("entidadsalud_codhabilitacion")) + ":_";
+
+            info += "text|#slogan_entidadsalud|" + (rs.getString("entidadsalud_slogan")
+                    == null ? "" : rs.getString("entidadsalud_slogan")) + ":_";
+
+            info += "text|#codigobarras_entidadsalud|" + (rs.getString("entidadsalud_codigobarras")
+                    == null ? "" : rs.getString("entidadsalud_codigobarras")) + ":_";
+
+            info += "text|#funcionarios_entidadsalud|" + (rs.getString("entidadsalud_funcionarios")
+                    == null ? "" : rs.getString("entidadsalud_funcionarios")) + ":_";
+
+            info += "text|#lineagratuita_entidadsalud|" + (rs.getString("entidadsalud_lineagratuita")
+                    == null ? "" : rs.getString("entidadsalud_lineagratuita")) + ":_";
+
+            info += "text|#cargocontacto_entidadsalud|" + (rs.getString("entidadsalud_cargocontacto")
+                    == null ? "" : rs.getString("entidadsalud_cargocontacto")) + ":_";
+
+            info += "text|#contacto_entidadsalud|" + (rs.getString("entidadsalud_contacto")
+                    == null ? "" : rs.getString("entidadsalud_contacto")) + ":_";
+
+            info += "combo|#codclasifentidad_entidadsalud|" + rs.getString("entidadsalud_codclasifentidad")
+                    + "|llenarCombo('codclasifentidad_entidadsalud', '"
+                    + rs.getString("entidadsalud_codclasifentidad") + "', '"
+                    + rs.getString("clasificacionentidad_descripcion") + "'):_";
+
+            info += "combo|#codnivelcomplejidad_entidadsalud|" + rs.getString("entidadsalud_codnivelcomplejidad")
+                    + "|llenarCombo('codnivelcomplejidad_entidadsalud', '"
+                    + rs.getString("entidadsalud_codnivelcomplejidad") + "', '"
+                    + rs.getString("nivelcomplejidad_descripcion") + "'):_";
+
+            info += "combo|#codtipoentidadsalud_entidadsalud|" + rs.getString("entidadsalud_codtipoentidadsalud")
+                    + "|llenarCombo('codtipoentidadsalud_entidadsalud', '"
+                    + rs.getString("entidadsalud_codtipoentidadsalud") + "', '"
+                    + rs.getString("tipoentidadsalud_descripcion") + "'):_";
+
             info += "combo|#codregimenes_entidadsalud|" + rs.getString("entidadsalud_codregimenes")
                     + "|llenarCombo('codregimenes_entidadsalud', '"
                     + rs.getString("entidadsalud_codregimenes") + "', '"
                     + rs.getString("regimen_descripcion") + "'):_";
-            
+
+            info += "text|#codentidadsalud_entidadsalud|" + (rs.getString("entidadsalud_codentidadsalud")
+                    == null ? "" : rs.getString("entidadsalud_codentidadsalud")) + ":_";
+
+            info += "combo|#empresa_entidadsalud_1|" + "empresa   codtipoidentidad  "
+                    + rs.getString("entidadsalud_codtipoidentidad") + "   codempresa  "
+                    + rs.getString("entidadsalud_codempresa") + "|llenarCombo('empresa_entidadsalud_1', '"
+                    + "empresa   codtipoidentidad  "
+                    + rs.getString("entidadsalud_codtipoidentidad") + "   codempresa  "
+                    + rs.getString("entidadsalud_codempresa") + "', '"
+                    + rs.getString("empresa_nombre") + "'):_";
+
+
             respuesta = "opcion=obtener_entidadsalud&&estado=si&&error=no&&errorDes=no&&codigo=" + codigo + "&&info=" + info.replace("\"", "");
         } catch (SQLException e) {
             respuesta = "opcion=obtener_entidadsalud&&estado=no&&error=si&&errorDes=" + dkda.convertirACarEspecial(e.getMessage());
