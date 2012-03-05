@@ -2178,6 +2178,24 @@ flexiActividadEconomica = {
     sortname: 'descripcion',
     sortorder: 'asc'   
 }
+//## {flexiiNscripcionIps-inscripcionips}
+flexiiNscripcionIps = { 
+	url : '../edinstancias?parametros=opcion=tabla-tabla=inscripcionips-principal=codregimenes,codentidadsalud,codtipoidentidad-seleccion=-tipo=modificar', 
+	dataType : 'xml', 
+	height: 280, 
+	width : 850, 
+	usepager : true, 
+	rp : 30, 
+	sortname: 'codtipoidentidad', 
+	sortorder: 'asc', 
+	buttons : [ 
+	{ 
+	name : 'Agregar Nuev', 
+	bclass : 'anadir' 
+	} 
+	] 
+}; 
+
 //## {flexiTipoAportante-tipoaportante}
 flexiTipoAportante = {
     url : '../edinstancias?parametros=opcion=tabla-tabla=tipoaportante-principal=codtipoaportante-seleccion=descripcion-tipo=modificar',
