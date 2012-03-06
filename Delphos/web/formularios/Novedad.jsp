@@ -8,7 +8,7 @@
     </head>
     <body> 
         <div id="ajax" class="c1"></div>  
-        <div id="mensaje" class="c1"></div>  
+        <div id="mensaje" class="c1"></div><div id="reporte"></div>  
         <form><input type="hidden" id="respuestaAjax" /></form>
         <div id="tablaContenedor"></div> 
         <form><input type="hidden" id="combo" /> <input type="hidden" id="nombreFormulario" value="Novedad" /> <input type="hidden" id="servlet" value="Novedad" /></form>  

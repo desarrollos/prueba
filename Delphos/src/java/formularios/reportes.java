@@ -30,7 +30,12 @@ public class reportes extends HttpServlet {
         funciones fun = new funciones();
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        out.println( request.getSession().getAttribute( fun.usuarioAutenticado(request) + "_reporte" ) );
+        // Tipo reporte
+        String tipo = request.getParameter("tipo");
+        // Contiene la SQL para el reporte
+        String sql = request.getSession().getAttribute( fun.usuarioAutenticado(request) + "_reporte" ).toString();
+        
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -51,7 +51,8 @@ function reHref(id){console.log($('#'+id).val());if($('#'+id).val()==''){bottomM
 return false;}
 function urlDecodificar(urlCodificada,sp){mapaClaveValor=new Object();separacionVariables=urlCodificada.split((sp==''?"&":sp));for(s=0;s<separacionVariables.length;s++){claveValor=separacionVariables[s].split("=");clave=claveValor[0];valor=claveValor[1];mapaClaveValor[clave]=(valor==""?"":valor);}
 return mapaClaveValor;}
-function agregar(){console.log('Form : '+form);abrirPagina('../formularios/'+form);}
+function agregar(){if(form==''){bottomMensaje('El formulario que esta intentando abrir no existe.','Error formulario','e','n');return;}
+abrirPagina('../formularios/'+form);}
 function abrirPagina(url){console.log(url);WindowObjectReference=window.open(url,"_blank","width="+(screen.width-100)+",height="+(screen.height-150)+",scrollbars=1");WindowObjectReference.focus();}
 function generarReporte(tipo){$.post("../reportes",{'tipo':tipo},function(data){})}
 function rePlano(){generarReporte('txt');}

@@ -206,10 +206,10 @@ function obtenerElementoModificar() {
 }
 // Permite obtener el id del elemento que se quiere modificar en el flexigrid
 function obtenerElementoId( id ) {
-        var id = id.substr(3);
-        nombreCodigo = id.split("_");
-        nombreCodigo = nombreCodigo[ 1 ].split("--");
-        return nombreCodigo[ 0 ] + ',';
+    var id = id.substr(3);
+    nombreCodigo = id.split("_");
+    nombreCodigo = nombreCodigo[ 1 ].split("--");
+    return nombreCodigo[ 0 ] + ',';
 
 }
 function modificar( codigo ) {
@@ -320,8 +320,8 @@ function tabla( flexiParametros, titulo,combo ) {
             $("#servletActivo").val( ( $("#servlet").val() == datos['servlet'] ? '' :  datos['servlet'] ) );
             $("#tablaContenedor").html("<div class=\"men\" style=\"padding:  .10em;color:#4da10b\">"+ 
 					
-					"<p><strong>"+ men +"</strong></p>"+
-				"</div><div id=\"tabla\"></div>");
+                "<p><strong>"+ men +"</strong></p>"+
+                "</div><div id=\"tabla\"></div>");
             //var columnas = $.parseJSON( data );
             //var  searchitems = $.parseJSON( data );
             columnas = data;
@@ -620,17 +620,53 @@ function agregar() {
     abrirPagina('../formularios/' + form);
 }
 function abrirPagina( url ) {
-    console.log( url );
     WindowObjectReference = window.open(url,"_blank","width="+ (screen.width - 100) +",height=" +(screen.height  - 150) +",scrollbars=1");
     WindowObjectReference.focus();
 }
+function accordionReporte(tipo) {
+    tablaPdf = '<table cellspacing="10">'+
+    '<tr><td>Formato Papel</td><td><div class="repTipo">Carta</div></td><td><div class="repTipo">Oficio</div></td></tr><tr></tr>'+
+    '<tr><td>Orientacion</td><td><div class="repTipo">Vertical</div></td><td><div class="repTipo">Horizontal</div></td></tr><tr></tr>'
+    +'</table>';
+    campos = '<table><tr><td>Campos</td><td></td><td>Oficio</div></tr></table>';
+    
+    return '<div id="accordion">'+
+    '<h3><a href="#">Configuraci&oacute;n Salida</a></h3>'+
+    '<div>'+( tipo == 'pdf' ? tablaPdf : ''  ) +'</div>'+
+    '<h3><a href="#">Exportar Reporte</a></h3>'+
+    '<div>Second content</div>'+
+    '</div>';
+}
 function generarReporte( tipo ){
+    $( "#reporte" ).html( accordionReporte(tipo) );
+    $( "#accordion" ).accordion({
+        autoHeight : true
+    });
+    
+    
+    $( "#reporte" ).dialog({
+        title : "Generar Reporte " +  tipo,
+        width : 900,
+        height : 550,
+        autoOpen: true,
+        closeOnEscape: true,
+        show: "highlight",
+        hide: "explode",
+        modal : true, // Para oscurecer la pantalla
+        buttons : {
+            "Cerrar" : function() {
+                $(this).dialog("close");
+            }
+        }
+               
+    });
+/*
     $.post("../reportes", {
         'tipo' : tipo
     }, function( data ) {
-        
-        })
-    
+        console.log( "Datos : " +  data );
+    })
+    */
 }
 
 function rePlano() {
